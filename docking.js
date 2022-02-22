@@ -2277,9 +2277,12 @@ var DockManager = class DashToDock_DockManager {
     }
 
     /**
-     * Adjust Panel corners
+     * Adjust Panel corners, remove this when 41 won't be supported anymore
      */
     _adjustPanelCorners() {
+        if (!Main.panel._rightCorner || !Main.panel._leftCorner)
+            return;
+
         let position = Utils.getPosition();
         let isHorizontal = ((position == St.Side.TOP) || (position == St.Side.BOTTOM));
         let dockOnPrimary  = this._settings.get_boolean('multi-monitor') ||
@@ -2294,8 +2297,8 @@ var DockManager = class DashToDock_DockManager {
     }
 
     _revertPanelCorners() {
-        Main.panel._leftCorner.show();
-        Main.panel._rightCorner.show();
+        Main.panel._leftCorner?.show();
+        Main.panel._rightCorner?.show();
     }
 };
 Signals.addSignalMethods(DockManager.prototype);
