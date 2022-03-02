@@ -587,7 +587,7 @@ class TrashAppInfo extends LocationAppInfo {
 
         try {
             this._monitor = this.location.monitor_directory(0, this.cancellable);
-            this._monitor.set_rate_limit(UPDATE_TRASH_DELAY);
+            this._schedUpdateId = 0;
             this._monitorChangedId = this._monitor.connect('changed', () =>
                 this._onTrashChange());
         } catch (e) {
@@ -602,6 +602,10 @@ class TrashAppInfo extends LocationAppInfo {
     }
 
     destroy() {
+        if (this._schedUpdateId) {
+            GLib.source_remove(this._schedUpdateId);
+            this._schedUpdateId = 0;
+        }
         this._updateTrashCancellable?.cancel();
         this._monitor?.disconnect(this._monitorChangedId);
         this._monitor = null;
@@ -622,10 +626,20 @@ class TrashAppInfo extends LocationAppInfo {
     }
 
     _onTrashChange() {
+        if (this._schedUpdateId) {
+            GLib.source_remove(this._schedUpdateId);
+            this._schedUpdateId = 0;
+        }
+
         if (this._monitor.is_cancelled())
             return;
 
-        this._updateTrash();
+        this._schedUpdateId = GLib.timeout_add(GLib.PRIORITY_LOW,
+            UPDATE_TRASH_DELAY, () => {
+            this._schedUpdateId = 0;
+            this._updateTrash();
+            return GLib.SOURCE_REMOVE;
+        });
     }
 
     async _updateTrash() {
