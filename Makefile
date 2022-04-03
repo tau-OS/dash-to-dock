@@ -39,6 +39,9 @@ clean:
 	rm -f ./schemas/gschemas.compiled
 	rm -f stylesheet.css
 	rm -rf _build
+	rm -rf *.tar.gz
+	rm -rf *.sha1sum
+	rm -rf *.zip
 
 extension: ./schemas/gschemas.compiled ./stylesheet.css $(MSGSRC:.po=.mo)
 
