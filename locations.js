@@ -20,10 +20,7 @@ const Docking = Me.imports.docking;
 const Utils = Me.imports.utils;
 
 const FALLBACK_REMOVABLE_MEDIA_ICON = 'drive-removable-media';
-<<<<<<< HEAD
 const FALLBACK_TRASH_ICON = 'user-trash';
-=======
->>>>>>> 41-fixes
 const FILE_MANAGER_DESKTOP_APP_ID = 'org.gnome.Nautilus.desktop';
 const ATTRIBUTE_METADATA_CUSTOM_ICON = 'metadata::custom-icon';
 const TRASH_URI = 'trash://';
@@ -75,7 +72,6 @@ function makeNautilusFileOperationsProxy() {
     return proxy;
 }
 
-<<<<<<< HEAD
 var LocationAppInfo = GObject.registerClass({
     Implements: [Gio.AppInfo],
     Properties: {
@@ -689,9 +685,6 @@ class TrashAppInfo extends LocationAppInfo {
 });
 
 function wrapWindowsBackedApp(shellApp) {
-=======
-function wrapWindowsBackedApp(shellApp, params = {}) {
->>>>>>> 41-fixes
     if (shellApp._dtdData)
         throw new Error('%s has been already wrapped'.format(shellApp));
 
@@ -755,43 +748,15 @@ function wrapWindowsBackedApp(shellApp, params = {}) {
 
     const m = (...args) => shellApp._dtdData.methodInjections.add(shellApp, ...args);
     const p = (...args) => shellApp._dtdData.propertyInjections.add(shellApp, ...args);
-<<<<<<< HEAD
-=======
-    const aM = (...args) => {
-        if (shellApp.appInfo)
-            shellApp._dtdData.methodInjections.add(shellApp.appInfo, ...args);
-    }
-    shellApp._mi = m; // Method injector
-    shellApp._pi = p; // Property injector
->>>>>>> 41-fixes
 
     shellApp._setDtdData({ mi: m, pi: p }, { public: false });
 
     m('get_state', () => shellApp._state ?? shellApp._getStateByWindows());
     p('state', { get: () => shellApp.get_state() });
 
-<<<<<<< HEAD
     m('get_windows', () => shellApp._windows);
     m('get_n_windows', () => shellApp._windows.length);
     m('get_pids', () => shellApp._windows.reduce((pids, w) => {
-=======
-    if (params.gicon) {
-        const { gicon } = params;
-        m('get_icon', () => gicon);
-        p('icon', { get: () => shellApp.get_icon() });
-        aM('get_icon', () => shellApp.get_icon());
-
-        m('create_icon_texture', (_om, icon_size) => new St.Icon({
-            icon_size,
-            gicon: shellApp.icon,
-            fallback_icon_name: FALLBACK_REMOVABLE_MEDIA_ICON,
-        }));
-    }
-
-    m('get_windows', () => shellApp._dtdData.windows);
-    m('get_n_windows', () => shellApp.get_windows().length);
-    m('get_pids', () => shellApp.get_windows().reduce((pids, w) => {
->>>>>>> 41-fixes
         if (w.get_pid() > 0 && !pids.includes(w.get_pid()))
             pids.push(w.get_pid());
         return pids;
@@ -900,10 +865,7 @@ function wrapWindowsBackedApp(shellApp, params = {}) {
                     this._setState(Shell.AppState.STARTING);
                     this.launch(timestamp, workspace, Shell.AppLaunchGpu.APP_PREF);
                 } catch (e) {
-<<<<<<< HEAD
                     logError(e);
-=======
->>>>>>> 41-fixes
                     global.notify_error(_("Failed to launch “%s”".format(
                         this.get_name())), e.message);
                 }
@@ -936,22 +898,11 @@ function makeLocationApp(params) {
     if (!(params?.appInfo instanceof LocationAppInfo))
         throw new TypeError('Invalid location');
 
-<<<<<<< HEAD
     const { fallbackIconName } = params;
     delete params.fallbackIconName;
 
     const shellApp = new Shell.App(params);
     wrapWindowsBackedApp(shellApp);
-=======
-    const location = params.location;
-    const gicon = params.gicon;
-    delete params.location;
-    delete params.gicon;
-
-    const shellApp = new Shell.App(params);
-    wrapWindowsBackedApp(shellApp, { gicon });
-    shellApp.appInfo.customId = 'location:%s'.format(location);
->>>>>>> 41-fixes
 
     shellApp._setDtdData({
         location: () => shellApp.appInfo.location,
@@ -1128,7 +1079,6 @@ var Trash = class DashToDock_Trash {
     }
 
     _ensureApp() {
-<<<<<<< HEAD
         if (this._trashApp)
             return;
 
@@ -1136,50 +1086,6 @@ var Trash = class DashToDock_Trash {
             appInfo: new TrashAppInfo(this._cancellable),
             fallbackIconName: FALLBACK_TRASH_ICON,
         });
-=======
-        if (this._trashApp == null ||
-            this._lastEmpty !== this._empty) {
-            let trashKeys = new GLib.KeyFile();
-            trashKeys.set_string('Desktop Entry', 'Name', __('Trash'));
-            trashKeys.set_string('Desktop Entry', 'Type', 'Application');
-            trashKeys.set_string('Desktop Entry', 'Exec', 'gio open %s'.format(TRASH_URI));
-            trashKeys.set_string('Desktop Entry', 'StartupNotify', 'false');
-            if (!this._empty) {
-                trashKeys.set_string('Desktop Entry', 'Actions', 'empty-trash;');
-                trashKeys.set_string('Desktop Action empty-trash', 'Name', __('Empty Trash'));
-                trashKeys.set_string('Desktop Action empty-trash', 'Exec', 'true');
-            }
-
-            let trashAppInfo = Gio.DesktopAppInfo.new_from_keyfile(trashKeys);
-            this._trashApp?.destroy();
-            this._trashApp = makeLocationApp({
-                location: TRASH_URI + '/',
-                appInfo: trashAppInfo,
-                gicon: Gio.ThemedIcon.new(this._empty ? 'user-trash' : 'user-trash-full'),
-            });
-
-            if (!this._empty) {
-                this._trashApp._mi('launch_action',
-                    (launchAction, actionName, timestamp, ...args) => {
-                        if (actionName === 'empty-trash') {
-                            const nautilus = makeNautilusFileOperationsProxy();
-                            const askConfirmation = true;
-                            nautilus.EmptyTrashRemote(askConfirmation,
-                                nautilus.platformData({ timestamp }), (_p, error) => {
-                                    if (error)
-                                        logError(error, 'Empty trash failed');
-                                });
-                            return;
-                        }
-
-                        return launchAction.call(this, actionName, timestamp, ...args);
-                });
-            }
-            this._lastEmpty = this._empty;
-
-            this.emit('changed');
-        }
->>>>>>> 41-fixes
     }
 
     getApp() {
@@ -1263,7 +1169,6 @@ var Removables = class DashToDock_Removables {
         this._monitor = null;
     }
 
-<<<<<<< HEAD
     _updateVolumes() {
         this._volumeApps?.forEach(a => a.destroy());
         this._volumeApps = [];
@@ -1277,10 +1182,6 @@ var Removables = class DashToDock_Removables {
 
         if (!Docking.DockManager.settings.showMountsNetwork &&
             volume.get_identifier('class') == 'network') {
-=======
-    _onVolumeAdded(monitor, volume) {
-        if (!volume.can_mount()) {
->>>>>>> 41-fixes
             return;
         }
 
@@ -1297,38 +1198,10 @@ var Removables = class DashToDock_Removables {
                 return;
         }
 
-<<<<<<< HEAD
         const appInfo = new MountableVolumeAppInfo(volume, this._cancellable);
         const volumeApp = makeLocationApp({
             appInfo,
             fallbackIconName: FALLBACK_REMOVABLE_MEDIA_ICON,
-=======
-        let activationRoot = volume.get_activation_root();
-        if (!activationRoot) {
-            // Can't offer to mount a device if we don't know
-            // where to mount it.
-            // These devices are usually ejectable so you
-            // don't normally unmount them anyway.
-            return;
-        }
-
-        let escapedUri = activationRoot.get_uri()
-        let uri = GLib.uri_unescape_string(escapedUri, null);
-
-        let volumeKeys = new GLib.KeyFile();
-        volumeKeys.set_string('Desktop Entry', 'Name', volume.get_name());
-        volumeKeys.set_string('Desktop Entry', 'Type', 'Application');
-        volumeKeys.set_string('Desktop Entry', 'Exec', 'gio open "' + uri + '"');
-        volumeKeys.set_string('Desktop Entry', 'StartupNotify', 'false');
-        volumeKeys.set_string('Desktop Entry', 'Actions', 'mount;');
-        volumeKeys.set_string('Desktop Action mount', 'Name', __('Mount'));
-        volumeKeys.set_string('Desktop Action mount', 'Exec', 'gio mount "' + uri + '"');
-        let volumeAppInfo = Gio.DesktopAppInfo.new_from_keyfile(volumeKeys);
-        const volumeApp = makeLocationApp({
-            location: escapedUri,
-            appInfo: volumeAppInfo,
-            gicon: volume.get_icon() || Gio.ThemedIcon.new(FALLBACK_REMOVABLE_MEDIA_ICON),
->>>>>>> 41-fixes
         });
 
         volumeApp._signalConnections.add(volumeApp, 'windows-changed',
@@ -1367,48 +1240,6 @@ var Removables = class DashToDock_Removables {
             if (volume)
                 this._onVolumeAdded(volume);
         }
-<<<<<<< HEAD
-=======
-
-        const escapedUri = mount.get_default_location().get_uri()
-        let uri = GLib.uri_unescape_string(escapedUri, null);
-
-        let mountKeys = new GLib.KeyFile();
-        mountKeys.set_string('Desktop Entry', 'Name', mount.get_name());
-        mountKeys.set_string('Desktop Entry', 'Type', 'Application');
-        mountKeys.set_string('Desktop Entry', 'Exec', 'gio open "' + uri + '"');
-        mountKeys.set_string('Desktop Entry', 'StartupNotify', 'false');
-        mountKeys.set_string('Desktop Entry', 'Actions', 'unmount;');
-        if (mount.can_eject()) {
-            mountKeys.set_string('Desktop Action unmount', 'Name', __('Eject'));
-            mountKeys.set_string('Desktop Action unmount', 'Exec',
-                                 'gio mount -e "' + uri + '"');
-        } else {
-            mountKeys.set_string('Desktop Entry', 'Actions', 'unmount;');
-            mountKeys.set_string('Desktop Action unmount', 'Name', __('Unmount'));
-            mountKeys.set_string('Desktop Action unmount', 'Exec',
-                                 'gio mount -u "' + uri + '"');
-        }
-        let mountAppInfo = Gio.DesktopAppInfo.new_from_keyfile(mountKeys);
-        const mountApp = makeLocationApp({
-            appInfo: mountAppInfo,
-            location: escapedUri,
-            gicon: mount.get_icon() || new Gio.ThemedIcon(FALLBACK_REMOVABLE_MEDIA_ICON),
-        });
-        this._mountApps.push(mountApp);
-        this.emit('changed');
-    }
-
-    _onMountRemoved(monitor, mount) {
-        for (let i = 0; i < this._mountApps.length; i++) {
-            let app = this._mountApps[i];
-            if (app.get_name() == mount.get_name()) {
-                const [mountApp] = this._mountApps.splice(i, 1);
-                mountApp.destroy();
-            }
-        }
-        this.emit('changed');
->>>>>>> 41-fixes
     }
 
     getApps() {
