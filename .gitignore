@@ -1,7 +1,7 @@
 .~
 *~
 gschemas.compiled
-dash-to-dock@tauos.co.zip
+dash-to-dock@tauos.co*.zip
 *.mo
 po/dashtodock.pot
 stylesheet.css
