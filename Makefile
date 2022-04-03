@@ -33,7 +33,7 @@ else
 	VSTRING =
 endif
 
-all: extension archive
+all: extension
 
 clean:
 	rm -f ./schemas/gschemas.compiled
