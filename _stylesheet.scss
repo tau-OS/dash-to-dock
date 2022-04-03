@@ -16,13 +16,18 @@ $dash_bottom_margin: $base_margin * 4;
 $dash_border_radius: $modal_radius * 1.5;
 
 // Stock
-$dock_side_margin: $dash_bottom_margin / 4;
+$dock_start_margin: $dash_bottom_margin;
+$dock_side_margin: $dock_start_margin / 4;
 $dock_fixed_inner_margin: $dock_side_margin;
 
 // Adapted to $dock_bottom_margin
 
 @function shrink($val) {
     @return round($val / 4);
+}
+
+@function shrink_light($val) {
+    @return round($val * 0.75);
 }
 
 @function is_horizontal($side) {
@@ -56,12 +61,12 @@ $osd_fg_color: #eeeeec;
             }
 
             .dash-separator {
+                background-color: transparentize($osd_fg_color, 0.7);
                 @if is_horizontal($side) {
                     margin-bottom: 0;
                 } @else {
                     height: 1px;
                     margin: ($dash_spacing + ($dash_padding / 2)) 0;
-                    background-color: transparentize($osd_fg_color, 0.7);
                 }
             }
 
@@ -78,15 +83,29 @@ $osd_fg_color: #eeeeec;
                     padding-#{$side}: $dash_padding + $dock_side_margin;
                     padding-#{opposite($side)}: $dash_padding;
                 }
+
+                .app-well-app {
+                    &.running .overview-icon {
+                        background-image: none;
+                    }
+                    &.focused .overview-icon {
+                        background-color: rgba(238, 238, 236, 0.2);
+                    }
+                }
+
+                > StButton {
+                    transition-duration: 250;
+                    background-size: contain;
+                }
             }
         }
 
         &.shrink {
             #dash {
                 .dash-background {
-                    margin-#{$side}: shrink($dock_side_margin);
+                    margin-#{$side}: $dock_side_margin;
                     padding: shrink($dash_padding);
-                    border-radius: $dash_border_radius / 2;
+                    border-radius: shrink_light($dash_border_radius);
                 }
 
                 #dashtodockDashContainer {
@@ -97,7 +116,7 @@ $osd_fg_color: #eeeeec;
                     .app-well-app,
                     .show-apps {
                         padding: shrink($dash_spacing);
-                        padding-#{$side}: shrink($dash_padding + $dock_side_margin);
+                        padding-#{$side}: shrink($dash_padding) + $dock_side_margin;
                         padding-#{opposite($side)}: shrink($dash_padding);
                     }
                 }
@@ -199,6 +218,7 @@ $osd_fg_color: #eeeeec;
                 .app-well-app,
                 .show-apps {
                     padding-#{$side}: $dash_padding;
+                    padding-#{opposite($side)}: $dash_padding;
                 }
             }
         }
@@ -208,13 +228,14 @@ $osd_fg_color: #eeeeec;
                 #dashtodockDashContainer {
                     padding: 0;
 
-                    @include padded-dash-edge-items($side, shrink($dash_edge_items_padding));
+                    @include padded-dash-edge-items($side, $dash_edge_items_padding);
                 }
 
                 .dash-item-container {
                     .app-well-app,
                     .show-apps {
                         padding-#{$side}: shrink($dash_padding);
+                        padding-#{opposite($side)}: shrink($dash_padding);
                     }
                 }
             }
@@ -249,24 +270,6 @@ $osd_fg_color: #eeeeec;
 .left #dashtodockDashScrollview,
 .right #dashtodockDashScrollview {
     -st-vfade-offset: 24px;
-}
-
-#dashtodockContainer.running-dots .dash-item-container > StButton,
-#dashtodockContainer.dashtodock .dash-item-container > StButton {
-    transition-duration: 250;
-    background-size: contain;
-}
-
-/* Running and focused application style */
-
-#dashtodockContainer.running-dots .app-well-app.running > .overview-icon,
-#dashtodockContainer.dashtodock .app-well-app.running > .overview-icon {
-    background-image: none;
-}
-
-#dashtodockContainer.running-dots .app-well-app.focused .overview-icon,
-#dashtodockContainer.dashtodock .app-well-app.focused .overview-icon {
-    background-color: rgba(238, 238, 236, 0.2);
 }
 
 #dashtodockContainer.dashtodock #dash .dash-background {
