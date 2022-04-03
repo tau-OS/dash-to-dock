@@ -2120,13 +2120,19 @@
                 <child>
                   <object class="GtkLabel" id="label15">
                     <property name="can_focus">0</property>
-                    <property name="label" translatable="yes">Created by</property>
+                    <property name="label" translatable="yes">Originally created by</property>
                   </object>
                 </child>
                 <child>
                   <object class="GtkLabel" id="label16">
                     <property name="label">Michele (&lt;a href=&quot;mailto:micxgx@gmail.com&quot;&gt;micxgx@gmail.com&lt;/a&gt;)</property>
                     <property name="use_markup">1</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label17">
+                    <property name="can_focus">0</property>
+                    <property name="label" translatable="yes">Modified for tauOS</property>
                   </object>
                 </child>
               </object>
