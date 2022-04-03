@@ -49,7 +49,7 @@ var Intellihide = class DashToDock_Intellihide {
 
     constructor(monitorIndex) {
         // Load settings
-        this._monitorIndex = monitorIndex;
+        this.monitorIndex = monitorIndex;
 
         this._signalsHandler = new Utils.GlobalSignalsHandler();
         this._tracker = Shell.WindowTracker.get_default();
@@ -200,7 +200,7 @@ var Intellihide = class DashToDock_Intellihide {
             let topWindow = null;
             for (let i = windows.length - 1; i >= 0; i--) {
                 let meta_win = windows[i].get_meta_window();
-                if (this._handledWindow(windows[i]) && (meta_win.get_monitor() == this._monitorIndex)) {
+                if (this._handledWindow(windows[i]) && (meta_win.get_monitor() == this.monitorIndex)) {
                     topWindow = meta_win;
                     break;
                 }

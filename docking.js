@@ -1112,13 +1112,13 @@ var DockedDash = GObject.registerClass({
 
         const { desktopIconsUsableArea } = DockManager.getDefault();
         if (this._position === St.Side.BOTTOM)
-            desktopIconsUsableArea.setMargins(this._monitorIndex, 0, this._box.height, 0, 0);
+            desktopIconsUsableArea.setMargins(this.monitorIndex, 0, this._box.height, 0, 0);
         else if (this._position === St.Side.TOP)
-            desktopIconsUsableArea.setMargins(this._monitorIndex, this._box.height, 0, 0, 0);
+            desktopIconsUsableArea.setMargins(this.monitorIndex, this._box.height, 0, 0, 0);
         else if (this._position === St.Side.RIGHT)
-            desktopIconsUsableArea.setMargins(this._monitorIndex, 0, 0, 0, this._box.width);
+            desktopIconsUsableArea.setMargins(this.monitorIndex, 0, 0, 0, this._box.width);
         else if (this._position === St.Side.LEFT)
-            desktopIconsUsableArea.setMargins(this._monitorIndex, 0, 0, this._box.width, 0);
+            desktopIconsUsableArea.setMargins(this.monitorIndex, 0, 0, this._box.width, 0);
     }
 
     _updateStaticBox() {
@@ -2077,7 +2077,7 @@ var DockManager = class DashToDock_DockManager {
             // This code has been submitted upstream via GNOME/gnome-shell!1892
             // so can be removed when that gets merged (or bypassed on newer shell
             // versions).
-            const monitor = Main.layoutManager.monitors[this._monitorIndex];
+            const monitor = Main.layoutManager.monitors[this.monitorIndex];
             const [contentWidth, contentHeight] = this._bin.get_content_box().get_size();
             const [mX1, mX2] = [monitor.x, monitor.x + monitor.width];
             const [mY1, mY2] = [monitor.y, monitor.y + monitor.height];
@@ -2121,10 +2121,10 @@ var DockManager = class DashToDock_DockManager {
             '_getFirstFitAllWorkspaceBox', function (originalFunction, ...args) {
                 const box = originalFunction.call(this, ...args);
                 if (DockManager.settings.dockFixed ||
-                    this._monitorIndex === Main.layoutManager.primaryIndex)
+                    this.monitorIndex === Main.layoutManager.primaryIndex)
                     return box;
 
-                const dock = DockManager.getDefault().getDockByMonitor(this._monitorIndex);
+                const dock = DockManager.getDefault().getDockByMonitor(this.monitorIndex);
                 if (!dock)
                     return box;
 

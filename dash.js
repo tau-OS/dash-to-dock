@@ -99,7 +99,7 @@ var DockDash = GObject.registerClass({
 
         this._separator = null;
 
-        this._monitorIndex = monitorIndex;
+        this.monitorIndex = monitorIndex;
         this._position = Utils.getPosition();
         this._isHorizontal = ((this._position == St.Side.TOP) ||
                                (this._position == St.Side.BOTTOM));
@@ -467,7 +467,7 @@ var DockDash = GObject.registerClass({
     }
 
     _createAppItem(app) {
-        const appIcon = new AppIcons.makeAppIcon(app, this._monitorIndex, this.iconAnimator);
+        const appIcon = new AppIcons.makeAppIcon(app, this.monitorIndex, this.iconAnimator);
 
         if (appIcon._draggable) {
             appIcon._draggable.connect('drag-begin', () => {
@@ -733,7 +733,7 @@ var DockDash = GObject.registerClass({
             settings.get_boolean('isolate-monitors')) {
             // When using isolation, we filter out apps that have no windows in
             // the current workspace
-            let monitorIndex = this._monitorIndex;
+            let monitorIndex = this.monitorIndex;
             running = running.filter(app =>
                 AppIcons.getInterestingWindows(app.get_windows(), monitorIndex).length);
         }
