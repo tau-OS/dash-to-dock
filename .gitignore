@@ -6,3 +6,6 @@ dash-to-dock@tauos.co*.zip
 po/dashtodock.pot
 stylesheet.css
 _build
+
+*.tar.gz
+*.sha1sum

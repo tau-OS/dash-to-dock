@@ -16,6 +16,12 @@ else
 endif
 INSTALLNAME = dash-to-dock@tauos.co
 
+NAME = tau-dash-to-dock
+
+RPM_VERSION := $(shell awk '/Version:/ { print $$2 }' $(NAME).spec)
+RELEASE := $(shell awk '/Release:/ { print $$2 }' $(NAME).spec | sed 's|%{?dist}||g')
+TAG=$(NAME)-$(RPM_VERSION)
+
 # The command line passed variable VERSION is used to set the version string
 # in the metadata and in the generated zip-file. If no VERSION is passed, the
 # current commit SHA1 is used as version number in the metadata while the
@@ -27,7 +33,7 @@ else
 	VSTRING =
 endif
 
-all: extension
+all: extension archive
 
 clean:
 	rm -f ./schemas/gschemas.compiled
@@ -82,13 +88,23 @@ endif
 	-rm -fR _build
 	echo done
 
-zip-file: _build check
+zip-file: _build
 	cd _build ; \
 	zip -qr "$(UUID)$(VSTRING).zip" .
 	mv _build/$(UUID)$(VSTRING).zip ./
 	-rm -fR _build
 
-_build: all
+tag:
+	@git tag -a -f -m "Tag as $(TAG)" -f $(TAG)
+	@echo "Tagged as $(TAG)"
+
+archive: tag
+	@git archive --format=tar --prefix=$(TAG)/ HEAD > $(TAG).tar
+	@gzip -f $(TAG).tar
+	@echo "$(TAG).tar.gz created" 
+	@sha1sum $(TAG).tar.gz > $(TAG).sha1sum
+
+_build:
 	-rm -fR ./_build
 	mkdir -p _build
 	cp $(BASE_MODULES) $(EXTRA_MODULES) _build
@@ -106,14 +122,3 @@ _build: all
 		cp $$l $$lf/LC_MESSAGES/dashtodock.mo; \
 	done;
 	sed -i 's/"version": -1/"version": "$(VERSION)"/'  _build/metadata.json;
-
-ifeq ($(strip $(ESLINT)),)
-    ESLINT = eslint
-endif
-
-ifneq ($(strip $(ESLINT_TAP)),)
-    ESLINT_ARGS = -f tap
-endif
-
-check:
-	$(ESLINT) $(ESLINT_ARGS) .
