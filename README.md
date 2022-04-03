@@ -8,6 +8,8 @@ This extension enhances the dash moving it out of the overview and transforming 
 
 For additional installation instructions and more information visit [https://micheleg.github.io/dash-to-dock/](https://micheleg.github.io/dash-to-dock/).
 
+> This repository is based off of https://github.com/micheleg/dash-to-dock, to see the upstream source, visit that repository
+
 ## Installation from source
 
 The extension can be installed directly from source, either for the convenience of using git or to test the latest development version. Clone the desired branch with git
