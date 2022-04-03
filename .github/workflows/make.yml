@@ -1,32 +1,37 @@
----
-name: Make
-'on':
-  pull_request:
+name: Package
+
+on:
   push:
-    branches:
-      - master
-      - ubuntu-dock
-      - make_ci
-
+    branches: [ main ]
+  workflow_dispatch:
+  
 jobs:
-  make:
-    name: Make
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out the codebase.
-        uses: actions/checkout@v2
-
-      - name: Install dependencies.
-        run: sudo apt-get install -y sassc gettext
-
-      - name: Make
-        run: make
-
-      - name: Install modules
-        run: sudo npm install eslint -g
-
-      - name: Make Check
-        run: make check
-
-      - name: Make Install
-        run: make install
+  build:
+    uses: tau-OS/github-actions/.github/workflows/build-rpm.yml@main
+    with:
+      name: "tau-dash-to-dock"
+      version: "71"
+      arch: "noarch"
+      extraBuildPackages: sassc gettext
+  sign:
+    needs:
+      - build
+    uses: tau-OS/github-actions/.github/workflows/sign-rpm.yml@main
+    if: github.ref == 'refs/heads/main'
+    with:
+      name: "tau-dash-to-dock"
+      version: "71"
+      arch: "noarch"
+    secrets:
+      signingKey: ${{ secrets.GPG_PRIVATE_KEY }}
+  upload:
+    needs:
+      - sign
+    uses: tau-OS/github-actions/.github/workflows/upload-rpm.yml@main
+    with:
+      name: "tau-dash-to-dock"
+      version: "71"
+      arch: "noarch"
+      tauOSVersion: "1.1"
+    secrets:
+      privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
