@@ -4,12 +4,12 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # Δημήτριος-Ρωμανός Ησαΐας <dirosissaias@cosmotemail.gr>, 2017.
 # Vangelis Skarmoutsos <skarmoutsosv@gmail.com>, 2017.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash to Dock\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-04 12:35+0100\n"
+"POT-Creation-Date: 2022-04-03 15:16-0700\n"
 "PO-Revision-Date: 2017-09-29 21:48+0300\n"
 "Last-Translator: Vangelis Skarmoutsos <skarmoutsosv@gmail.com>\n"
 "Language-Team:\n"
@@ -20,99 +20,113 @@ msgstr ""
 "X-Generator: Poedit 2.0.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: prefs.js:113
-msgid "Primary monitor"
+#. Translators: This will be followed by Display Name - Connector.
+#: prefs.js:374
+#, fuzzy
+msgid "Primary monitor: "
 msgstr "Κύρια οθόνη"
 
-#: prefs.js:122 prefs.js:129
+#. Translators: Followed by monitor index, Display Name - Connector.
+#: prefs.js:379
 msgid "Secondary monitor "
 msgstr "Δευτερεύουσα οθόνη "
 
-#: prefs.js:154 Settings.ui.h:29
+#: prefs.js:417 Settings.ui.h:30
 msgid "Right"
 msgstr "Δεξιά"
 
-#: prefs.js:155 Settings.ui.h:26
+#: prefs.js:418 Settings.ui.h:27
 msgid "Left"
 msgstr "Αριστερά"
 
-#: prefs.js:205
+#: prefs.js:469
 msgid "Intelligent autohide customization"
 msgstr "Προσαρμογή έξυπνης απόκρυψης"
 
-#: prefs.js:212 prefs.js:393 prefs.js:450
+#: prefs.js:477 prefs.js:714 prefs.js:772
 msgid "Reset to defaults"
 msgstr "Επαναφορά στις προεπιλογές"
 
-#: prefs.js:386
+#: prefs.js:706
 msgid "Show dock and application numbers"
 msgstr "Προβολή της μπάρας και της αρίθμησης εφαρμογών"
 
-#: prefs.js:443
+#: prefs.js:764
 msgid "Customize middle-click behavior"
 msgstr "Προσαρμογή συμπεριφοράς μεσαίου κλικ"
 
-#: prefs.js:514
+#: prefs.js:849
 msgid "Customize running indicators"
 msgstr "Προσαρμογή δεικτών τρεχόντων εφαρμογών"
 
-#: appIcons.js:804
+#: prefs.js:964 Settings.ui.h:82
+msgid "Customize opacity"
+msgstr "Προσαρμογή αδιαφάνειας"
+
+#: appIcons.js:1003
 msgid "All Windows"
 msgstr "Όλα τα παράθυρα"
 
+#: appIcons.js:1150
+#, fuzzy, javascript-format
+msgid "Quit %d Windows"
+msgstr "Όλα τα παράθυρα"
+
+#. Translators: %s is "Settings", which is automatically translated. You
+#. can also translate the full message if this fits better your language.
+#: appIcons.js:1362
+#, javascript-format
+msgid "Dash to Dock %s"
+msgstr ""
+
+#: locations.js:422
+msgid "Mount"
+msgstr ""
+
+#: locations.js:424
+msgid "Unmount"
+msgstr ""
+
+#: locations.js:426
+msgid "Eject"
+msgstr ""
+
+#: locations.js:484
+#, javascript-format
+msgid "Failed to mount “%s”"
+msgstr ""
+
+#: locations.js:487
+#, javascript-format
+msgid "Failed to umount “%s”"
+msgstr ""
+
+#: locations.js:490
+#, javascript-format
+msgid "Failed to eject “%s”"
+msgstr ""
+
+#: locations.js:502
+msgid "Mount operation already in progress"
+msgstr ""
+
+#: locations.js:505
+msgid "Umount operation already in progress"
+msgstr ""
+
+#: locations.js:508
+msgid "Eject operation already in progress"
+msgstr ""
+
+#: locations.js:582
+msgid "Trash"
+msgstr ""
+
+#: locations.js:618
+msgid "Empty Trash"
+msgstr ""
+
 #: Settings.ui.h:1
-msgid "Customize indicator style"
-msgstr "Προσαρμογή του στυλ του δείκτη"
-
-#: Settings.ui.h:2
-msgid "Color"
-msgstr "Χρώμα"
-
-#: Settings.ui.h:3
-msgid "Border color"
-msgstr "Χρώμα περιγράμματος"
-
-#: Settings.ui.h:4
-msgid "Border width"
-msgstr "Πλάτος περιγράμματος"
-
-#: Settings.ui.h:5
-msgid "Number overlay"
-msgstr "Επίστρωση αριθμού"
-
-#: Settings.ui.h:6
-msgid ""
-"Temporarily show the application numbers over the icons, corresponding to "
-"the shortcut."
-msgstr ""
-"Προσωρινή εμφάνιση αριθμών εφαρμογής πάνω από τα εικονίδια, που αντιστοιχούν "
-"στη συντόμευση πληκτρολογίου."
-
-#: Settings.ui.h:7
-msgid "Show the dock if it is hidden"
-msgstr "Προβολή της μπάρας αν είναι κρυμμένη"
-
-#: Settings.ui.h:8
-msgid ""
-"If using autohide, the dock will appear for a short time when triggering the "
-"shortcut."
-msgstr ""
-"Αν χρησιμοποιείται η αυτόματη απόκρυψη, η μπάρα θα εμφανίζεται για λίγο "
-"χρόνο όταν πατιέται η συντόμευση."
-
-#: Settings.ui.h:9
-msgid "Shortcut for the options above"
-msgstr "Συντόμευση για τις παραπάνω επιλογές"
-
-#: Settings.ui.h:10
-msgid "Syntax: <Shift>, <Ctrl>, <Alt>, <Super>"
-msgstr "Σύνταξη: <Shift>, <Ctrl>, <Alt>, <Super>"
-
-#: Settings.ui.h:11
-msgid "Hide timeout (s)"
-msgstr "Καθυστέρηση απόκρυψης"
-
-#: Settings.ui.h:12
 msgid ""
 "When set to minimize, double clicking minimizes all the windows of the "
 "application."
@@ -120,116 +134,187 @@ msgstr ""
 "Όταν είναι ρυθμισμένο στην ελαχιστοποίηση, το διπλό κλικ ελαχιστοποιεί όλα "
 "τα παράθυρα της εφαρμογής."
 
-#: Settings.ui.h:13
+#: Settings.ui.h:2
 msgid "Shift+Click action"
 msgstr "Λειτουργία του Shift+Click"
 
-#: Settings.ui.h:14
+#: Settings.ui.h:3
 msgid "Raise window"
 msgstr "Ανύψωση παραθύρου"
 
-#: Settings.ui.h:15
+#: Settings.ui.h:4
 msgid "Minimize window"
 msgstr "Ελαχιστοποίηση παραθύρου"
 
-#: Settings.ui.h:16
+#: Settings.ui.h:5
 msgid "Launch new instance"
 msgstr "Εκκίνηση νέου παραθύρου"
 
-#: Settings.ui.h:17
+#: Settings.ui.h:6
 msgid "Cycle through windows"
 msgstr "Περιήγηση στα ανοικτά παράθυρα"
 
-#: Settings.ui.h:18
+#: Settings.ui.h:7
+msgid "Minimize or overview"
+msgstr "Ελαχιστοποίηση ή επισκόπηση"
+
+#: Settings.ui.h:8
+#, fuzzy
+msgid "Show window previews"
+msgstr "Εμφάνιση προεπισκόπησης ανοικτών παραθύρων."
+
+#: Settings.ui.h:9
+#, fuzzy
+msgid "Minimize or show previews"
+msgstr "Ελαχιστοποίηση ή επισκόπηση"
+
+#: Settings.ui.h:10
+#, fuzzy
+msgid "Focus or show previews"
+msgstr "Εμφάνιση προεπισκόπησης ανοικτών παραθύρων."
+
+#: Settings.ui.h:11
+#, fuzzy
+msgid "Focus, minimize or show previews"
+msgstr "Ελαχιστοποίηση ή επισκόπηση"
+
+#: Settings.ui.h:12
 msgid "Quit"
 msgstr "Έξοδος"
 
-#: Settings.ui.h:19
+#: Settings.ui.h:13
 msgid "Behavior for Middle-Click."
 msgstr "Συμπεριφορά μεσαίου κλικ."
 
-#: Settings.ui.h:20
+#: Settings.ui.h:14
 msgid "Middle-Click action"
 msgstr "Λειτουργία του μεσαίου κλικ"
 
-#: Settings.ui.h:21
+#: Settings.ui.h:15
 msgid "Behavior for Shift+Middle-Click."
 msgstr "Συμπεριφορά Shift+Μεσαίο κλικ."
 
-#: Settings.ui.h:22
+#: Settings.ui.h:16
 msgid "Shift+Middle-Click action"
 msgstr "Λειτουργία του Shift+Μεσαίο κλικ"
 
+#: Settings.ui.h:17
+msgid "Enable Unity7 like glossy backlit items"
+msgstr ""
+
+#: Settings.ui.h:18
+msgid "Apply glossy effect."
+msgstr ""
+
+#: Settings.ui.h:19
+msgid "Use dominant color"
+msgstr ""
+
+#: Settings.ui.h:20
+msgid "Customize indicator style"
+msgstr "Προσαρμογή του στυλ του δείκτη"
+
+#: Settings.ui.h:21
+msgid "Color"
+msgstr "Χρώμα"
+
+#: Settings.ui.h:22
+msgid "Border color"
+msgstr "Χρώμα περιγράμματος"
+
 #: Settings.ui.h:23
+msgid "Border width"
+msgstr "Πλάτος περιγράμματος"
+
+#: Settings.ui.h:24
 msgid "Show the dock on"
 msgstr "Εμφάνιση της μπάρας στην"
 
-#: Settings.ui.h:24
+#: Settings.ui.h:25
 msgid "Show on all monitors."
 msgstr "Εμφάνιση σε όλες τις οθόνες."
 
-#: Settings.ui.h:25
+#: Settings.ui.h:26
 msgid "Position on screen"
 msgstr "Θέση στην οθόνη"
 
-#: Settings.ui.h:27
+#: Settings.ui.h:28
 msgid "Bottom"
 msgstr "Κάτω"
 
-#: Settings.ui.h:28
+#: Settings.ui.h:29
 msgid "Top"
 msgstr "Πάνω"
 
-#: Settings.ui.h:30
+#: Settings.ui.h:31
+#, fuzzy
 msgid ""
-"Hide the dock when it obstructs a window of the the current application. "
-"More refined settings are available."
+"Hide the dock when it obstructs a window of the current application. More "
+"refined settings are available."
 msgstr ""
 "Απόκρυψη της μπάρας όταν εμποδίζει ένα παράθυρο της τρέχουσας εφαρμογής. Πιο "
 "εξειδικευμένες επιλογές είναι επίσης διαθέσιμες."
 
-#: Settings.ui.h:31
+#: Settings.ui.h:32
 msgid "Intelligent autohide"
 msgstr "Έξυπνη απόκρυψη"
 
-#: Settings.ui.h:32
+#: Settings.ui.h:33
 msgid "Dock size limit"
 msgstr "Περιορισμός μεγέθους μπάρας"
 
-#: Settings.ui.h:33
+#: Settings.ui.h:34
 msgid "Panel mode: extend to the screen edge"
 msgstr "Λειτουργιά πάνελ: επέκταση της μπάρας ως τις άκρες της οθόνης"
 
-#: Settings.ui.h:34
+#: Settings.ui.h:35
 msgid "Icon size limit"
 msgstr "Περιορισμός μεγέθους εικονιδίων"
 
-#: Settings.ui.h:35
+#: Settings.ui.h:36
 msgid "Fixed icon size: scroll to reveal other icons"
 msgstr ""
 "Σταθερό μέγεθος εικονιδίων: κύλιση για την εμφάνιση περαιτέρω εικονιδίων"
 
-#: Settings.ui.h:36
+#: Settings.ui.h:37
+msgid "Preview size scale"
+msgstr ""
+
+#: Settings.ui.h:38
 msgid "Position and size"
 msgstr "Θέση και μέγεθος"
 
-#: Settings.ui.h:37
+#: Settings.ui.h:39
 msgid "Show favorite applications"
 msgstr "Εμφάνιση αγαπημένων εφαρμογών"
 
-#: Settings.ui.h:38
+#: Settings.ui.h:40
 msgid "Show running applications"
 msgstr "Εμφάνιση εκτελούμενων εφαρμογών"
 
-#: Settings.ui.h:39
+#: Settings.ui.h:41
 msgid "Isolate workspaces."
 msgstr "Απομόνωση χώρων εργασίας."
 
-#: Settings.ui.h:40
+#: Settings.ui.h:42
+#, fuzzy
+msgid "Show urgent windows despite current workspace."
+msgstr "Εμφάνιση προεπισκόπησης ανοικτών παραθύρων."
+
+#: Settings.ui.h:43
+#, fuzzy
+msgid "Isolate monitors."
+msgstr "Απομόνωση χώρων εργασίας."
+
+#: Settings.ui.h:44
 msgid "Show open windows previews."
 msgstr "Εμφάνιση προεπισκόπησης ανοικτών παραθύρων."
 
-#: Settings.ui.h:41
+#: Settings.ui.h:45
+msgid "Keep the focused application always visible in the dash"
+msgstr ""
+
+#: Settings.ui.h:46
 msgid ""
 "If disabled, these settings are accessible from gnome-tweak-tool or the "
 "extension website."
@@ -237,23 +322,45 @@ msgstr ""
 "Αν είναι απενεργοποιημένο, αυτές οι ρυθμίσεις είναι προσβάσιμες από το "
 "εργαλείο μικρορυθμίσεων του GNOME ή τον ιστοτόπο επεκτάσεων."
 
-#: Settings.ui.h:42
+#: Settings.ui.h:47
 msgid "Show <i>Applications</i> icon"
 msgstr "Εμφάνιση εικονιδίου <i>Εφαρμογές</i>"
 
-#: Settings.ui.h:43
+#: Settings.ui.h:48
 msgid "Move the applications button at the beginning of the dock."
 msgstr "Μετακίνηση του πλήκτρου εφαρμογών στην αρχή της μπάρας."
 
-#: Settings.ui.h:44
+#: Settings.ui.h:49
 msgid "Animate <i>Show Applications</i>."
 msgstr "Ενεργοποίηση γραφικών κατά την <i>Εμφάνιση Εφαρμογών</i>."
 
-#: Settings.ui.h:45
+#: Settings.ui.h:50
+#, fuzzy
+msgid "Show trash can"
+msgstr "Εμφάνιση της μπάρας στην"
+
+#: Settings.ui.h:51
+#, fuzzy
+msgid "Show volumes and devices"
+msgstr "Εμφάνιση προεπισκόπησης ανοικτών παραθύρων."
+
+#: Settings.ui.h:52
+msgid "Only if mounted"
+msgstr ""
+
+#: Settings.ui.h:53
+msgid "Include network volumes"
+msgstr ""
+
+#: Settings.ui.h:54
+msgid "Isolate volumes, devices and trash windows from file manager"
+msgstr ""
+
+#: Settings.ui.h:55
 msgid "Launchers"
 msgstr "Εκκινητές"
 
-#: Settings.ui.h:46
+#: Settings.ui.h:56
 msgid ""
 "Enable Super+(0-9) as shortcuts to activate apps. It can also be used "
 "together with Shift and Ctrl."
@@ -261,47 +368,43 @@ msgstr ""
 "Ενεργοποίηση του Super+(0-9) ως συντομεύσεις για την ενεργοποίηση εφαρμογών. "
 "Μπορεί επίσης να χρησιμοποιηθεί με το Shift και το Ctrl."
 
-#: Settings.ui.h:47
+#: Settings.ui.h:57
 msgid "Use keyboard shortcuts to activate apps"
 msgstr "Χρήση συντομεύσεων πληκτρολογίου για την ενεργοποίηση εφαρμογών"
 
-#: Settings.ui.h:48
+#: Settings.ui.h:58
 msgid "Behaviour when clicking on the icon of a running application."
 msgstr "Συμπεριφορά κατά το κλικ σε εικονίδιο τρέχουσας εφαρμογής."
 
-#: Settings.ui.h:49
+#: Settings.ui.h:59
 msgid "Click action"
 msgstr "Συμπεριφορά κλικ"
 
-#: Settings.ui.h:50
+#: Settings.ui.h:60
 msgid "Minimize"
 msgstr "Ελαχιστοποίηση"
 
-#: Settings.ui.h:51
-msgid "Minimize or overview"
-msgstr "Ελαχιστοποίηση ή επισκόπηση"
-
-#: Settings.ui.h:52
+#: Settings.ui.h:61
 msgid "Behaviour when scrolling on the icon of an application."
 msgstr "Συμπεριφορά κατά την κύλιση σε εικονίδιο τρέχουσας εφαρμογής."
 
-#: Settings.ui.h:53
+#: Settings.ui.h:62
 msgid "Scroll action"
 msgstr "Συμπεριφορά κύλισης"
 
-#: Settings.ui.h:54
+#: Settings.ui.h:63
 msgid "Do nothing"
 msgstr "Καμία δράση"
 
-#: Settings.ui.h:55
+#: Settings.ui.h:64
 msgid "Switch workspace"
 msgstr "Αλλαγή χώρου εργασίας"
 
-#: Settings.ui.h:56
+#: Settings.ui.h:65
 msgid "Behavior"
 msgstr "Συμπεριφορά"
 
-#: Settings.ui.h:57
+#: Settings.ui.h:66
 msgid ""
 "Few customizations meant to integrate the dock with the default GNOME theme. "
 "Alternatively, specific options can be enabled below."
@@ -310,135 +413,232 @@ msgstr ""
 "προκαθορισμένο θέμα του GNOME. Εναλλακτικά, ειδικές επιλογές μπορούν να "
 "ενεργοποιηθούν παρακάτω."
 
-#: Settings.ui.h:58
+#: Settings.ui.h:67
 msgid "Use built-in theme"
 msgstr "Χρήση ενσωματωμένου θέματος"
 
-#: Settings.ui.h:59
+#: Settings.ui.h:68
 msgid "Save space reducing padding and border radius."
 msgstr "Εξοικονόμηση χώρου μειώνοντας τα κενά και τα περιθώρια."
 
-#: Settings.ui.h:60
+#: Settings.ui.h:69
 msgid "Shrink the dash"
 msgstr "Σμίκρυνση της μπάρας"
 
-#: Settings.ui.h:61
-msgid "Show a dot for each windows of the application."
-msgstr "Εμφανίζει μία τελεία για κάθε παράθυρο της εφαρμογής."
-
-#: Settings.ui.h:62
-msgid "Show windows counter indicators"
+#: Settings.ui.h:70
+#, fuzzy
+msgid "Customize windows counter indicators"
 msgstr "Εμφάνιση μετρητή παραθύρων"
 
-#: Settings.ui.h:63
+#: Settings.ui.h:71
+msgid "Default"
+msgstr ""
+
+#: Settings.ui.h:72
+msgid "Dots"
+msgstr ""
+
+#: Settings.ui.h:73
+msgid "Squares"
+msgstr ""
+
+#: Settings.ui.h:74
+msgid "Dashes"
+msgstr ""
+
+#: Settings.ui.h:75
+msgid "Segmented"
+msgstr ""
+
+#: Settings.ui.h:76
+msgid "Solid"
+msgstr ""
+
+#: Settings.ui.h:77
+msgid "Ciliora"
+msgstr ""
+
+#: Settings.ui.h:78
+msgid "Metro"
+msgstr ""
+
+#: Settings.ui.h:79
 msgid "Set the background color for the dash."
 msgstr "Ορισμός χρώματος φόντου της μπάρας."
 
-#: Settings.ui.h:64
+#: Settings.ui.h:80
 msgid "Customize the dash color"
 msgstr "Προσαρμογή του χρώματος της μπάρας"
 
-#: Settings.ui.h:65
+#: Settings.ui.h:81
 msgid "Tune the dash background opacity."
 msgstr "Αλλαγή της αδιαφάνειας του φόντου της μπάρας."
 
-#: Settings.ui.h:66
-msgid "Customize opacity"
-msgstr "Προσαρμογή αδιαφάνειας"
+#: Settings.ui.h:83
+msgid "Fixed"
+msgstr ""
 
-#: Settings.ui.h:67
+#: Settings.ui.h:84
+msgid "Dynamic"
+msgstr ""
+
+#: Settings.ui.h:85
 msgid "Opacity"
 msgstr "Αδιαφάνεια"
 
-#: Settings.ui.h:68
-msgid "Force straight corner\n"
+#: Settings.ui.h:86
+#, fuzzy
+msgid "Force straight corner"
 msgstr "Εξαναγκασμός ευθείας γωνίας\n"
 
-#: Settings.ui.h:70
+#: Settings.ui.h:87
 msgid "Appearance"
 msgstr "Εμφάνιση"
 
-#: Settings.ui.h:71
+#: Settings.ui.h:88
 msgid "version: "
 msgstr "έκδοση: "
 
-#: Settings.ui.h:72
+#: Settings.ui.h:89
 msgid "Moves the dash out of the overview transforming it in a dock"
 msgstr ""
 "Μετακινεί το ταμπλό και εκτός της προεπισκόπησης μετατρέποντάς το σε μπάρα "
 "εφαρμογών"
 
-#: Settings.ui.h:73
-msgid "Created by"
-msgstr "Δημιουργήθηκε από"
+#: Settings.ui.h:90
+msgid "Originally created by"
+msgstr ""
 
-#: Settings.ui.h:74
+#: Settings.ui.h:91
+msgid "Modified for tauOS"
+msgstr ""
+
+#: Settings.ui.h:92
 msgid "Webpage"
 msgstr "Ιστοσελίδα"
 
-#: Settings.ui.h:75
+#: Settings.ui.h:93
 msgid ""
 "<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
-"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
-"\">GNU General Public License, version 2 or later</a> for details.</span>"
+"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0."
+"html\">GNU General Public License, version 2 or later</a> for details.</span>"
 msgstr ""
 "<span size=\"small\">Αυτό πρόγραμμα παρέχεται χωρίς ΑΠΟΛΥΤΩΣ ΚΑΜΙΑ ΕΓΓΥΗΣΗ.\n"
 "Για λεπτομέρειες δείτε την <a href=\"https://www.gnu.org/licenses/old-"
 "licenses/gpl-2.0.html\">Γενική δημόσια άδεια GNU, έκδοση 2 ή νεότερη.</a> </"
 "span>"
 
-#: Settings.ui.h:77
+#: Settings.ui.h:95
 msgid "About"
 msgstr "Περί"
 
-#: Settings.ui.h:78
+#: Settings.ui.h:96
+msgid "Customize minimum and maximum opacity values"
+msgstr ""
+
+#: Settings.ui.h:97
+#, fuzzy
+msgid "Minimum opacity"
+msgstr "Προσαρμογή αδιαφάνειας"
+
+#: Settings.ui.h:98
+#, fuzzy
+msgid "Maximum opacity"
+msgstr "Προσαρμογή αδιαφάνειας"
+
+#: Settings.ui.h:99
+msgid "Number overlay"
+msgstr "Επίστρωση αριθμού"
+
+#: Settings.ui.h:100
+msgid ""
+"Temporarily show the application numbers over the icons, corresponding to "
+"the shortcut."
+msgstr ""
+"Προσωρινή εμφάνιση αριθμών εφαρμογής πάνω από τα εικονίδια, που αντιστοιχούν "
+"στη συντόμευση πληκτρολογίου."
+
+#: Settings.ui.h:101
+msgid "Show the dock if it is hidden"
+msgstr "Προβολή της μπάρας αν είναι κρυμμένη"
+
+#: Settings.ui.h:102
+msgid ""
+"If using autohide, the dock will appear for a short time when triggering the "
+"shortcut."
+msgstr ""
+"Αν χρησιμοποιείται η αυτόματη απόκρυψη, η μπάρα θα εμφανίζεται για λίγο "
+"χρόνο όταν πατιέται η συντόμευση."
+
+#: Settings.ui.h:103
+msgid "Shortcut for the options above"
+msgstr "Συντόμευση για τις παραπάνω επιλογές"
+
+#: Settings.ui.h:104
+msgid "Syntax: <Shift>, <Ctrl>, <Alt>, <Super>"
+msgstr "Σύνταξη: <Shift>, <Ctrl>, <Alt>, <Super>"
+
+#: Settings.ui.h:105
+msgid "Hide timeout (s)"
+msgstr "Καθυστέρηση απόκρυψης"
+
+#: Settings.ui.h:106
 msgid "Show the dock by mouse hover on the screen edge."
 msgstr "Εμφάνιση της μπάρας όταν το ποντίκι πηγαίνει στην άκρη της οθόνης."
 
-#: Settings.ui.h:79
+#: Settings.ui.h:107
 msgid "Autohide"
 msgstr "Αυτόματη απόκρυψη"
 
-#: Settings.ui.h:80
+#: Settings.ui.h:108
 msgid "Push to show: require pressure to show the dock"
 msgstr "Πίεση για εμφάνιση: απαιτείται πίεση για την εμφάνιση της μπάρας"
 
-#: Settings.ui.h:81
+#: Settings.ui.h:109
 msgid "Enable in fullscreen mode"
 msgstr "Ενεργοποίηση σε κατάσταση πλήρους οθόνης"
 
-#: Settings.ui.h:82
+#: Settings.ui.h:110
 msgid "Show the dock when it doesn't obstruct application windows."
 msgstr "Εμφάνιση της μπάρας όταν δεν εμποδίζει τα παράθυρά των εφαρμογών."
 
-#: Settings.ui.h:83
+#: Settings.ui.h:111
 msgid "Dodge windows"
 msgstr "Αποφυγή παραθύρων"
 
-#: Settings.ui.h:84
+#: Settings.ui.h:112
 msgid "All windows"
 msgstr "Όλα τα παράθυρα"
 
-#: Settings.ui.h:85
+#: Settings.ui.h:113
 msgid "Only focused application's windows"
 msgstr "Μόνο τα παράθυρα της εστιασμένης εφαρμογής"
 
-#: Settings.ui.h:86
+#: Settings.ui.h:114
 msgid "Only maximized windows"
 msgstr "Μόνο μεγιστοποιημένα παράθυρα"
 
-#: Settings.ui.h:87
+#: Settings.ui.h:115
+msgid "Always on top"
+msgstr ""
+
+#: Settings.ui.h:116
 msgid "Animation duration (s)"
 msgstr "Διάρκεια κίνησης γραφικών (s)"
 
-#: Settings.ui.h:88
-msgid "0.000"
-msgstr "0.000"
-
-#: Settings.ui.h:89
+#: Settings.ui.h:117
 msgid "Show timeout (s)"
 msgstr "Χρονικό όριο εμφάνισης"
 
-#: Settings.ui.h:90
+#: Settings.ui.h:118
 msgid "Pressure threshold"
 msgstr "Ελάχιστη πίεση"
+
+#~ msgid "Show a dot for each windows of the application."
+#~ msgstr "Εμφανίζει μία τελεία για κάθε παράθυρο της εφαρμογής."
+
+#~ msgid "Created by"
+#~ msgstr "Δημιουργήθηκε από"
+
+#~ msgid "0.000"
+#~ msgstr "0.000"

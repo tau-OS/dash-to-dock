@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-16 13:45+0200\n"
+"POT-Creation-Date: 2022-04-03 15:16-0700\n"
 "PO-Revision-Date: 2017-09-20 18:56+0200\n"
 "Last-Translator: Slobodan Terzić <Xabre@archlinux.info>\n"
 "Language-Team: \n"
@@ -16,108 +16,116 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.3\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: prefs.js:113
-msgid "Primary monitor"
+#. Translators: This will be followed by Display Name - Connector.
+#: prefs.js:374
+#, fuzzy
+msgid "Primary monitor: "
 msgstr "primarnom monitoru"
 
-#: prefs.js:122 prefs.js:129
+#. Translators: Followed by monitor index, Display Name - Connector.
+#: prefs.js:379
 msgid "Secondary monitor "
 msgstr "sekundarnom monitoru"
 
-#: prefs.js:154 Settings.ui.h:31
+#: prefs.js:417 Settings.ui.h:30
 msgid "Right"
 msgstr "desno"
 
-#: prefs.js:155 Settings.ui.h:28
+#: prefs.js:418 Settings.ui.h:27
 msgid "Left"
 msgstr "levo"
 
-#: prefs.js:205
+#: prefs.js:469
 msgid "Intelligent autohide customization"
 msgstr "Postavke inteligentnog automatskog sakrivanja"
 
-#: prefs.js:212 prefs.js:397 prefs.js:454
+#: prefs.js:477 prefs.js:714 prefs.js:772
 msgid "Reset to defaults"
 msgstr "Povrati osnovno"
 
-#: prefs.js:390
+#: prefs.js:706
 msgid "Show dock and application numbers"
 msgstr "Prikaži dok i brojeve programa"
 
-#: prefs.js:447
+#: prefs.js:764
 msgid "Customize middle-click behavior"
 msgstr "Prilagoćavanje ponašanja srednjeg klika"
 
-#: prefs.js:518
+#: prefs.js:849
 msgid "Customize running indicators"
 msgstr "Prilagođavanje indikatora pokrenutih"
 
-#: appIcons.js:1144
+#: prefs.js:964 Settings.ui.h:82
+msgid "Customize opacity"
+msgstr "Prilagoćavanje prozirnosti"
+
+#: appIcons.js:1003
 msgid "All Windows"
+msgstr "Svi prozori"
+
+#: appIcons.js:1150
+#, fuzzy, javascript-format
+msgid "Quit %d Windows"
 msgstr "Svi prozori"
 
 #. Translators: %s is "Settings", which is automatically translated. You
 #. can also translate the full message if this fits better your language.
-#: appIcons.js:1450
+#: appIcons.js:1362
 #, javascript-format
 msgid "Dash to Dock %s"
 msgstr "%s ploče/panela"
 
+#: locations.js:422
+msgid "Mount"
+msgstr ""
+
+#: locations.js:424
+msgid "Unmount"
+msgstr ""
+
+#: locations.js:426
+msgid "Eject"
+msgstr ""
+
+#: locations.js:484
+#, javascript-format
+msgid "Failed to mount “%s”"
+msgstr ""
+
+#: locations.js:487
+#, javascript-format
+msgid "Failed to umount “%s”"
+msgstr ""
+
+#: locations.js:490
+#, javascript-format
+msgid "Failed to eject “%s”"
+msgstr ""
+
+#: locations.js:502
+msgid "Mount operation already in progress"
+msgstr ""
+
+#: locations.js:505
+msgid "Umount operation already in progress"
+msgstr ""
+
+#: locations.js:508
+msgid "Eject operation already in progress"
+msgstr ""
+
+#: locations.js:582
+msgid "Trash"
+msgstr ""
+
+#: locations.js:618
+msgid "Empty Trash"
+msgstr ""
+
 #: Settings.ui.h:1
-msgid "Customize indicator style"
-msgstr "Prilagoćavanje stila indikatora"
-
-#: Settings.ui.h:2
-msgid "Color"
-msgstr "Boja"
-
-#: Settings.ui.h:3
-msgid "Border color"
-msgstr "Boja ivice"
-
-#: Settings.ui.h:4
-msgid "Border width"
-msgstr "Širina ivice"
-
-#: Settings.ui.h:5
-msgid "Number overlay"
-msgstr "Brojne nalepnice"
-
-#: Settings.ui.h:6
-msgid ""
-"Temporarily show the application numbers over the icons, corresponding to the "
-"shortcut."
-msgstr ""
-"Privremeno prikaži brojeve programa iznad ikonica, prema pripadajućoj prečici."
-
-#: Settings.ui.h:7
-msgid "Show the dock if it is hidden"
-msgstr "Prikaži dok ukoliko je sakriven"
-
-#: Settings.ui.h:8
-msgid ""
-"If using autohide, the dock will appear for a short time when triggering the "
-"shortcut."
-msgstr ""
-"Ukoliko se koristi automatsko sakrivanje, dok će se prikazati na trenutak pri "
-"okidanju prečice."
-
-#: Settings.ui.h:9
-msgid "Shortcut for the options above"
-msgstr "Prečica za gore navedene opcije"
-
-#: Settings.ui.h:10
-msgid "Syntax: <Shift>, <Ctrl>, <Alt>, <Super>"
-msgstr "Sintaksa: <Shift>, <Ctrl>, <Alt>, <Super>"
-
-#: Settings.ui.h:11
-msgid "Hide timeout (s)"
-msgstr "Zastoj skrivanja"
-
-#: Settings.ui.h:12
 msgid ""
 "When set to minimize, double clicking minimizes all the windows of the "
 "application."
@@ -125,75 +133,118 @@ msgstr ""
 "Kad je postavljeno na minimizovanje, dupli klik minimizuje sve prozore "
 "programa."
 
-#: Settings.ui.h:13
+#: Settings.ui.h:2
 msgid "Shift+Click action"
 msgstr "Radnja šift+klika"
 
-#: Settings.ui.h:14
+#: Settings.ui.h:3
 msgid "Raise window"
 msgstr "izdigni prozor"
 
-#: Settings.ui.h:15
+#: Settings.ui.h:4
 msgid "Minimize window"
 msgstr "minimizuj prozor"
 
-#: Settings.ui.h:16
+#: Settings.ui.h:5
 msgid "Launch new instance"
 msgstr "pokreni novi primerak"
 
-#: Settings.ui.h:17
+#: Settings.ui.h:6
 msgid "Cycle through windows"
 msgstr "kruženje kroz prozore"
 
-#: Settings.ui.h:18
+#: Settings.ui.h:7
 msgid "Minimize or overview"
 msgstr "minimiuj ili pregled"
 
-#: Settings.ui.h:19
+#: Settings.ui.h:8
 msgid "Show window previews"
 msgstr "prikaži sličice prozora"
 
-#: Settings.ui.h:20
+#: Settings.ui.h:9
+#, fuzzy
+msgid "Minimize or show previews"
+msgstr "minimiuj ili pregled"
+
+#: Settings.ui.h:10
+#, fuzzy
+msgid "Focus or show previews"
+msgstr "prikaži sličice prozora"
+
+#: Settings.ui.h:11
+#, fuzzy
+msgid "Focus, minimize or show previews"
+msgstr "minimiuj ili pregled"
+
+#: Settings.ui.h:12
 msgid "Quit"
 msgstr "napusti"
 
-#: Settings.ui.h:21
+#: Settings.ui.h:13
 msgid "Behavior for Middle-Click."
 msgstr "Ponašanje srednjeg klika."
 
-#: Settings.ui.h:22
+#: Settings.ui.h:14
 msgid "Middle-Click action"
 msgstr "Radnja srednjeg klika"
 
-#: Settings.ui.h:23
+#: Settings.ui.h:15
 msgid "Behavior for Shift+Middle-Click."
 msgstr "Ponašanje šift+srednjeg klika."
 
-#: Settings.ui.h:24
+#: Settings.ui.h:16
 msgid "Shift+Middle-Click action"
 msgstr "Radnja šift+srednjegklika"
 
-#: Settings.ui.h:25
+#: Settings.ui.h:17
+msgid "Enable Unity7 like glossy backlit items"
+msgstr "Uključi pozadinske efekte poput Unity7"
+
+#: Settings.ui.h:18
+msgid "Apply glossy effect."
+msgstr ""
+
+#: Settings.ui.h:19
+msgid "Use dominant color"
+msgstr ""
+
+#: Settings.ui.h:20
+msgid "Customize indicator style"
+msgstr "Prilagoćavanje stila indikatora"
+
+#: Settings.ui.h:21
+msgid "Color"
+msgstr "Boja"
+
+#: Settings.ui.h:22
+msgid "Border color"
+msgstr "Boja ivice"
+
+#: Settings.ui.h:23
+msgid "Border width"
+msgstr "Širina ivice"
+
+#: Settings.ui.h:24
 msgid "Show the dock on"
 msgstr "Prikaži dok na"
 
-#: Settings.ui.h:26
+#: Settings.ui.h:25
 msgid "Show on all monitors."
 msgstr "Prikaži na svim monitorima."
 
-#: Settings.ui.h:27
+#: Settings.ui.h:26
 msgid "Position on screen"
 msgstr "Pozicija na ekranu"
 
-#: Settings.ui.h:29
+#: Settings.ui.h:28
 msgid "Bottom"
 msgstr "dno"
 
-#: Settings.ui.h:30
+#: Settings.ui.h:29
 msgid "Top"
 msgstr "vrh"
 
-#: Settings.ui.h:32
+#: Settings.ui.h:31
 msgid ""
 "Hide the dock when it obstructs a window of the current application. More "
 "refined settings are available."
@@ -201,25 +252,29 @@ msgstr ""
 "Sakrij dok kada je na putu prozora trenutnog programa. Dostupne su finije "
 "postavke."
 
-#: Settings.ui.h:33
+#: Settings.ui.h:32
 msgid "Intelligent autohide"
 msgstr "Inteligentno automatsko sakrivanje"
 
-#: Settings.ui.h:34
+#: Settings.ui.h:33
 msgid "Dock size limit"
 msgstr "Ograničenje veličine doka"
 
-#: Settings.ui.h:35
+#: Settings.ui.h:34
 msgid "Panel mode: extend to the screen edge"
 msgstr "Režim panela: proširen do ivica ekrana"
 
-#: Settings.ui.h:36
+#: Settings.ui.h:35
 msgid "Icon size limit"
 msgstr "Ograničenje veličine ikonica"
 
-#: Settings.ui.h:37
+#: Settings.ui.h:36
 msgid "Fixed icon size: scroll to reveal other icons"
 msgstr "Ustaljena veličina ikonica: klizajte za druge ikone"
+
+#: Settings.ui.h:37
+msgid "Preview size scale"
+msgstr ""
 
 #: Settings.ui.h:38
 msgid "Position and size"
@@ -238,14 +293,23 @@ msgid "Isolate workspaces."
 msgstr "Izoluj radne prostore."
 
 #: Settings.ui.h:42
+#, fuzzy
+msgid "Show urgent windows despite current workspace."
+msgstr "Prikaži sličice otvorenih prozora."
+
+#: Settings.ui.h:43
 msgid "Isolate monitors."
 msgstr "Izoluj monitore."
 
-#: Settings.ui.h:43
+#: Settings.ui.h:44
 msgid "Show open windows previews."
 msgstr "Prikaži sličice otvorenih prozora."
 
-#: Settings.ui.h:44
+#: Settings.ui.h:45
+msgid "Keep the focused application always visible in the dash"
+msgstr ""
+
+#: Settings.ui.h:46
 msgid ""
 "If disabled, these settings are accessible from gnome-tweak-tool or the "
 "extension website."
@@ -253,23 +317,45 @@ msgstr ""
 "Ukoliko je onemogućeno, ove postavke su dostupne kroz alatku za lickanje ili "
 "veb sajt proširenja."
 
-#: Settings.ui.h:45
+#: Settings.ui.h:47
 msgid "Show <i>Applications</i> icon"
 msgstr "Prikaz ikonice <i>Prikaži programe</i>"
 
-#: Settings.ui.h:46
+#: Settings.ui.h:48
 msgid "Move the applications button at the beginning of the dock."
 msgstr "Pomeri dugme programa na početak doka."
 
-#: Settings.ui.h:47
+#: Settings.ui.h:49
 msgid "Animate <i>Show Applications</i>."
 msgstr "Animiraj prikaz programa."
 
-#: Settings.ui.h:48
+#: Settings.ui.h:50
+#, fuzzy
+msgid "Show trash can"
+msgstr "Prikaži dok na"
+
+#: Settings.ui.h:51
+#, fuzzy
+msgid "Show volumes and devices"
+msgstr "Prikaži sličice otvorenih prozora."
+
+#: Settings.ui.h:52
+msgid "Only if mounted"
+msgstr ""
+
+#: Settings.ui.h:53
+msgid "Include network volumes"
+msgstr ""
+
+#: Settings.ui.h:54
+msgid "Isolate volumes, devices and trash windows from file manager"
+msgstr ""
+
+#: Settings.ui.h:55
 msgid "Launchers"
 msgstr "Pokretači"
 
-#: Settings.ui.h:49
+#: Settings.ui.h:56
 msgid ""
 "Enable Super+(0-9) as shortcuts to activate apps. It can also be used "
 "together with Shift and Ctrl."
@@ -277,43 +363,43 @@ msgstr ""
 "Uključuje Super+(0-9) kao prečice za aktivaciju programa. Takođe je moguće "
 "koristiti uz shift i ctrl."
 
-#: Settings.ui.h:50
+#: Settings.ui.h:57
 msgid "Use keyboard shortcuts to activate apps"
 msgstr "Aktiviraj programe prečicama tastature"
 
-#: Settings.ui.h:51
+#: Settings.ui.h:58
 msgid "Behaviour when clicking on the icon of a running application."
 msgstr "Ponašanje pri kliku na pokrenuti program."
 
-#: Settings.ui.h:52
+#: Settings.ui.h:59
 msgid "Click action"
 msgstr "Radnja klika"
 
-#: Settings.ui.h:53
+#: Settings.ui.h:60
 msgid "Minimize"
 msgstr "minimizuj"
 
-#: Settings.ui.h:54
+#: Settings.ui.h:61
 msgid "Behaviour when scrolling on the icon of an application."
 msgstr "Ponašanje pri klizanju na ikonicu pokrenutog programa."
 
-#: Settings.ui.h:55
+#: Settings.ui.h:62
 msgid "Scroll action"
 msgstr "Radnja klizanja na ikonicu"
 
-#: Settings.ui.h:56
+#: Settings.ui.h:63
 msgid "Do nothing"
 msgstr "ništa"
 
-#: Settings.ui.h:57
+#: Settings.ui.h:64
 msgid "Switch workspace"
 msgstr "prebaci radni prostor"
 
-#: Settings.ui.h:58
+#: Settings.ui.h:65
 msgid "Behavior"
 msgstr "Ponašanje"
 
-#: Settings.ui.h:59
+#: Settings.ui.h:66
 msgid ""
 "Few customizations meant to integrate the dock with the default GNOME theme. "
 "Alternatively, specific options can be enabled below."
@@ -321,135 +407,230 @@ msgstr ""
 "Nekoliko postavki namenjenih ugrađivanju doka u osnovnu temu Gnoma. "
 "Alternativno, posebne postavke se mogu urediti ispod."
 
-#: Settings.ui.h:60
+#: Settings.ui.h:67
 msgid "Use built-in theme"
 msgstr "Koristi ugrađenu temu"
 
-#: Settings.ui.h:61
+#: Settings.ui.h:68
 msgid "Save space reducing padding and border radius."
 msgstr "Čuva prostor sužavanjem popune i opsega ivica."
 
-#: Settings.ui.h:62
+#: Settings.ui.h:69
 msgid "Shrink the dash"
 msgstr "Skupi ploču"
 
-#: Settings.ui.h:63
-msgid "Show a dot for each windows of the application."
-msgstr "Prikazuje tačku za svaki prozor programa."
-
-#: Settings.ui.h:64
-msgid "Show windows counter indicators"
+#: Settings.ui.h:70
+#, fuzzy
+msgid "Customize windows counter indicators"
 msgstr "Prikaz indikatora brojača prozora."
 
-#: Settings.ui.h:65
+#: Settings.ui.h:71
+msgid "Default"
+msgstr ""
+
+#: Settings.ui.h:72
+msgid "Dots"
+msgstr ""
+
+#: Settings.ui.h:73
+msgid "Squares"
+msgstr ""
+
+#: Settings.ui.h:74
+msgid "Dashes"
+msgstr ""
+
+#: Settings.ui.h:75
+msgid "Segmented"
+msgstr ""
+
+#: Settings.ui.h:76
+msgid "Solid"
+msgstr ""
+
+#: Settings.ui.h:77
+msgid "Ciliora"
+msgstr ""
+
+#: Settings.ui.h:78
+msgid "Metro"
+msgstr ""
+
+#: Settings.ui.h:79
 msgid "Set the background color for the dash."
 msgstr "Postavi pozadinsku boju ploče."
 
-#: Settings.ui.h:66
+#: Settings.ui.h:80
 msgid "Customize the dash color"
 msgstr "Prilagodi boju ploče"
 
-#: Settings.ui.h:67
+#: Settings.ui.h:81
 msgid "Tune the dash background opacity."
 msgstr "Prilagodi prozirnost pozadine ploče."
 
-#: Settings.ui.h:68
-msgid "Customize opacity"
-msgstr "Prilagoćavanje prozirnosti"
+#: Settings.ui.h:83
+msgid "Fixed"
+msgstr ""
 
-#: Settings.ui.h:69
+#: Settings.ui.h:84
+msgid "Dynamic"
+msgstr ""
+
+#: Settings.ui.h:85
 msgid "Opacity"
 msgstr "Prozirnost"
 
-#: Settings.ui.h:70
-msgid "Enable Unity7 like glossy backlit items"
-msgstr "Uključi pozadinske efekte poput Unity7"
-
-#: Settings.ui.h:71
-msgid "Force straight corner\n"
+#: Settings.ui.h:86
+#, fuzzy
+msgid "Force straight corner"
 msgstr "Nametni ravne uglove\n"
 
-#: Settings.ui.h:73
+#: Settings.ui.h:87
 msgid "Appearance"
 msgstr "Izgled"
 
-#: Settings.ui.h:74
+#: Settings.ui.h:88
 msgid "version: "
 msgstr "verzija: "
 
-#: Settings.ui.h:75
+#: Settings.ui.h:89
 msgid "Moves the dash out of the overview transforming it in a dock"
 msgstr "Pomera ploču iz globalnog prikaza, pretvarajući je u dok"
 
-#: Settings.ui.h:76
-msgid "Created by"
-msgstr "Napravi"
+#: Settings.ui.h:90
+msgid "Originally created by"
+msgstr ""
 
-#: Settings.ui.h:77
+#: Settings.ui.h:91
+msgid "Modified for tauOS"
+msgstr ""
+
+#: Settings.ui.h:92
 msgid "Webpage"
 msgstr "Veb stranica"
 
-#: Settings.ui.h:78
+#: Settings.ui.h:93
 msgid ""
 "<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
-"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
-"\">GNU General Public License, version 2 or later</a> for details.</span>"
+"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0."
+"html\">GNU General Public License, version 2 or later</a> for details.</span>"
 msgstr ""
 "<span size=\"small\">Ovaj program se dostavlja BEZ IKAKVIH GARANCIJA.\n"
-"Pogledajte <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
-"\">GNUovu Opštu Javnu licencu, verzija 2 ili kasnija</a>, za detalje.</span>"
+"Pogledajte <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0."
+"html\">GNUovu Opštu Javnu licencu, verzija 2 ili kasnija</a>, za detalje.</"
+"span>"
 
-#: Settings.ui.h:80
+#: Settings.ui.h:95
 msgid "About"
 msgstr "O programu"
 
-#: Settings.ui.h:81
+#: Settings.ui.h:96
+msgid "Customize minimum and maximum opacity values"
+msgstr ""
+
+#: Settings.ui.h:97
+#, fuzzy
+msgid "Minimum opacity"
+msgstr "Prilagoćavanje prozirnosti"
+
+#: Settings.ui.h:98
+#, fuzzy
+msgid "Maximum opacity"
+msgstr "Prilagoćavanje prozirnosti"
+
+#: Settings.ui.h:99
+msgid "Number overlay"
+msgstr "Brojne nalepnice"
+
+#: Settings.ui.h:100
+msgid ""
+"Temporarily show the application numbers over the icons, corresponding to "
+"the shortcut."
+msgstr ""
+"Privremeno prikaži brojeve programa iznad ikonica, prema pripadajućoj "
+"prečici."
+
+#: Settings.ui.h:101
+msgid "Show the dock if it is hidden"
+msgstr "Prikaži dok ukoliko je sakriven"
+
+#: Settings.ui.h:102
+msgid ""
+"If using autohide, the dock will appear for a short time when triggering the "
+"shortcut."
+msgstr ""
+"Ukoliko se koristi automatsko sakrivanje, dok će se prikazati na trenutak "
+"pri okidanju prečice."
+
+#: Settings.ui.h:103
+msgid "Shortcut for the options above"
+msgstr "Prečica za gore navedene opcije"
+
+#: Settings.ui.h:104
+msgid "Syntax: <Shift>, <Ctrl>, <Alt>, <Super>"
+msgstr "Sintaksa: <Shift>, <Ctrl>, <Alt>, <Super>"
+
+#: Settings.ui.h:105
+msgid "Hide timeout (s)"
+msgstr "Zastoj skrivanja"
+
+#: Settings.ui.h:106
 msgid "Show the dock by mouse hover on the screen edge."
 msgstr "Prikaži dok prelazom miša peko ivice ekrana."
 
-#: Settings.ui.h:82
+#: Settings.ui.h:107
 msgid "Autohide"
 msgstr "Automatsko sakrivanje"
 
-#: Settings.ui.h:83
+#: Settings.ui.h:108
 msgid "Push to show: require pressure to show the dock"
 msgstr "Prikaz pritiskom: zahteva pritisak za prikaz doka"
 
-#: Settings.ui.h:84
+#: Settings.ui.h:109
 msgid "Enable in fullscreen mode"
 msgstr "Omogući u celoekranskom režimu"
 
-#: Settings.ui.h:85
+#: Settings.ui.h:110
 msgid "Show the dock when it doesn't obstruct application windows."
 msgstr "Prikazuje dok kada nije na putu prozorima programa."
 
-#: Settings.ui.h:86
+#: Settings.ui.h:111
 msgid "Dodge windows"
 msgstr "Izbegavanje rozora"
 
-#: Settings.ui.h:87
+#: Settings.ui.h:112
 msgid "All windows"
 msgstr "Svi prozori"
 
-#: Settings.ui.h:88
+#: Settings.ui.h:113
 msgid "Only focused application's windows"
 msgstr "Samo prozor fokusiranog programa"
 
-#: Settings.ui.h:89
+#: Settings.ui.h:114
 msgid "Only maximized windows"
 msgstr "Samo maksimizovani prozori"
 
-#: Settings.ui.h:90
+#: Settings.ui.h:115
+msgid "Always on top"
+msgstr ""
+
+#: Settings.ui.h:116
 msgid "Animation duration (s)"
 msgstr "Trajanje(a) animacije"
 
-#: Settings.ui.h:91
+#: Settings.ui.h:117
 msgid "Show timeout (s)"
 msgstr "Zastoj prikazivanja"
 
-#: Settings.ui.h:92
+#: Settings.ui.h:118
 msgid "Pressure threshold"
 msgstr "Prag pritiska"
+
+#~ msgid "Show a dot for each windows of the application."
+#~ msgstr "Prikazuje tačku za svaki prozor programa."
+
+#~ msgid "Created by"
+#~ msgstr "Napravi"
 
 #~ msgid "0.000"
 #~ msgstr "0,000"
