@@ -1,0 +1,3 @@
+[org.gnome.shell.extensions.dash-to-dock]
+show-trash=false
+show-mounts=false

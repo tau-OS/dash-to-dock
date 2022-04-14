@@ -58,7 +58,9 @@ var AppIconIndicator = class DashToDock_AppIconIndicator {
 
         switch (runningIndicatorStyle) {
             case RunningIndicatorStyle.DEFAULT:
-                runningIndicator = new RunningIndicatorDefault(source);
+                // FIXME Using RunningIndicatorDots as it's close enough to RunningIndicatorDefault
+                // and RunningIndicatorDefault is broken
+                runningIndicator = new RunningIndicatorDots(source);
                 break;
 
             case RunningIndicatorStyle.DOTS:
