@@ -8,6 +8,7 @@ const GLib = imports.gi.GLib;
 const GObject = imports.gi.GObject;
 const Gtk = imports.gi.Gtk;
 const Gdk = imports.gi.Gdk;
+const Adw = imports.gi.Adw;
 const Signals = imports.signals;
 
 // Use __ () and N__() for the extension gettext domain, and reuse
@@ -204,20 +205,12 @@ var Settings = GObject.registerClass({
             this._builder.add_from_file('./Settings.ui');
         }
 
-        this.widget = new Gtk.ScrolledWindow({
-            hscrollbar_policy: Gtk.PolicyType.NEVER,
-            vscrollbar_policy: (SHELL_VERSION >= 42) ?
-                Gtk.PolicyType.NEVER : Gtk.PolicyType.AUTOMATIC,
-        });
-        this._notebook = this._builder.get_object('settings_notebook');
-        this.widget.set_child(this._notebook);
-
-        // Set a reasonable initial window height
-        this.widget.connect('realize', () => {
-            this.widget.get_root().set_size_request(-1, 850);
-            if (SHELL_VERSION >= 42)
-                this.widget.set_size_request(-1, 850);
-        });
+        // Settings Pages
+        this.general = this._builder.get_object('settings_general');
+        this.behaviour = this._builder.get_object('settings_behaviour');
+        this.apps = this._builder.get_object('settings_dock');
+        this.appearance = this._builder.get_object('settings_appearance');
+        this.about = this._builder.get_object('settings_about');
 
         // Timeout to delay the update of the settings
         this._dock_size_timeout = 0;
@@ -1078,21 +1071,21 @@ function init() {
     ExtensionUtils.initTranslations();
 }
 
-function buildPrefsWidget() {
+function fillPreferencesWindow(window) {
     let settings = new Settings();
-    let widget = settings.widget;
-    return widget;
+    
+    window.add(settings.general);
+    window.add(settings.behaviour);
+    window.add(settings.apps);
+    window.add(settings.appearance);
+    window.add(settings.about);
+
+    window.search_enabled = true;
+    window.set_default_size(720, 490);
 }
+
 
 if (!Me) {
     GLib.setenv('GSETTINGS_SCHEMA_DIR', './schemas', true);
     Gtk.init();
-
-    const loop = GLib.MainLoop.new(null, false);
-    const win = new Gtk.Window();
-    win.set_child(buildPrefsWidget());
-    win.connect('close-request', () => loop.quit());
-    win.present();
-
-    loop.run();
 }
