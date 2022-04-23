@@ -76,6 +76,7 @@ else
 endif
 
 install: install-local
+run: install-local
 
 install-local: _build
 	rm -rf $(INSTALLBASE)/$(INSTALLNAME)

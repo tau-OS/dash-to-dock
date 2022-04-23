@@ -471,7 +471,7 @@ var Settings = GObject.registerClass({
 
             let dialog = new Gtk.Dialog({
                 title: __('Intelligent autohide customization'),
-                transient_for: this.widget.get_root(),
+                
                 use_header_bar: true,
                 modal: true
             });
@@ -649,18 +649,6 @@ var Settings = GObject.registerClass({
             this._builder.get_object('show_network_volumes_check'),
             'active',
             Gio.SettingsBindFlags.DEFAULT);
-        this._settings.bind('isolate-locations',
-            this._builder.get_object('isolate_locations_switch'),
-            'active',
-            Gio.SettingsBindFlags.DEFAULT);
-        const isolateLocationsBindings = ['show_trash_switch', 'show_mounts_switch'];
-        const updateIsolateLocations = () => {
-            this._builder.get_object('isolate_locations_row').sensitive =
-                isolateLocationsBindings.some(s => this._builder.get_object(s).active);
-        };
-        updateIsolateLocations();
-        isolateLocationsBindings.forEach(s => this._builder.get_object(s).connect(
-            'notify::active', () => updateIsolateLocations()));
         this._settings.bind('show-show-apps-button',
             this._builder.get_object('show_applications_button_switch'),
             'active',
@@ -724,7 +712,7 @@ var Settings = GObject.registerClass({
 
             let dialog = new Gtk.Dialog({
                 title: __('Show dock and application numbers'),
-                transient_for: this.widget.get_root(),
+                
                 use_header_bar: true,
                 modal: true
             });
@@ -782,7 +770,7 @@ var Settings = GObject.registerClass({
 
             let dialog = new Gtk.Dialog({
                 title: __('Customize middle-click behavior'),
-                transient_for: this.widget.get_root(),
+                
                 use_header_bar: true,
                 modal: true
             });
@@ -867,7 +855,7 @@ var Settings = GObject.registerClass({
 
             let dialog = new Gtk.Dialog({
                 title: __('Customize running indicators'),
-                transient_for: this.widget.get_root(),
+                
                 use_header_bar: true,
                 modal: true
             });
@@ -884,9 +872,6 @@ var Settings = GObject.registerClass({
                 this._builder.get_object('dot_style_switch'),
                 'active',
                 Gio.SettingsBindFlags.DEFAULT);
-            this._settings.bind('custom-theme-customize-running-dots',
-                this._builder.get_object('dot_style_settings_box'),
-                'sensitive', Gio.SettingsBindFlags.DEFAULT);
 
             let rgba = new Gdk.RGBA();
             rgba.parse(this._settings.get_string('custom-theme-running-dots-color'));
@@ -982,7 +967,7 @@ var Settings = GObject.registerClass({
 
             let dialog = new Gtk.Dialog({
                 title: __('Customize opacity'),
-                transient_for: this.widget.get_root(),
+                
                 use_header_bar: true,
                 modal: true
             });
@@ -1080,8 +1065,8 @@ function fillPreferencesWindow(window) {
     window.add(settings.appearance);
     window.add(settings.about);
 
-    window.search_enabled = true;
-    window.set_default_size(720, 490);
+    window.search_enabled = false;
+    window.set_default_size(620, 700);
 }
 
 
