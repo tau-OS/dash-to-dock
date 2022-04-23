@@ -916,88 +916,99 @@
     <property name="title" translatable="yes">About</property>
     <property name="icon-name">help-about-symbolic</property>
     <child>
-      <object class="GtkBox" id="about">
-        <property name="visible">1</property>
+      <object class="GtkBox" id="box1">
         <property name="can_focus">0</property>
-        <property name="margin_top">24</property>
-        <property name="margin_bottom">24</property>
-        <property name="hexpand">1</property>
-        <property name="vexpand">1</property>
+        <property name="spacing">12</property>
+        <property name="margin_start">110</property>
+        <property name="margin_end">110</property>
+        <property name="margin_top">12</property>
+        <property name="margin_bottom">12</property>
         <property name="orientation">vertical</property>
-        <property name="spacing">24</property>
         <child>
-          <object class="GtkImage" id="logo">
-            <property name="can_focus">0</property>
-            <property name="file">./media/logo.svg</property>
-          </object>
-        </child>
-        <child>
-          <object class="GtkLabel" id="extension_name">
-            <property name="can_focus">0</property>
-            <property name="label">&lt;b&gt;Dash to Dock&lt;/b&gt;</property>
-            <property name="use_markup">1</property>
-          </object>
-        </child>
-        <child>
-          <object class="GtkBox" id="box1">
-            <property name="can_focus">0</property>
-            <property name="halign">center</property>
+          <object class="AdwStatusPage" id="status_page">
+            <property name="icon-name">./media/logo.svg</property>
+            <property name="title">Dash to Dock</property>
+            <property name="description" translatable="yes">Moves the dash out of the overview transforming it into a dock.</property>
+            <property name="vexpand">1</property>
             <child>
-              <object class="GtkLabel" id="extension_version_label">
-                <property name="can_focus">0</property>
-                <property name="halign">end</property>
-                <property name="label" translatable="yes">version: </property>
+              <object class="GtkListBox" id="extension_author">
+                <style>
+                  <class name="boxed-list"/>
+                </style>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title" translatable="yes">Version</property>
+                    <child type="suffix">
+                      <object class="GtkBox" id="box888">
+                        <property name="can_focus">0</property>
+                        <property name="valign">center</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkLabel" id="extension_version">
+                            <property name="can_focus">0</property>
+                            <property name="label">...</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="extension_version_mod">
+                            <property name="can_focus">0</property>
+                            <property name="label">Modified for tauOS</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title" translatable="yes">Original Author</property>
+                    <child type="suffix">
+                      <object class="GtkBox" id="box666">
+                        <property name="can_focus">0</property>
+                        <property name="valign">center</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkLabel" id="extension_author_name">
+                            <property name="can_focus">0</property>
+                            <property name="use_markup">1</property>
+                            <property name="halign">end</property>
+                            <property name="label">Michele (&lt;a href="mailto:micxgx@gmail.com"&gt;micxgx@gmail.com&lt;/a&gt;)</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title" translatable="yes">Authors</property>
+                    <child type="suffix">
+                      <object class="GtkBox" id="box0">
+                        <property name="can_focus">0</property>
+                        <property name="valign">center</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkLabel" id="extension_mod_name1">
+                            <property name="can_focus">0</property>
+                            <property name="use_markup">1</property>
+                            <property name="halign">end</property>
+                            <property name="label">Jamie Murphy (&lt;a href="mailto:jamie@fyralabs.com"&gt;jamie@fyralabs.com&lt;/a&gt;)</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="extension_mod_name2">
+                            <property name="can_focus">0</property>
+                            <property name="use_markup">1</property>
+                            <property name="halign">end</property>
+                            <property name="label">Lains (&lt;a href="mailto:lainsce@airmail.cc"&gt;lainsce@airmail.cc&lt;/a&gt;)</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
               </object>
             </child>
-            <child>
-              <object class="GtkLabel" id="extension_version">
-                <property name="can_focus">0</property>
-                <property name="halign">start</property>
-                <property name="label">...</property>
-              </object>
-            </child>
-          </object>
-        </child>
-        <child>
-          <object class="GtkLabel" id="extension_description">
-            <property name="can_focus">0</property>
-            <property name="label" translatable="yes">Moves the dash out of the overview transforming it in a dock</property>
-            <property name="justify">center</property>
-            <property name="wrap">1</property>
-          </object>
-        </child>
-        <child>
-          <object class="GtkBox" id="box10">
-            <property name="can_focus">0</property>
-            <property name="halign">center</property>
-            <property name="spacing">6</property>
-            <property name="orientation">vertical</property>
-            <child>
-              <object class="GtkLabel" id="label15">
-                <property name="can_focus">0</property>
-                <property name="label" translatable="yes">Originally created by:</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkLabel" id="label16">
-                <property name="label">Michele (&lt;a href="mailto:micxgx@gmail.com"&gt;micxgx@gmail.com&lt;/a&gt;)</property>
-                <property name="use_markup">1</property>
-              </object>
-            </child>
-          </object>
-        </child>
-        <child>
-          <object class="GtkLabel" id="label17">
-            <property name="can_focus">0</property>
-            <property name="label" translatable="yes">Modified for tauOS</property>
-          </object>
-        </child>
-        <child>
-          <object class="GtkLinkButton" id="homepage_link">
-            <property name="label" translatable="yes">Webpage</property>
-            <property name="receives_default">1</property>
-            <property name="halign">center</property>
-            <property name="uri">https://micheleg.github.io/dash-to-dock/</property>
           </object>
         </child>
         <child>
