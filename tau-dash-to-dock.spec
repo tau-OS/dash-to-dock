@@ -10,7 +10,8 @@ URL:            https://micheleg.github.io/dash-to-dock
 Source0:        %{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  gettext
-BuildRequires:  make
+BuildRequires:  meson
+BuildRequires:  ninja
 BuildRequires:  sassc
 BuildRequires:  %{_bindir}/glib-compile-schemas
 
@@ -28,16 +29,20 @@ Features modifications for tauOS.
 %setup -q
 
 %build
-%make_build
+%meson
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 # Cleanup crap.
 %{__rm} -fr %{buildroot}%{extdir}/{COPYING*,README*,locale,schemas}
 
 # Create manifest for i18n.
 %find_lang %{name} --all-name
+
+%check
+%meson_test
 
 %files -f %{name}.lang
 %license COPYING
