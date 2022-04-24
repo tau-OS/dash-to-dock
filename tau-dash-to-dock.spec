@@ -4,7 +4,7 @@ Summary:        Dock for the GNOME Shell by micxgx@gmail.com, modified for tauOS
 Name:           tau-dash-to-dock
 # This should match the version in metadata.json
 Version:        72
-Release:        0.1
+Release:        1
 License:        GPLv2+
 URL:            https://micheleg.github.io/dash-to-dock
 Source0:        %{name}-%{version}.tar.gz
@@ -46,8 +46,9 @@ Features modifications for tauOS.
 %{_datadir}/glib-2.0/schemas/*gschema.*
 
 %changelog
-* Sat Apr 23 2022 Jamie Murphy <jamie@fyralabs.com> - 72-0.1
-- Update Settings
+* Sat Apr 23 2022 Jamie Murphy <jamie@fyralabs.com> - 72-1
+- Update Settings (Thanks @lainsce)
+- General improvements
 
 * Thu Apr 14 2022 Jamie Murphy <jamie@fyralabs.com> - 71-1.1
 - Remove RunningIndicatorDefault due to bugs
