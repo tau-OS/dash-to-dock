@@ -18,10 +18,6 @@ INSTALLNAME = dash-to-dock@tauos.co
 
 NAME = tau-dash-to-dock
 
-RPM_VERSION := $(shell awk '/Version:/ { print $$2 }' $(NAME).spec)
-RELEASE := $(shell awk '/Release:/ { print $$2 }' $(NAME).spec | sed 's|%{?dist}||g')
-TAG=$(NAME)-$(RPM_VERSION)
-
 # The command line passed variable VERSION is used to set the version string
 # in the metadata and in the generated zip-file. If no VERSION is passed, the
 # current commit SHA1 is used as version number in the metadata while the
@@ -97,16 +93,6 @@ zip-file: _build
 	zip -qr "$(UUID)$(VSTRING).zip" .
 	mv _build/$(UUID)$(VSTRING).zip ./
 	-rm -fR _build
-
-tag:
-	@git tag -a -f -m "Tag as $(TAG)" -f $(TAG)
-	@echo "Tagged as $(TAG)"
-
-archive: tag
-	@git archive --format=tar --prefix=$(TAG)/ HEAD > $(TAG).tar
-	@gzip -f $(TAG).tar
-	@echo "$(TAG).tar.gz created" 
-	@sha1sum $(TAG).tar.gz > $(TAG).sha1sum
 
 _build:
 	-rm -fR ./_build
