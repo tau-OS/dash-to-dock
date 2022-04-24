@@ -4,14 +4,13 @@ Summary:        Dock for the GNOME Shell by micxgx@gmail.com, modified for tauOS
 Name:           tau-dash-to-dock
 # This should match the version in metadata.json
 Version:        72
-Release:        1
+Release:        2
 License:        GPLv2+
 URL:            https://micheleg.github.io/dash-to-dock
 Source0:        %{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  gettext
 BuildRequires:  meson
-BuildRequires:  ninja
 BuildRequires:  sassc
 BuildRequires:  %{_bindir}/glib-compile-schemas
 
@@ -51,6 +50,9 @@ Features modifications for tauOS.
 %{_datadir}/glib-2.0/schemas/*gschema.*
 
 %changelog
+* Sat Apr 23 2022 Jamie Murphy <jamie@fyralabs.com> - 72-2
+- Change to Meson
+
 * Sat Apr 23 2022 Jamie Murphy <jamie@fyralabs.com> - 72-1
 - Update Settings (Thanks @lainsce)
 - General improvements
