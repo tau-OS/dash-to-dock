@@ -16,25 +16,20 @@ The extension can be installed directly from source, either for the convenience 
 
 ### Build Dependencies
 
-To compile the stylesheet you'll need an implementation of SASS. Dash to Dock supports `dart-sass` (`sass`), `sassc`, and `ruby-sass`. Every distro should have at least one of these implementations, we recommend using `dart-sass` (`sass`) or `sassc` over `ruby-sass` as `ruby-sass` is deprecated.
-
-By default, Dash to Dock will attempt to build with `sassc`. To change this behavior set the `SASS` environment variable to either `dart` or `ruby`.
-
-```bash
-export SASS=dart
-# or...
-export SASS=ruby
-```
+To compile the stylesheet you'll need `sassc`.
 
 ### Building
 
-Clone the repository or download the branch from github. A simple Makefile is included.
+Clone the repository or download the branch from github.
 
-Next use `make` to install the extension into your home directory. A Shell reload is required `Alt+F2 r Enter` under Xorg or under Wayland you may have to logout and login. The extension has to be enabled  with *gnome-extensions-app* (GNOME Extensions) or with *dconf*.
+To enable the extension, a shell reload is required `Alt+F2 r Enter` under Xorg or under Wayland you may have to logout and login. The extension has to be enabled  with *gnome-extensions-app* (GNOME Extensions) or with *dconf*.
 
-```bash
+```sh
 git clone https://github.com/tau-OS/dash-to-dock.git
-make -C dash-to-dock install
+# To install the extension locally, use ~/.local
+meson build --prefix=/usr
+cd build
+ninja && ninja install
 ```
 
 ## Bug Reporting
