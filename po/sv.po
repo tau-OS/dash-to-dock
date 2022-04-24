@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-03 15:16-0700\n"
+"POT-Creation-Date: 2022-04-23 19:15-0700\n"
 "PO-Revision-Date: 2021-11-07 13:19+0100\n"
 "Last-Translator: Morgan Antonsson <morgan.antonsson@gmail.com>\n"
 "Language-Team: \n"
@@ -19,59 +19,63 @@ msgstr ""
 "X-Generator: Poedit 3.0\n"
 
 #. Translators: This will be followed by Display Name - Connector.
-#: prefs.js:374
+#: prefs.js:372
 msgid "Primary monitor: "
 msgstr "Primär skärm: "
 
 #. Translators: Followed by monitor index, Display Name - Connector.
-#: prefs.js:379
+#: prefs.js:378
 msgid "Secondary monitor "
 msgstr "Sekundär skärm "
 
-#: prefs.js:417 Settings.ui.h:30
+#: prefs.js:421 Settings.ui.h:31
 msgid "Right"
 msgstr "Höger"
 
-#: prefs.js:418 Settings.ui.h:27
+#: prefs.js:422 Settings.ui.h:28
 msgid "Left"
 msgstr "Vänster"
 
-#: prefs.js:469
+#: prefs.js:473
 msgid "Intelligent autohide customization"
 msgstr "Anpassning av intelligent automatiskt döljande"
 
-#: prefs.js:477 prefs.js:714 prefs.js:772
+#: prefs.js:481 prefs.js:722 prefs.js:780
 msgid "Reset to defaults"
 msgstr "Återställ till standardvärden"
 
-#: prefs.js:706
+#: prefs.js:608
+msgid "Managed by GNOME Multitasking's Application Switching setting"
+msgstr ""
+
+#: prefs.js:714
 msgid "Show dock and application numbers"
 msgstr "Visa docka och programnummer"
 
-#: prefs.js:764
+#: prefs.js:772
 msgid "Customize middle-click behavior"
 msgstr "Anpassa mellanklicksbeteende"
 
-#: prefs.js:849
+#: prefs.js:857
 msgid "Customize running indicators"
 msgstr "Anpassa körningsindikatorer"
 
-#: prefs.js:964 Settings.ui.h:82
+#: prefs.js:969
 msgid "Customize opacity"
 msgstr "Anpassa opacitet"
 
-#: appIcons.js:1003
+#: appIcons.js:970 Settings.ui.h:111
 msgid "All Windows"
 msgstr "Alla fönster"
 
-#: appIcons.js:1150
+#: appIcons.js:1114
 #, javascript-format
 msgid "Quit %d Windows"
 msgstr "Stäng %d fönster"
 
 #. Translators: %s is "Settings", which is automatically translated. You
 #. can also translate the full message if this fits better your language.
-#: appIcons.js:1362
+#: appIcons.js:1329
 #, javascript-format
 msgid "Dash to Dock %s"
 msgstr "%s för Dash to Dock"
@@ -119,21 +123,22 @@ msgstr ""
 msgid "Trash"
 msgstr "Papperskorg"
 
-#: locations.js:618
+#: locations.js:622
 msgid "Empty Trash"
 msgstr "Töm papperskorgen"
 
 #: Settings.ui.h:1
+#, fuzzy
+msgid "Shift+Click Action"
+msgstr "Skift+klick-åtgärd"
+
+#: Settings.ui.h:2
+#, fuzzy
 msgid ""
-"When set to minimize, double clicking minimizes all the windows of the "
-"application."
+"If set to Minimize window, double clicking minimizes all windows of one app."
 msgstr ""
 "Då inställd till minimera så minimerar dubbelklick alla fönster för "
 "programmet."
-
-#: Settings.ui.h:2
-msgid "Shift+Click action"
-msgstr "Skift+klick-åtgärd"
 
 #: Settings.ui.h:3
 msgid "Raise window"
@@ -176,331 +181,366 @@ msgid "Quit"
 msgstr "Avsluta"
 
 #: Settings.ui.h:13
+#, fuzzy
+msgid "Middle-Click Action"
+msgstr "Åtgärd för mellanklick"
+
+#: Settings.ui.h:14
 msgid "Behavior for Middle-Click."
 msgstr "Beteende för mellanklick."
 
-#: Settings.ui.h:14
-msgid "Middle-Click action"
-msgstr "Åtgärd för mellanklick"
-
 #: Settings.ui.h:15
+#, fuzzy
+msgid "Shift+Middle-Click Action"
+msgstr "Åtgärd för skift+mellanklick"
+
+#: Settings.ui.h:16
 msgid "Behavior for Shift+Middle-Click."
 msgstr "Beteende för skift+mellanklick."
 
-#: Settings.ui.h:16
-msgid "Shift+Middle-Click action"
-msgstr "Åtgärd för skift+mellanklick"
-
 #: Settings.ui.h:17
-msgid "Enable Unity7 like glossy backlit items"
+#, fuzzy
+msgid "Enable Unity 7-like Backlit Items"
 msgstr "Aktivera bakgrundsbelysta blanka knappar"
 
 #: Settings.ui.h:18
-msgid "Apply glossy effect."
+msgid "Glossy"
 msgstr ""
 
 #: Settings.ui.h:19
-msgid "Use dominant color"
+#, fuzzy
+msgid "Use Dominant Color"
 msgstr "Använd dominerande färg"
 
 #: Settings.ui.h:20
-msgid "Customize indicator style"
+#, fuzzy
+msgid "Customize Indicator Style"
 msgstr "Anpassa indikatorstil"
 
 #: Settings.ui.h:21
-msgid "Color"
+#, fuzzy
+msgid "Fill Color"
 msgstr "Färg"
 
 #: Settings.ui.h:22
-msgid "Border color"
+#, fuzzy
+msgid "Border Color"
 msgstr "Kantfärg"
 
 #: Settings.ui.h:23
-msgid "Border width"
+#, fuzzy
+msgid "Border Width"
 msgstr "Kantbredd"
 
 #: Settings.ui.h:24
-msgid "Show the dock on"
-msgstr "Visa dockan på"
+msgid "General"
+msgstr ""
 
 #: Settings.ui.h:25
-msgid "Show on all monitors."
-msgstr "Visa på alla skärmar."
+#, fuzzy
+msgid "Show Dock On"
+msgstr "Visa dockan på"
 
 #: Settings.ui.h:26
-msgid "Position on screen"
-msgstr "Position på skärmen"
+#, fuzzy
+msgid "All Monitors"
+msgstr "Visa endast skärmens fönster."
 
-#: Settings.ui.h:28
+#: Settings.ui.h:27
+msgid "Screen Position"
+msgstr ""
+
+#: Settings.ui.h:29
 msgid "Bottom"
 msgstr "Nederkant"
 
-#: Settings.ui.h:29
+#: Settings.ui.h:30
 msgid "Top"
 msgstr "Överkant"
 
-#: Settings.ui.h:31
-msgid ""
-"Hide the dock when it obstructs a window of the current application. More "
-"refined settings are available."
+#: Settings.ui.h:32
+#, fuzzy
+msgid "Intelligent Hiding"
+msgstr "Intelligent automatiskt döljande"
+
+#: Settings.ui.h:33
+#, fuzzy
+msgid "Hide the dock when a window is below it. More adjustments when enabled."
 msgstr ""
 "Dölj dockan då den är i vägen för ett fönster för det aktuella programmet. "
 "Mer förfinade inställningar finns tillgängliga."
 
-#: Settings.ui.h:32
-msgid "Intelligent autohide"
-msgstr "Intelligent automatiskt döljande"
-
-#: Settings.ui.h:33
-msgid "Dock size limit"
+#: Settings.ui.h:34
+#, fuzzy
+msgid "Dock Size"
 msgstr "Storleksgräns för docka"
 
-#: Settings.ui.h:34
-msgid "Panel mode: extend to the screen edge"
-msgstr "Panelläge: sträck ut till skärmkanten"
-
 #: Settings.ui.h:35
-msgid "Icon size limit"
-msgstr "Storleksgräns för ikoner"
+msgid "Panel Mode"
+msgstr ""
 
 #: Settings.ui.h:36
-msgid "Fixed icon size: scroll to reveal other icons"
-msgstr "Fast ikonstorlek: rulla för att visa dolda ikoner"
+#, fuzzy
+msgid "Icon Size"
+msgstr "Storleksgräns för ikoner"
 
 #: Settings.ui.h:37
-msgid "Preview size scale"
-msgstr "Förhandsgranskningens skalning"
+#, fuzzy
+msgid "Fixed Size (Scroll to see more icons.)"
+msgstr "Fast ikonstorlek: rulla för att visa dolda ikoner"
 
 #: Settings.ui.h:38
-msgid "Position and size"
-msgstr "Position och storlek"
+#, fuzzy
+msgid "Window Preview Size Scale"
+msgstr "Förhandsgranskningens skalning"
 
 #: Settings.ui.h:39
-msgid "Show favorite applications"
-msgstr "Visa favoritprogram"
+msgid "Apps"
+msgstr ""
 
 #: Settings.ui.h:40
-msgid "Show running applications"
-msgstr "Visa körande program"
+#, fuzzy
+msgid "Show Favorites"
+msgstr "Visa favoritprogram"
 
 #: Settings.ui.h:41
-msgid "Isolate workspaces."
-msgstr "Visa endast arbetsytans fönster."
+#, fuzzy
+msgid "Show Running Apps"
+msgstr "Visa körande program"
 
 #: Settings.ui.h:42
 #, fuzzy
-msgid "Show urgent windows despite current workspace."
-msgstr "Visa förhandsgranskningar av öppna fönster."
+msgid "Isolate Workspaces"
+msgstr "Visa endast arbetsytans fönster."
 
 #: Settings.ui.h:43
-msgid "Isolate monitors."
+#, fuzzy
+msgid "Isolate Monitors"
 msgstr "Visa endast skärmens fönster."
 
 #: Settings.ui.h:44
-msgid "Show open windows previews."
-msgstr "Visa förhandsgranskningar av öppna fönster."
+#, fuzzy
+msgid "Show Urgent Windows"
+msgstr "Undvik fönster"
 
 #: Settings.ui.h:45
-msgid "Keep the focused application always visible in the dash"
-msgstr "Visa alltid den fokuserade applikationen i snabbstartspanelen"
+#, fuzzy
+msgid "Show Window Previews"
+msgstr "Visa förhandsgranskningar av fönster"
 
 #: Settings.ui.h:46
-msgid ""
-"If disabled, these settings are accessible from gnome-tweak-tool or the "
-"extension website."
+msgid "Focused Apps Always Visible"
+msgstr ""
+
+#: Settings.ui.h:47
+#, fuzzy
+msgid "Show <i>Apps</i> Icon"
+msgstr "Visa <i>Program</i>-ikon"
+
+#: Settings.ui.h:48
+#, fuzzy
+msgid "If disabled, these settings are accessible from gnome-tweak-tool."
 msgstr ""
 "Om inaktiverad är dessa inställningar tillgängliga från justeringsverktyg "
 "eller webbplatsen för utökningar."
 
-#: Settings.ui.h:47
-msgid "Show <i>Applications</i> icon"
-msgstr "Visa <i>Program</i>-ikon"
-
-#: Settings.ui.h:48
-msgid "Move the applications button at the beginning of the dock."
-msgstr "Flytta programknappen till början av dockan."
-
 #: Settings.ui.h:49
-msgid "Animate <i>Show Applications</i>."
-msgstr "Animera <i>Visa program</i>."
+msgid "Move Apps Icon As First Icon"
+msgstr ""
 
 #: Settings.ui.h:50
-msgid "Show trash can"
-msgstr "Visa papperskorgen"
+msgid "Animate Opening Apps Grid"
+msgstr ""
 
 #: Settings.ui.h:51
 #, fuzzy
-msgid "Show volumes and devices"
-msgstr "Visa monterade volymer och enheter"
+msgid "Show Trash Icon"
+msgstr "Visa papperskorgen"
 
 #: Settings.ui.h:52
-msgid "Only if mounted"
-msgstr ""
+#, fuzzy
+msgid "Show Devices"
+msgstr "Visa förhandsgranskningar av fönster"
 
 #: Settings.ui.h:53
-msgid "Include network volumes"
+msgid "Mounted Only"
 msgstr ""
 
 #: Settings.ui.h:54
-msgid "Isolate volumes, devices and trash windows from file manager"
-msgstr "Isolera volymer, enheter och papperskorgen från filhanteraren"
+msgid "Include Network Devices"
+msgstr ""
 
 #: Settings.ui.h:55
-msgid "Launchers"
-msgstr "Programstartare"
+#, fuzzy
+msgid "Isolate Windows From File Manager"
+msgstr "Isolera volymer, enheter och papperskorgen från filhanteraren"
 
 #: Settings.ui.h:56
-msgid ""
-"Enable Super+(0-9) as shortcuts to activate apps. It can also be used "
-"together with Shift and Ctrl."
+#, fuzzy
+msgid "Behaviour"
+msgstr "Beteende"
+
+#: Settings.ui.h:57
+#, fuzzy
+msgid "Keyboard Shortcuts To Activate Apps"
+msgstr "Använd tangentbordsgenvägar för att aktivera program"
+
+#: Settings.ui.h:58
+#, fuzzy
+msgid "Enable Super+(0-9) to activate apps. Shift and Ctrl also can be used."
 msgstr ""
 "Använd Super+(0-9) som tangentbordsgenvägar för att aktivera program. De kan "
 "även användas tillsammans med skift- och ctrl-tangenterna."
 
-#: Settings.ui.h:57
-msgid "Use keyboard shortcuts to activate apps"
-msgstr "Använd tangentbordsgenvägar för att aktivera program"
-
-#: Settings.ui.h:58
-msgid "Behaviour when clicking on the icon of a running application."
-msgstr "Beteende då ikonen för ett körande program klickas."
-
 #: Settings.ui.h:59
-msgid "Click action"
+#, fuzzy
+msgid "Click Action"
 msgstr "Klickåtgärd"
 
 #: Settings.ui.h:60
+#, fuzzy
+msgid "Behaviour when clicking on a running app icon."
+msgstr "Beteende då ikonen för ett körande program klickas."
+
+#: Settings.ui.h:61
 msgid "Minimize"
 msgstr "Minimera"
 
-#: Settings.ui.h:61
-msgid "Behaviour when scrolling on the icon of an application."
-msgstr "Beteende vid rullning över programikon."
-
 #: Settings.ui.h:62
-msgid "Scroll action"
+#, fuzzy
+msgid "Scroll Action"
 msgstr "Rullåtgärd"
 
 #: Settings.ui.h:63
+#, fuzzy
+msgid "Behaviour when scrolling on an app icon."
+msgstr "Beteende vid rullning över programikon."
+
+#: Settings.ui.h:64
 msgid "Do nothing"
 msgstr "Gör ingenting"
 
-#: Settings.ui.h:64
+#: Settings.ui.h:65
 msgid "Switch workspace"
 msgstr "Byt arbetsyta"
 
-#: Settings.ui.h:65
-msgid "Behavior"
-msgstr "Beteende"
-
 #: Settings.ui.h:66
-msgid ""
-"Few customizations meant to integrate the dock with the default GNOME theme. "
-"Alternatively, specific options can be enabled below."
-msgstr ""
-"Några anpassningar för att integrera dockan med GNOME:s standardtema. "
-"Alternativt kan specifika alternativ aktiveras nedan."
-
-#: Settings.ui.h:67
-msgid "Use built-in theme"
-msgstr "Använd inbyggt tema"
-
-#: Settings.ui.h:68
-msgid "Save space reducing padding and border radius."
-msgstr "Spara utrymme genom att minska utfyllnad och kantradie."
-
-#: Settings.ui.h:69
-msgid "Shrink the dash"
-msgstr "Krymp snabbstartspanelen"
-
-#: Settings.ui.h:70
-msgid "Customize windows counter indicators"
-msgstr "Anpassa räknare för öppna fönster"
-
-#: Settings.ui.h:71
-msgid "Default"
-msgstr "Standard"
-
-#: Settings.ui.h:72
-msgid "Dots"
-msgstr "Prickar"
-
-#: Settings.ui.h:73
-msgid "Squares"
-msgstr "Kvadrater"
-
-#: Settings.ui.h:74
-msgid "Dashes"
-msgstr "Streck"
-
-#: Settings.ui.h:75
-msgid "Segmented"
-msgstr "Segment"
-
-#: Settings.ui.h:76
-msgid "Solid"
-msgstr "Solid"
-
-#: Settings.ui.h:77
-msgid "Ciliora"
-msgstr "Ciliora"
-
-#: Settings.ui.h:78
-msgid "Metro"
-msgstr "Metro"
-
-#: Settings.ui.h:79
-msgid "Set the background color for the dash."
-msgstr "Ställ in bakgrundsfärg för snabbstartspanelen."
-
-#: Settings.ui.h:80
-msgid "Customize the dash color"
-msgstr "Anpassa färgen för snabbstartspanelen"
-
-#: Settings.ui.h:81
-msgid "Tune the dash background opacity."
-msgstr "Justera opacitet för bakgrunden till snabbstartspanelen."
-
-#: Settings.ui.h:83
-msgid "Fixed"
-msgstr "Fast"
-
-#: Settings.ui.h:84
-msgid "Dynamic"
-msgstr "Dynamisk"
-
-#: Settings.ui.h:85
-msgid "Opacity"
-msgstr "Opacitet"
-
-#: Settings.ui.h:86
-msgid "Force straight corner"
-msgstr "Tvinga räta hörn"
-
-#: Settings.ui.h:87
 msgid "Appearance"
 msgstr "Utseende"
 
+#: Settings.ui.h:67
+#, fuzzy
+msgid "Built-in Theme"
+msgstr "Använd inbyggt tema"
+
+#: Settings.ui.h:68
+msgid "Integrates the dock with the default GNOME theme."
+msgstr ""
+
+#: Settings.ui.h:69
+msgid "Shrink Dock"
+msgstr ""
+
+#: Settings.ui.h:70
+msgid "Save space reducing padding and border radius."
+msgstr "Spara utrymme genom att minska utfyllnad och kantradie."
+
+#: Settings.ui.h:71
+#, fuzzy
+msgid "Customize Indicators"
+msgstr "Anpassa indikatorstil"
+
+#: Settings.ui.h:72
+msgid "Default"
+msgstr "Standard"
+
+#: Settings.ui.h:73
+msgid "Dots"
+msgstr "Prickar"
+
+#: Settings.ui.h:74
+msgid "Squares"
+msgstr "Kvadrater"
+
+#: Settings.ui.h:75
+msgid "Dashes"
+msgstr "Streck"
+
+#: Settings.ui.h:76
+msgid "Segmented"
+msgstr "Segment"
+
+#: Settings.ui.h:77
+msgid "Solid"
+msgstr "Solid"
+
+#: Settings.ui.h:78
+msgid "Ciliora"
+msgstr "Ciliora"
+
+#: Settings.ui.h:79
+msgid "Metro"
+msgstr "Metro"
+
+#: Settings.ui.h:80
+#, fuzzy
+msgid "Dock Color"
+msgstr "Färg"
+
+#: Settings.ui.h:81
+#, fuzzy
+msgid "Set the dock background color."
+msgstr "Ställ in bakgrundsfärg för snabbstartspanelen."
+
+#: Settings.ui.h:82
+#, fuzzy
+msgid "Dock Opacity"
+msgstr "Opacitet"
+
+#: Settings.ui.h:83
+#, fuzzy
+msgid "Set the dock background opacity."
+msgstr "Justera opacitet för bakgrunden till snabbstartspanelen."
+
+#: Settings.ui.h:84
+msgid "Fixed"
+msgstr "Fast"
+
+#: Settings.ui.h:85
+msgid "Dynamic"
+msgstr "Dynamisk"
+
+#: Settings.ui.h:86
+#, fuzzy
+msgid "Squared Corners"
+msgstr "Kvadrater"
+
+#: Settings.ui.h:87
+msgid "Show Overview On Logon"
+msgstr ""
+
 #: Settings.ui.h:88
-msgid "version: "
-msgstr "version: "
+msgid "About"
+msgstr "Om"
 
 #: Settings.ui.h:89
-msgid "Moves the dash out of the overview transforming it in a dock"
+#, fuzzy
+msgid "Moves the dash out of the overview transforming it into a dock."
 msgstr ""
 "Flyttar snabbstartspanelen från översiktsvyn och förvandlar den till en docka"
 
 #: Settings.ui.h:90
-msgid "Originally created by"
-msgstr ""
+#, fuzzy
+msgid "Version"
+msgstr "version: "
 
 #: Settings.ui.h:91
-msgid "Modified for tauOS"
+msgid "Original Author"
 msgstr ""
 
 #: Settings.ui.h:92
-msgid "Webpage"
-msgstr "Webbsida"
+msgid "Authors"
+msgstr ""
 
 #: Settings.ui.h:93
 msgid ""
@@ -513,99 +553,107 @@ msgstr ""
 "General Public License, version 2 eller senare</a> för detaljer.</span>"
 
 #: Settings.ui.h:95
-msgid "About"
-msgstr "Om"
+#, fuzzy
+msgid "Customize Opacity"
+msgstr "Anpassa opacitet"
 
 #: Settings.ui.h:96
-msgid "Customize minimum and maximum opacity values"
-msgstr "Anpassa minsta och högsta värden för opacitet"
-
-#: Settings.ui.h:97
-msgid "Minimum opacity"
+#, fuzzy
+msgid "Minimum Opacity"
 msgstr "Minsta opacitet"
 
-#: Settings.ui.h:98
-msgid "Maximum opacity"
+#: Settings.ui.h:97
+#, fuzzy
+msgid "Maximum Opacity"
 msgstr "Högsta opacitet"
 
-#: Settings.ui.h:99
-msgid "Number overlay"
+#: Settings.ui.h:98
+#, fuzzy
+msgid "Number Overlay"
 msgstr "Nummermarkeringar"
 
-#: Settings.ui.h:100
+#: Settings.ui.h:99
+#, fuzzy
 msgid ""
-"Temporarily show the application numbers over the icons, corresponding to "
-"the shortcut."
+"Show the app numbers over the icons briefly, corresponding to the shortcut."
 msgstr ""
 "Visa tillfälligt programmens tangentbordsgenvägsnummer ovanpå dess ikoner."
 
-#: Settings.ui.h:101
-msgid "Show the dock if it is hidden"
-msgstr "Visa dockan om den är dold"
+#: Settings.ui.h:100
+#, fuzzy
+msgid "Show Hidden Dock"
+msgstr "Visa dockan på"
 
-#: Settings.ui.h:102
-msgid ""
-"If using autohide, the dock will appear for a short time when triggering the "
-"shortcut."
+#: Settings.ui.h:101
+#, fuzzy
+msgid "Show dock briefly when triggering the shortcut."
 msgstr ""
 "Om automatiskt döljande är aktiverat kommer dockan att synas tillfälligt när "
 "tangentbordsgenvägen triggas."
 
-#: Settings.ui.h:103
-msgid "Shortcut for the options above"
-msgstr "Tangentbordsgenväg för alternativen ovan"
+#: Settings.ui.h:102
+msgid "Keyboard Shortcut"
+msgstr ""
 
-#: Settings.ui.h:104
-msgid "Syntax: <Shift>, <Ctrl>, <Alt>, <Super>"
+#: Settings.ui.h:103
+#, fuzzy
+msgid "Syntax: Shift, Ctrl, Alt, Super."
 msgstr "Syntax: <Skift>, <Ctrl>, <Alt>, <Super>"
 
-#: Settings.ui.h:105
-msgid "Hide timeout (s)"
+#: Settings.ui.h:104
+#, fuzzy
+msgid "Hide Timeout"
 msgstr "Tidsgräns för att dölja (s)"
+
+#: Settings.ui.h:105
+msgid "Show Dock by Mouse Hover"
+msgstr ""
 
 #: Settings.ui.h:106
 msgid "Show the dock by mouse hover on the screen edge."
 msgstr "Visa dockan genom att flytta muspekaren till skärmkanten."
 
 #: Settings.ui.h:107
-msgid "Autohide"
-msgstr "Dölj automatiskt"
+#, fuzzy
+msgid "Push to Show Dock"
+msgstr "%s för Dash to Dock"
 
 #: Settings.ui.h:108
-msgid "Push to show: require pressure to show the dock"
-msgstr "Tryck för att visa: kräv tryck för att visa dockan"
-
-#: Settings.ui.h:109
-msgid "Enable in fullscreen mode"
+#, fuzzy
+msgid "Enable in Fullscreen"
 msgstr "Aktivera i helskärmsläge"
 
-#: Settings.ui.h:110
-msgid "Show the dock when it doesn't obstruct application windows."
-msgstr "Visa dockan då den inte är i vägen för programfönster."
-
-#: Settings.ui.h:111
-msgid "Dodge windows"
+#: Settings.ui.h:109
+#, fuzzy
+msgid "Dodge Windows"
 msgstr "Undvik fönster"
 
+#: Settings.ui.h:110
+#, fuzzy
+msgid "Show the dock when it doesn't obstruct app windows."
+msgstr "Visa dockan då den inte är i vägen för programfönster."
+
 #: Settings.ui.h:112
-msgid "All windows"
-msgstr "Alla fönster"
+#, fuzzy
+msgid "Focused Windows"
+msgstr "Stäng %d fönster"
 
 #: Settings.ui.h:113
-msgid "Only focused application's windows"
-msgstr "Endast fokuserade programs fönster"
-
-#: Settings.ui.h:114
-msgid "Only maximized windows"
+#, fuzzy
+msgid "Maximized Windows"
 msgstr "Endast maximerade fönster"
 
-#: Settings.ui.h:115
-msgid "Always on top"
+#: Settings.ui.h:114
+msgid "Always-on-top"
 msgstr ""
 
-#: Settings.ui.h:116
+#: Settings.ui.h:115
 msgid "Animation duration (s)"
 msgstr "Animationens varaktighet (s)"
+
+#: Settings.ui.h:116
+msgid "Hide timeout (s)"
+msgstr "Tidsgräns för att dölja (s)"
 
 #: Settings.ui.h:117
 msgid "Show timeout (s)"
@@ -614,6 +662,84 @@ msgstr "Tidsgräns för att visa (s)"
 #: Settings.ui.h:118
 msgid "Pressure threshold"
 msgstr "Tröskelvärde för tryck"
+
+#~ msgid "Show on all monitors."
+#~ msgstr "Visa på alla skärmar."
+
+#~ msgid "Position on screen"
+#~ msgstr "Position på skärmen"
+
+#~ msgid "Panel mode: extend to the screen edge"
+#~ msgstr "Panelläge: sträck ut till skärmkanten"
+
+#~ msgid "Position and size"
+#~ msgstr "Position och storlek"
+
+#, fuzzy
+#~ msgid "Show urgent windows despite current workspace."
+#~ msgstr "Visa förhandsgranskningar av öppna fönster."
+
+#~ msgid "Show open windows previews."
+#~ msgstr "Visa förhandsgranskningar av öppna fönster."
+
+#~ msgid "Keep the focused application always visible in the dash"
+#~ msgstr "Visa alltid den fokuserade applikationen i snabbstartspanelen"
+
+#~ msgid "Move the applications button at the beginning of the dock."
+#~ msgstr "Flytta programknappen till början av dockan."
+
+#~ msgid "Animate <i>Show Applications</i>."
+#~ msgstr "Animera <i>Visa program</i>."
+
+#, fuzzy
+#~ msgid "Show volumes and devices"
+#~ msgstr "Visa monterade volymer och enheter"
+
+#~ msgid "Launchers"
+#~ msgstr "Programstartare"
+
+#~ msgid ""
+#~ "Few customizations meant to integrate the dock with the default GNOME "
+#~ "theme. Alternatively, specific options can be enabled below."
+#~ msgstr ""
+#~ "Några anpassningar för att integrera dockan med GNOME:s standardtema. "
+#~ "Alternativt kan specifika alternativ aktiveras nedan."
+
+#~ msgid "Shrink the dash"
+#~ msgstr "Krymp snabbstartspanelen"
+
+#~ msgid "Customize windows counter indicators"
+#~ msgstr "Anpassa räknare för öppna fönster"
+
+#~ msgid "Customize the dash color"
+#~ msgstr "Anpassa färgen för snabbstartspanelen"
+
+#~ msgid "Force straight corner"
+#~ msgstr "Tvinga räta hörn"
+
+#~ msgid "Webpage"
+#~ msgstr "Webbsida"
+
+#~ msgid "Customize minimum and maximum opacity values"
+#~ msgstr "Anpassa minsta och högsta värden för opacitet"
+
+#~ msgid "Show the dock if it is hidden"
+#~ msgstr "Visa dockan om den är dold"
+
+#~ msgid "Shortcut for the options above"
+#~ msgstr "Tangentbordsgenväg för alternativen ovan"
+
+#~ msgid "Autohide"
+#~ msgstr "Dölj automatiskt"
+
+#~ msgid "Push to show: require pressure to show the dock"
+#~ msgstr "Tryck för att visa: kräv tryck för att visa dockan"
+
+#~ msgid "All windows"
+#~ msgstr "Alla fönster"
+
+#~ msgid "Only focused application's windows"
+#~ msgstr "Endast fokuserade programs fönster"
 
 #~ msgid "Created by"
 #~ msgstr "Skapat av"

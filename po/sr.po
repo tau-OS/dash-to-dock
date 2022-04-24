@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-03 15:16-0700\n"
+"POT-Creation-Date: 2022-04-23 19:15-0700\n"
 "PO-Revision-Date: 2017-09-20 18:59+0200\n"
 "Last-Translator: Слободан Терзић <Xabre@archlinux.info>\n"
 "Language-Team: \n"
@@ -20,60 +20,64 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. Translators: This will be followed by Display Name - Connector.
-#: prefs.js:374
+#: prefs.js:372
 #, fuzzy
 msgid "Primary monitor: "
 msgstr "примарном монитору"
 
 #. Translators: Followed by monitor index, Display Name - Connector.
-#: prefs.js:379
+#: prefs.js:378
 msgid "Secondary monitor "
 msgstr "секундарном монитору"
 
-#: prefs.js:417 Settings.ui.h:30
+#: prefs.js:421 Settings.ui.h:31
 msgid "Right"
 msgstr "десно"
 
-#: prefs.js:418 Settings.ui.h:27
+#: prefs.js:422 Settings.ui.h:28
 msgid "Left"
 msgstr "лево"
 
-#: prefs.js:469
+#: prefs.js:473
 msgid "Intelligent autohide customization"
 msgstr "Поставке интелигентног аутоматског сакривања"
 
-#: prefs.js:477 prefs.js:714 prefs.js:772
+#: prefs.js:481 prefs.js:722 prefs.js:780
 msgid "Reset to defaults"
 msgstr "Поврати основно"
 
-#: prefs.js:706
+#: prefs.js:608
+msgid "Managed by GNOME Multitasking's Application Switching setting"
+msgstr ""
+
+#: prefs.js:714
 msgid "Show dock and application numbers"
 msgstr "Прикажи док и бројеве програма"
 
-#: prefs.js:764
+#: prefs.js:772
 msgid "Customize middle-click behavior"
 msgstr "Прилагоћавање понашања средњег клика"
 
-#: prefs.js:849
+#: prefs.js:857
 msgid "Customize running indicators"
 msgstr "Прилагођавање индикатора покренутих"
 
-#: prefs.js:964 Settings.ui.h:82
+#: prefs.js:969
 msgid "Customize opacity"
 msgstr "Прилагоћавање прозирности"
 
-#: appIcons.js:1003
+#: appIcons.js:970 Settings.ui.h:111
 msgid "All Windows"
 msgstr "Сви прозори"
 
-#: appIcons.js:1150
+#: appIcons.js:1114
 #, fuzzy, javascript-format
 msgid "Quit %d Windows"
 msgstr "Сви прозори"
 
 #. Translators: %s is "Settings", which is automatically translated. You
 #. can also translate the full message if this fits better your language.
-#: appIcons.js:1362
+#: appIcons.js:1329
 #, javascript-format
 msgid "Dash to Dock %s"
 msgstr "%s плоче/панела"
@@ -121,21 +125,22 @@ msgstr ""
 msgid "Trash"
 msgstr ""
 
-#: locations.js:618
+#: locations.js:622
 msgid "Empty Trash"
 msgstr ""
 
 #: Settings.ui.h:1
+#, fuzzy
+msgid "Shift+Click Action"
+msgstr "Радња шифт+клика"
+
+#: Settings.ui.h:2
+#, fuzzy
 msgid ""
-"When set to minimize, double clicking minimizes all the windows of the "
-"application."
+"If set to Minimize window, double clicking minimizes all windows of one app."
 msgstr ""
 "Кад је постављено на минимизовање, дупли клик минимизује све прозоре "
 "програма."
-
-#: Settings.ui.h:2
-msgid "Shift+Click action"
-msgstr "Радња шифт+клика"
 
 #: Settings.ui.h:3
 msgid "Raise window"
@@ -181,333 +186,361 @@ msgid "Quit"
 msgstr "напусти"
 
 #: Settings.ui.h:13
+#, fuzzy
+msgid "Middle-Click Action"
+msgstr "Радња средњег клика"
+
+#: Settings.ui.h:14
 msgid "Behavior for Middle-Click."
 msgstr "Понашање средњег клика."
 
-#: Settings.ui.h:14
-msgid "Middle-Click action"
-msgstr "Радња средњег клика"
-
 #: Settings.ui.h:15
+#, fuzzy
+msgid "Shift+Middle-Click Action"
+msgstr "Радња шифт+средњегклика"
+
+#: Settings.ui.h:16
 msgid "Behavior for Shift+Middle-Click."
 msgstr "Пoнашање шифт+средњег клика."
 
-#: Settings.ui.h:16
-msgid "Shift+Middle-Click action"
-msgstr "Радња шифт+средњегклика"
-
 #: Settings.ui.h:17
-msgid "Enable Unity7 like glossy backlit items"
+#, fuzzy
+msgid "Enable Unity 7-like Backlit Items"
 msgstr "Укључи позадинске ефекте попут Unity7"
 
 #: Settings.ui.h:18
-msgid "Apply glossy effect."
+msgid "Glossy"
 msgstr ""
 
 #: Settings.ui.h:19
-msgid "Use dominant color"
+msgid "Use Dominant Color"
 msgstr ""
 
 #: Settings.ui.h:20
-msgid "Customize indicator style"
+#, fuzzy
+msgid "Customize Indicator Style"
 msgstr "Прилагоћавање стила индикатора"
 
 #: Settings.ui.h:21
-msgid "Color"
+#, fuzzy
+msgid "Fill Color"
 msgstr "Боја"
 
 #: Settings.ui.h:22
-msgid "Border color"
+#, fuzzy
+msgid "Border Color"
 msgstr "Боја ивице"
 
 #: Settings.ui.h:23
-msgid "Border width"
+#, fuzzy
+msgid "Border Width"
 msgstr "Ширина ивице"
 
 #: Settings.ui.h:24
-msgid "Show the dock on"
-msgstr "Прикажи док на"
+msgid "General"
+msgstr ""
 
 #: Settings.ui.h:25
-msgid "Show on all monitors."
-msgstr "Прикажи на свим мониторима."
+#, fuzzy
+msgid "Show Dock On"
+msgstr "Прикажи док на"
 
 #: Settings.ui.h:26
-msgid "Position on screen"
-msgstr "Позиција на екрану"
+#, fuzzy
+msgid "All Monitors"
+msgstr "Изолуј мониторе."
 
-#: Settings.ui.h:28
+#: Settings.ui.h:27
+msgid "Screen Position"
+msgstr ""
+
+#: Settings.ui.h:29
 msgid "Bottom"
 msgstr "дно"
 
-#: Settings.ui.h:29
+#: Settings.ui.h:30
 msgid "Top"
 msgstr "врх"
 
-#: Settings.ui.h:31
-msgid ""
-"Hide the dock when it obstructs a window of the current application. More "
-"refined settings are available."
+#: Settings.ui.h:32
+#, fuzzy
+msgid "Intelligent Hiding"
+msgstr "Интелигентно аутоматско сакривање"
+
+#: Settings.ui.h:33
+#, fuzzy
+msgid "Hide the dock when a window is below it. More adjustments when enabled."
 msgstr ""
 "Сакриј док када је на путу прозора тренутног програма. Доступне су финије "
 "поставке."
 
-#: Settings.ui.h:32
-msgid "Intelligent autohide"
-msgstr "Интелигентно аутоматско сакривање"
-
-#: Settings.ui.h:33
-msgid "Dock size limit"
+#: Settings.ui.h:34
+#, fuzzy
+msgid "Dock Size"
 msgstr "Ограничење величине дока"
 
-#: Settings.ui.h:34
-msgid "Panel mode: extend to the screen edge"
-msgstr "Режим панела: проширен до ивица екрана"
-
 #: Settings.ui.h:35
-msgid "Icon size limit"
-msgstr "Ограничење величине иконица"
-
-#: Settings.ui.h:36
-msgid "Fixed icon size: scroll to reveal other icons"
-msgstr "Устаљена величина иконица: клизајте за друге иконе"
-
-#: Settings.ui.h:37
-msgid "Preview size scale"
+msgid "Panel Mode"
 msgstr ""
 
+#: Settings.ui.h:36
+#, fuzzy
+msgid "Icon Size"
+msgstr "Ограничење величине иконица"
+
+#: Settings.ui.h:37
+#, fuzzy
+msgid "Fixed Size (Scroll to see more icons.)"
+msgstr "Устаљена величина иконица: клизајте за друге иконе"
+
 #: Settings.ui.h:38
-msgid "Position and size"
-msgstr "Позиција и величина"
+msgid "Window Preview Size Scale"
+msgstr ""
 
 #: Settings.ui.h:39
-msgid "Show favorite applications"
-msgstr "Приказ омиљених програма"
+msgid "Apps"
+msgstr ""
 
 #: Settings.ui.h:40
-msgid "Show running applications"
-msgstr "Приказ покренутих програма"
+#, fuzzy
+msgid "Show Favorites"
+msgstr "Приказ омиљених програма"
 
 #: Settings.ui.h:41
-msgid "Isolate workspaces."
-msgstr "Изолуј радне просторе."
+#, fuzzy
+msgid "Show Running Apps"
+msgstr "Приказ покренутих програма"
 
 #: Settings.ui.h:42
 #, fuzzy
-msgid "Show urgent windows despite current workspace."
-msgstr "Прикажи сличице отворених прозора."
+msgid "Isolate Workspaces"
+msgstr "Изолуј радне просторе."
 
 #: Settings.ui.h:43
-msgid "Isolate monitors."
+#, fuzzy
+msgid "Isolate Monitors"
 msgstr "Изолуј мониторе."
 
 #: Settings.ui.h:44
-msgid "Show open windows previews."
-msgstr "Прикажи сличице отворених прозора."
+#, fuzzy
+msgid "Show Urgent Windows"
+msgstr "Избегавање розора"
 
 #: Settings.ui.h:45
-msgid "Keep the focused application always visible in the dash"
-msgstr ""
+#, fuzzy
+msgid "Show Window Previews"
+msgstr "прикажи сличице прозора"
 
 #: Settings.ui.h:46
-msgid ""
-"If disabled, these settings are accessible from gnome-tweak-tool or the "
-"extension website."
+msgid "Focused Apps Always Visible"
+msgstr ""
+
+#: Settings.ui.h:47
+#, fuzzy
+msgid "Show <i>Apps</i> Icon"
+msgstr "Приказ иконице <i>Прикажи програме</i>"
+
+#: Settings.ui.h:48
+#, fuzzy
+msgid "If disabled, these settings are accessible from gnome-tweak-tool."
 msgstr ""
 "Уколико је онемогућено, ове поставке су доступне кроз алатку за лицкање или "
 "веб сајт проширења."
 
-#: Settings.ui.h:47
-msgid "Show <i>Applications</i> icon"
-msgstr "Приказ иконице <i>Прикажи програме</i>"
-
-#: Settings.ui.h:48
-msgid "Move the applications button at the beginning of the dock."
-msgstr "Помери дугме програма на почетак дока."
-
 #: Settings.ui.h:49
-msgid "Animate <i>Show Applications</i>."
-msgstr "Анимирај приказ програма."
+msgid "Move Apps Icon As First Icon"
+msgstr ""
 
 #: Settings.ui.h:50
-#, fuzzy
-msgid "Show trash can"
-msgstr "Прикажи док на"
+msgid "Animate Opening Apps Grid"
+msgstr ""
 
 #: Settings.ui.h:51
 #, fuzzy
-msgid "Show volumes and devices"
-msgstr "Прикажи сличице отворених прозора."
+msgid "Show Trash Icon"
+msgstr "Прикажи док на"
 
 #: Settings.ui.h:52
-msgid "Only if mounted"
-msgstr ""
+#, fuzzy
+msgid "Show Devices"
+msgstr "прикажи сличице прозора"
 
 #: Settings.ui.h:53
-msgid "Include network volumes"
+msgid "Mounted Only"
 msgstr ""
 
 #: Settings.ui.h:54
-msgid "Isolate volumes, devices and trash windows from file manager"
+msgid "Include Network Devices"
 msgstr ""
 
 #: Settings.ui.h:55
-msgid "Launchers"
-msgstr "Покретачи"
+msgid "Isolate Windows From File Manager"
+msgstr ""
 
 #: Settings.ui.h:56
-msgid ""
-"Enable Super+(0-9) as shortcuts to activate apps. It can also be used "
-"together with Shift and Ctrl."
+#, fuzzy
+msgid "Behaviour"
+msgstr "Понашање"
+
+#: Settings.ui.h:57
+#, fuzzy
+msgid "Keyboard Shortcuts To Activate Apps"
+msgstr "Активирај програме пречицама тастатуре"
+
+#: Settings.ui.h:58
+#, fuzzy
+msgid "Enable Super+(0-9) to activate apps. Shift and Ctrl also can be used."
 msgstr ""
 "Укључује Супер+(0-9) као пречице за активацију програма. Такође је могуће "
 "користити уз shift и ctrl."
 
-#: Settings.ui.h:57
-msgid "Use keyboard shortcuts to activate apps"
-msgstr "Активирај програме пречицама тастатуре"
-
-#: Settings.ui.h:58
-msgid "Behaviour when clicking on the icon of a running application."
-msgstr "Понашање при клику на покренути програм."
-
 #: Settings.ui.h:59
-msgid "Click action"
+#, fuzzy
+msgid "Click Action"
 msgstr "Радња клика"
 
 #: Settings.ui.h:60
+#, fuzzy
+msgid "Behaviour when clicking on a running app icon."
+msgstr "Понашање при клику на покренути програм."
+
+#: Settings.ui.h:61
 msgid "Minimize"
 msgstr "минимизуј"
 
-#: Settings.ui.h:61
-msgid "Behaviour when scrolling on the icon of an application."
-msgstr "Понашање при клизању на иконицу покренутог програма."
-
 #: Settings.ui.h:62
-msgid "Scroll action"
+#, fuzzy
+msgid "Scroll Action"
 msgstr "Радња клизања на иконицу"
 
 #: Settings.ui.h:63
+#, fuzzy
+msgid "Behaviour when scrolling on an app icon."
+msgstr "Понашање при клизању на иконицу покренутог програма."
+
+#: Settings.ui.h:64
 msgid "Do nothing"
 msgstr "ништа"
 
-#: Settings.ui.h:64
+#: Settings.ui.h:65
 msgid "Switch workspace"
 msgstr "пребаци радни простор"
 
-#: Settings.ui.h:65
-msgid "Behavior"
-msgstr "Понашање"
-
 #: Settings.ui.h:66
-msgid ""
-"Few customizations meant to integrate the dock with the default GNOME theme. "
-"Alternatively, specific options can be enabled below."
-msgstr ""
-"Неколико поставки намењених уграђивању дока у основну тему Гнома. "
-"Алтернативно, посебне поставке се могу уредити испод."
-
-#: Settings.ui.h:67
-msgid "Use built-in theme"
-msgstr "Користи уграђену тему"
-
-#: Settings.ui.h:68
-msgid "Save space reducing padding and border radius."
-msgstr "Чува простор сужавањем попуне и опсега ивица."
-
-#: Settings.ui.h:69
-msgid "Shrink the dash"
-msgstr "Скупи плочу"
-
-#: Settings.ui.h:70
-#, fuzzy
-msgid "Customize windows counter indicators"
-msgstr "Приказ индикаторa бројача прозора."
-
-#: Settings.ui.h:71
-msgid "Default"
-msgstr ""
-
-#: Settings.ui.h:72
-msgid "Dots"
-msgstr ""
-
-#: Settings.ui.h:73
-msgid "Squares"
-msgstr ""
-
-#: Settings.ui.h:74
-msgid "Dashes"
-msgstr ""
-
-#: Settings.ui.h:75
-msgid "Segmented"
-msgstr ""
-
-#: Settings.ui.h:76
-msgid "Solid"
-msgstr ""
-
-#: Settings.ui.h:77
-msgid "Ciliora"
-msgstr ""
-
-#: Settings.ui.h:78
-msgid "Metro"
-msgstr ""
-
-#: Settings.ui.h:79
-msgid "Set the background color for the dash."
-msgstr "Постави позадинску боју плоче."
-
-#: Settings.ui.h:80
-msgid "Customize the dash color"
-msgstr "Прилагоди боју плоче"
-
-#: Settings.ui.h:81
-msgid "Tune the dash background opacity."
-msgstr "Прилагоди прозирност позадине плоче."
-
-#: Settings.ui.h:83
-msgid "Fixed"
-msgstr ""
-
-#: Settings.ui.h:84
-msgid "Dynamic"
-msgstr ""
-
-#: Settings.ui.h:85
-msgid "Opacity"
-msgstr "Прозирност"
-
-#: Settings.ui.h:86
-#, fuzzy
-msgid "Force straight corner"
-msgstr "Наметни равне углове\n"
-
-#: Settings.ui.h:87
 msgid "Appearance"
 msgstr "Изглед"
 
+#: Settings.ui.h:67
+#, fuzzy
+msgid "Built-in Theme"
+msgstr "Користи уграђену тему"
+
+#: Settings.ui.h:68
+msgid "Integrates the dock with the default GNOME theme."
+msgstr ""
+
+#: Settings.ui.h:69
+msgid "Shrink Dock"
+msgstr ""
+
+#: Settings.ui.h:70
+msgid "Save space reducing padding and border radius."
+msgstr "Чува простор сужавањем попуне и опсега ивица."
+
+#: Settings.ui.h:71
+#, fuzzy
+msgid "Customize Indicators"
+msgstr "Прилагоћавање стила индикатора"
+
+#: Settings.ui.h:72
+msgid "Default"
+msgstr ""
+
+#: Settings.ui.h:73
+msgid "Dots"
+msgstr ""
+
+#: Settings.ui.h:74
+msgid "Squares"
+msgstr ""
+
+#: Settings.ui.h:75
+msgid "Dashes"
+msgstr ""
+
+#: Settings.ui.h:76
+msgid "Segmented"
+msgstr ""
+
+#: Settings.ui.h:77
+msgid "Solid"
+msgstr ""
+
+#: Settings.ui.h:78
+msgid "Ciliora"
+msgstr ""
+
+#: Settings.ui.h:79
+msgid "Metro"
+msgstr ""
+
+#: Settings.ui.h:80
+#, fuzzy
+msgid "Dock Color"
+msgstr "Боја"
+
+#: Settings.ui.h:81
+#, fuzzy
+msgid "Set the dock background color."
+msgstr "Постави позадинску боју плоче."
+
+#: Settings.ui.h:82
+#, fuzzy
+msgid "Dock Opacity"
+msgstr "Прозирност"
+
+#: Settings.ui.h:83
+#, fuzzy
+msgid "Set the dock background opacity."
+msgstr "Прилагоди прозирност позадине плоче."
+
+#: Settings.ui.h:84
+msgid "Fixed"
+msgstr ""
+
+#: Settings.ui.h:85
+msgid "Dynamic"
+msgstr ""
+
+#: Settings.ui.h:86
+msgid "Squared Corners"
+msgstr ""
+
+#: Settings.ui.h:87
+msgid "Show Overview On Logon"
+msgstr ""
+
 #: Settings.ui.h:88
-msgid "version: "
-msgstr "верзија: "
+msgid "About"
+msgstr "О програму"
 
 #: Settings.ui.h:89
-msgid "Moves the dash out of the overview transforming it in a dock"
+#, fuzzy
+msgid "Moves the dash out of the overview transforming it into a dock."
 msgstr "Помера плочу из глобалног приказа, претварајући је у док"
 
 #: Settings.ui.h:90
-msgid "Originally created by"
-msgstr ""
+#, fuzzy
+msgid "Version"
+msgstr "верзија: "
 
 #: Settings.ui.h:91
-msgid "Modified for tauOS"
+msgid "Original Author"
 msgstr ""
 
 #: Settings.ui.h:92
-msgid "Webpage"
-msgstr "Веб страница"
+msgid "Authors"
+msgstr ""
 
 #: Settings.ui.h:93
 msgid ""
@@ -521,102 +554,108 @@ msgstr ""
 "span>"
 
 #: Settings.ui.h:95
-msgid "About"
-msgstr "О програму"
+#, fuzzy
+msgid "Customize Opacity"
+msgstr "Прилагоћавање прозирности"
 
 #: Settings.ui.h:96
-msgid "Customize minimum and maximum opacity values"
-msgstr ""
+#, fuzzy
+msgid "Minimum Opacity"
+msgstr "Прилагоћавање прозирности"
 
 #: Settings.ui.h:97
 #, fuzzy
-msgid "Minimum opacity"
+msgid "Maximum Opacity"
 msgstr "Прилагоћавање прозирности"
 
 #: Settings.ui.h:98
 #, fuzzy
-msgid "Maximum opacity"
-msgstr "Прилагоћавање прозирности"
-
-#: Settings.ui.h:99
-msgid "Number overlay"
+msgid "Number Overlay"
 msgstr "Бројне налепнице"
 
-#: Settings.ui.h:100
+#: Settings.ui.h:99
+#, fuzzy
 msgid ""
-"Temporarily show the application numbers over the icons, corresponding to "
-"the shortcut."
+"Show the app numbers over the icons briefly, corresponding to the shortcut."
 msgstr ""
 "Привремено прикажи бројеве програма изнад иконица, према припадајућој "
 "пречици."
 
-#: Settings.ui.h:101
-msgid "Show the dock if it is hidden"
-msgstr "Прикажи док уколико је сакривен"
+#: Settings.ui.h:100
+#, fuzzy
+msgid "Show Hidden Dock"
+msgstr "Прикажи док на"
 
-#: Settings.ui.h:102
-msgid ""
-"If using autohide, the dock will appear for a short time when triggering the "
-"shortcut."
+#: Settings.ui.h:101
+#, fuzzy
+msgid "Show dock briefly when triggering the shortcut."
 msgstr ""
 "Уколико се користи аутоматско сакривање, док ће се приказати на тренутак при "
 "окидању пречице."
 
-#: Settings.ui.h:103
-msgid "Shortcut for the options above"
-msgstr "Пречица за горе наведене опције"
+#: Settings.ui.h:102
+msgid "Keyboard Shortcut"
+msgstr ""
 
-#: Settings.ui.h:104
-msgid "Syntax: <Shift>, <Ctrl>, <Alt>, <Super>"
+#: Settings.ui.h:103
+#, fuzzy
+msgid "Syntax: Shift, Ctrl, Alt, Super."
 msgstr "Синтакса: <Shift>, <Ctrl>, <Alt>, <Super>"
 
-#: Settings.ui.h:105
-msgid "Hide timeout (s)"
+#: Settings.ui.h:104
+#, fuzzy
+msgid "Hide Timeout"
 msgstr "Застој скривања"
+
+#: Settings.ui.h:105
+msgid "Show Dock by Mouse Hover"
+msgstr ""
 
 #: Settings.ui.h:106
 msgid "Show the dock by mouse hover on the screen edge."
 msgstr "Прикажи док прелазом миша пеко ивице екрана."
 
 #: Settings.ui.h:107
-msgid "Autohide"
-msgstr "Аутоматско сакривање"
+#, fuzzy
+msgid "Push to Show Dock"
+msgstr "%s плоче/панела"
 
 #: Settings.ui.h:108
-msgid "Push to show: require pressure to show the dock"
-msgstr "Приказ притиском: захтева притисак за приказ дока"
-
-#: Settings.ui.h:109
-msgid "Enable in fullscreen mode"
+#, fuzzy
+msgid "Enable in Fullscreen"
 msgstr "Омогући у целоекранском режиму"
 
-#: Settings.ui.h:110
-msgid "Show the dock when it doesn't obstruct application windows."
-msgstr "Приказује док када није на путу прозорима програма."
-
-#: Settings.ui.h:111
-msgid "Dodge windows"
+#: Settings.ui.h:109
+#, fuzzy
+msgid "Dodge Windows"
 msgstr "Избегавање розора"
 
+#: Settings.ui.h:110
+#, fuzzy
+msgid "Show the dock when it doesn't obstruct app windows."
+msgstr "Приказује док када није на путу прозорима програма."
+
 #: Settings.ui.h:112
-msgid "All windows"
+#, fuzzy
+msgid "Focused Windows"
 msgstr "Сви прозори"
 
 #: Settings.ui.h:113
-msgid "Only focused application's windows"
-msgstr "Само прозор фокусираног програма"
-
-#: Settings.ui.h:114
-msgid "Only maximized windows"
+#, fuzzy
+msgid "Maximized Windows"
 msgstr "Само максимизовани прозори"
 
-#: Settings.ui.h:115
-msgid "Always on top"
+#: Settings.ui.h:114
+msgid "Always-on-top"
 msgstr ""
 
-#: Settings.ui.h:116
+#: Settings.ui.h:115
 msgid "Animation duration (s)"
 msgstr "Трајање(а) анимације"
+
+#: Settings.ui.h:116
+msgid "Hide timeout (s)"
+msgstr "Застој скривања"
 
 #: Settings.ui.h:117
 msgid "Show timeout (s)"
@@ -625,6 +664,80 @@ msgstr "Застој приказивања"
 #: Settings.ui.h:118
 msgid "Pressure threshold"
 msgstr "Праг притиска"
+
+#~ msgid "Show on all monitors."
+#~ msgstr "Прикажи на свим мониторима."
+
+#~ msgid "Position on screen"
+#~ msgstr "Позиција на екрану"
+
+#~ msgid "Panel mode: extend to the screen edge"
+#~ msgstr "Режим панела: проширен до ивица екрана"
+
+#~ msgid "Position and size"
+#~ msgstr "Позиција и величина"
+
+#, fuzzy
+#~ msgid "Show urgent windows despite current workspace."
+#~ msgstr "Прикажи сличице отворених прозора."
+
+#~ msgid "Show open windows previews."
+#~ msgstr "Прикажи сличице отворених прозора."
+
+#~ msgid "Move the applications button at the beginning of the dock."
+#~ msgstr "Помери дугме програма на почетак дока."
+
+#~ msgid "Animate <i>Show Applications</i>."
+#~ msgstr "Анимирај приказ програма."
+
+#, fuzzy
+#~ msgid "Show volumes and devices"
+#~ msgstr "Прикажи сличице отворених прозора."
+
+#~ msgid "Launchers"
+#~ msgstr "Покретачи"
+
+#~ msgid ""
+#~ "Few customizations meant to integrate the dock with the default GNOME "
+#~ "theme. Alternatively, specific options can be enabled below."
+#~ msgstr ""
+#~ "Неколико поставки намењених уграђивању дока у основну тему Гнома. "
+#~ "Алтернативно, посебне поставке се могу уредити испод."
+
+#~ msgid "Shrink the dash"
+#~ msgstr "Скупи плочу"
+
+#, fuzzy
+#~ msgid "Customize windows counter indicators"
+#~ msgstr "Приказ индикаторa бројача прозора."
+
+#~ msgid "Customize the dash color"
+#~ msgstr "Прилагоди боју плоче"
+
+#, fuzzy
+#~ msgid "Force straight corner"
+#~ msgstr "Наметни равне углове\n"
+
+#~ msgid "Webpage"
+#~ msgstr "Веб страница"
+
+#~ msgid "Show the dock if it is hidden"
+#~ msgstr "Прикажи док уколико је сакривен"
+
+#~ msgid "Shortcut for the options above"
+#~ msgstr "Пречица за горе наведене опције"
+
+#~ msgid "Autohide"
+#~ msgstr "Аутоматско сакривање"
+
+#~ msgid "Push to show: require pressure to show the dock"
+#~ msgstr "Приказ притиском: захтева притисак за приказ дока"
+
+#~ msgid "All windows"
+#~ msgstr "Сви прозори"
+
+#~ msgid "Only focused application's windows"
+#~ msgstr "Само прозор фокусираног програма"
 
 #~ msgid "Show a dot for each windows of the application."
 #~ msgstr "Приказује тачку за сваки прозор програма."
