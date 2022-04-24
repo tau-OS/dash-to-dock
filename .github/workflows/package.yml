@@ -10,9 +10,7 @@ jobs:
     uses: tau-OS/github-actions/.github/workflows/build-rpm.yml@main
     with:
       name: "tau-dash-to-dock"
-      version: "71"
-      arch: "noarch"
-      extraBuildPackages: sassc gettext
+      archs: noarch
   sign:
     needs:
       - build
@@ -20,8 +18,6 @@ jobs:
     if: github.ref == 'refs/heads/main'
     with:
       name: "tau-dash-to-dock"
-      version: "71"
-      arch: "noarch"
     secrets:
       signingKey: ${{ secrets.GPG_PRIVATE_KEY }}
   upload:
@@ -30,8 +26,6 @@ jobs:
     uses: tau-OS/github-actions/.github/workflows/upload-rpm.yml@main
     with:
       name: "tau-dash-to-dock"
-      version: "71"
-      arch: "noarch"
       tauOSVersion: "1.1"
     secrets:
-      privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
+      teleportIdentity: ${{ secrets.TELEPORT_IDENTITY }}
