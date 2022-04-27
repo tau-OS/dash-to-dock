@@ -3,4 +3,4 @@ show-trash=false
 show-mounts=false
 running-indicator-style='DOTS'
 custom-background-color=true
-background-color=#000000
+background-color="#000000"
