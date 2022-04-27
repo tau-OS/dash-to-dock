@@ -206,7 +206,6 @@ var Settings = GObject.registerClass({
         }
 
         // Settings Pages
-        this.general = this._builder.get_object('settings_general');
         this.behaviour = this._builder.get_object('settings_behaviour');
         this.apps = this._builder.get_object('settings_dock');
         this.appearance = this._builder.get_object('settings_appearance');
@@ -241,57 +240,6 @@ var Settings = GObject.registerClass({
         this._settings.set_string('preferred-monitor-by-connector', preferredMonitor);
         this._settings.set_int('preferred-monitor', -2);
         this._updatingSettings = false;
-    }
-
-    position_top_button_toggled_cb(button) {
-        if (button.get_active())
-            this._settings.set_enum('dock-position', 0);
-    }
-
-    position_right_button_toggled_cb(button) {
-        if (button.get_active())
-            this._settings.set_enum('dock-position', 1);
-    }
-
-    position_bottom_button_toggled_cb(button) {
-        if (button.get_active())
-            this._settings.set_enum('dock-position', 2);
-    }
-
-    position_left_button_toggled_cb(button) {
-        if (button.get_active())
-            this._settings.set_enum('dock-position', 3);
-    }
-
-    icon_size_combo_changed_cb(combo) {
-        this._settings.set_int('dash-max-icon-size', this._allIconSizes[combo.get_active()]);
-    }
-
-    dock_size_scale_value_changed_cb(scale) {
-        // Avoid settings the size continuously
-        if (this._dock_size_timeout > 0)
-            GLib.source_remove(this._dock_size_timeout);
-        const id = this._dock_size_timeout = GLib.timeout_add(
-            GLib.PRIORITY_DEFAULT, SCALE_UPDATE_TIMEOUT, () => {
-                if (id === this._dock_size_timeout) {
-                    this._settings.set_double('height-fraction', scale.get_value());
-                    this._dock_size_timeout = 0;
-                    return GLib.SOURCE_REMOVE;
-                }
-            });
-    }
-
-    icon_size_scale_value_changed_cb(scale) {
-        // Avoid settings the size consinuosly
-        if (this._icon_size_timeout > 0)
-            GLib.source_remove(this._icon_size_timeout);
-        this._icon_size_timeout = GLib.timeout_add(
-            GLib.PRIORITY_DEFAULT, SCALE_UPDATE_TIMEOUT, () => {
-                log(scale.get_value());
-                this._settings.set_int('dash-max-icon-size', scale.get_value());
-                this._icon_size_timeout = 0;
-                return GLib.SOURCE_REMOVE;
-            });
     }
     preview_size_scale_format_value_cb(scale, value) {
         return value == 0 ? 'auto' : value;
@@ -391,196 +339,13 @@ var Settings = GObject.registerClass({
     }
 
     _bindSettings() {
-        // Position and size panel
+        // Behaviour panel
 
         this._updateMonitorsSettings();
         this._monitorsConfig.connect('updated', () => this._updateMonitorsSettings());
         this._settings.connect('changed::preferred-monitor', () => this._updateMonitorsSettings());
         this._settings.connect('changed::preferred-monitor-by-connector', () => this._updateMonitorsSettings());
-
-        // Position option
-        let position = this._settings.get_enum('dock-position');
-
-        switch (position) {
-            case 0:
-                this._builder.get_object('position_top_button').set_active(true);
-                break;
-            case 1:
-                this._builder.get_object('position_right_button').set_active(true);
-                break;
-            case 2:
-                this._builder.get_object('position_bottom_button').set_active(true);
-                break;
-            case 3:
-                this._builder.get_object('position_left_button').set_active(true);
-                break;
-        }
-
-        if (this._rtl) {
-            /* Left is Right in rtl as a setting */
-            this._builder.get_object('position_left_button').set_label(__('Right'));
-            this._builder.get_object('position_right_button').set_label(__('Left'));
-        }
-
-        // Intelligent autohide options
-        this._settings.bind('dock-fixed',
-            this._builder.get_object('intelligent_autohide_switch'),
-            'active',
-            Gio.SettingsBindFlags.INVERT_BOOLEAN);
-        this._settings.bind('dock-fixed',
-            this._builder.get_object('intelligent_autohide_button'),
-            'sensitive',
-            Gio.SettingsBindFlags.INVERT_BOOLEAN);
-        this._settings.bind('autohide',
-            this._builder.get_object('autohide_switch'),
-            'active',
-            Gio.SettingsBindFlags.DEFAULT);
-        this._settings.bind('autohide-in-fullscreen',
-            this._builder.get_object('autohide_enable_in_fullscreen_checkbutton'),
-            'active',
-            Gio.SettingsBindFlags.DEFAULT);
-        this._settings.bind('require-pressure-to-show',
-            this._builder.get_object('require_pressure_checkbutton'),
-            'active',
-            Gio.SettingsBindFlags.DEFAULT);
-        this._settings.bind('intellihide',
-            this._builder.get_object('intellihide_switch'),
-            'active',
-            Gio.SettingsBindFlags.DEFAULT);
-        this._settings.bind('animation-time',
-            this._builder.get_object('animation_duration_spinbutton'),
-            'value',
-            Gio.SettingsBindFlags.DEFAULT);
-        this._settings.bind('hide-delay',
-            this._builder.get_object('hide_timeout_spinbutton'),
-            'value',
-            Gio.SettingsBindFlags.DEFAULT);
-        this._settings.bind('show-delay',
-            this._builder.get_object('show_timeout_spinbutton'),
-            'value',
-            Gio.SettingsBindFlags.DEFAULT);
-        this._settings.bind('pressure-threshold',
-            this._builder.get_object('pressure_threshold_spinbutton'),
-            'value',
-            Gio.SettingsBindFlags.DEFAULT);
-
-        //this._builder.get_object('animation_duration_spinbutton').set_value(this._settings.get_double('animation-time'));
-
-        // Create dialog for intelligent autohide advanced settings
-        this._builder.get_object('intelligent_autohide_button').connect('clicked', () => {
-
-            let dialog = new Gtk.Dialog({
-                title: __('Intelligent autohide customization'),
-                
-                use_header_bar: true,
-                modal: true
-            });
-
-            // GTK+ leaves positive values for application-defined response ids.
-            // Use +1 for the reset action
-            dialog.add_button(__('Reset to defaults'), 1);
-
-            let box = this._builder.get_object('intelligent_autohide_advanced_settings_box');
-            dialog.get_content_area().append(box);
-
-            this._settings.bind('intellihide',
-                this._builder.get_object('intellihide_mode_box'),
-                'sensitive',
-                Gio.SettingsBindFlags.GET);
-
-            // intellihide mode
-
-            let intellihideModeRadioButtons = [
-                this._builder.get_object('all_windows_radio_button'),
-                this._builder.get_object('focus_application_windows_radio_button'),
-                this._builder.get_object('maximized_windows_radio_button'),
-                this._builder.get_object('always_on_top_radio_button'),
-            ];
-
-            intellihideModeRadioButtons[this._settings.get_enum('intellihide-mode')].set_active(true);
-
-            this._settings.bind('autohide',
-                this._builder.get_object('require_pressure_checkbutton'),
-                'sensitive',
-                Gio.SettingsBindFlags.GET);
-
-            this._settings.bind('autohide',
-                this._builder.get_object('autohide_enable_in_fullscreen_checkbutton'),
-                'sensitive',
-                Gio.SettingsBindFlags.GET);
-
-            this._settings.bind('require-pressure-to-show',
-                this._builder.get_object('show_timeout_spinbutton'),
-                'sensitive',
-                Gio.SettingsBindFlags.INVERT_BOOLEAN);
-            this._settings.bind('require-pressure-to-show',
-                this._builder.get_object('show_timeout_label'),
-                'sensitive',
-                Gio.SettingsBindFlags.INVERT_BOOLEAN);
-            this._settings.bind('require-pressure-to-show',
-                this._builder.get_object('pressure_threshold_spinbutton'),
-                'sensitive',
-                Gio.SettingsBindFlags.DEFAULT);
-            this._settings.bind('require-pressure-to-show',
-                this._builder.get_object('pressure_threshold_label'),
-                'sensitive',
-                Gio.SettingsBindFlags.DEFAULT);
-
-            dialog.connect('response', (dialog, id) => {
-                if (id == 1) {
-                    // restore default settings for the relevant keys
-                    let keys = ['intellihide', 'autohide', 'intellihide-mode', 'autohide-in-fullscreen', 'require-pressure-to-show',
-                        'animation-time', 'show-delay', 'hide-delay', 'pressure-threshold'];
-                    keys.forEach(function (val) {
-                        this._settings.set_value(val, this._settings.get_default_value(val));
-                    }, this);
-                    intellihideModeRadioButtons[this._settings.get_enum('intellihide-mode')].set_active(true);
-                } else {
-                    // remove the settings box so it doesn't get destroyed;
-                    dialog.get_content_area().remove(box);
-                    dialog.destroy();
-                }
-                return;
-            });
-
-            dialog.present();
-
-        });
-
-        // size options
-        const dock_size_scale = this._builder.get_object('dock_size_scale');
-        dock_size_scale.set_value(this._settings.get_double('height-fraction'));
-        dock_size_scale.add_mark(0.9, Gtk.PositionType.TOP, null);
-        dock_size_scale.set_format_value_func((_, value) => {
-            return Math.round(value * 100) + ' %';
-        });
-        let icon_size_scale = this._builder.get_object('icon_size_scale');
-        icon_size_scale.set_range(8, DEFAULT_ICONS_SIZES[0]);
-        icon_size_scale.set_value(this._settings.get_int('dash-max-icon-size'));
-        DEFAULT_ICONS_SIZES.forEach(function (val) {
-            icon_size_scale.add_mark(val, Gtk.PositionType.TOP, val.toString());
-        });
-        icon_size_scale.set_format_value_func((_, value) => {
-            return value + ' px';
-        });
         this._builder.get_object('preview_size_scale').set_value(this._settings.get_double('preview-size-scale'));
-
-        // Corrent for rtl languages
-        if (this._rtl) {
-            // Flip value position: this is not done automatically
-            dock_size_scale.set_value_pos(Gtk.PositionType.LEFT);
-            icon_size_scale.set_value_pos(Gtk.PositionType.LEFT);
-            // I suppose due to a bug, having a more than one mark and one above a value of 100
-            // makes the rendering of the marks wrong in rtl. This doesn't happen setting the scale as not flippable
-            // and then manually inverting it
-            icon_size_scale.set_flippable(false);
-            icon_size_scale.set_inverted(true);
-        }
-
-        this._settings.bind('icon-size-fixed', this._builder.get_object('icon_size_fixed_checkbutton'), 'active', Gio.SettingsBindFlags.DEFAULT);
-        this._settings.bind('extend-height', this._builder.get_object('dock_size_extend_checkbutton'), 'active', Gio.SettingsBindFlags.DEFAULT);
-        this._settings.bind('extend-height', this._builder.get_object('dock_size_scale'), 'sensitive', Gio.SettingsBindFlags.INVERT_BOOLEAN);
-
         this._settings.bind('multi-monitor',
             this._builder.get_object('dock_monitor_combo'),
             'sensitive',
@@ -1058,15 +823,13 @@ function init() {
 
 function fillPreferencesWindow(window) {
     let settings = new Settings();
-    
-    window.add(settings.general);
     window.add(settings.behaviour);
     window.add(settings.apps);
     window.add(settings.appearance);
     window.add(settings.about);
 
     window.search_enabled = false;
-    window.set_default_size(620, 700);
+    window.set_default_size(630, 780);
 }
 
 
