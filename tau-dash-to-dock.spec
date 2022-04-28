@@ -4,7 +4,7 @@ Summary:        Dock for the GNOME Shell by micxgx@gmail.com, modified for tauOS
 Name:           tau-dash-to-dock
 # This should match the version in metadata.json
 Version:        72
-Release:        5
+Release:        6
 License:        GPLv2+
 URL:            https://micheleg.github.io/dash-to-dock
 Source0:        %{name}-%{version}.tar.gz
@@ -50,6 +50,9 @@ Features modifications for tauOS.
 %{_datadir}/glib-2.0/schemas/*gschema.*
 
 %changelog
+* Thu Apr 28 2022 Lains <lainsce@airmail.cc> - 72-6
+- When clicking any app on the Dock, action will be to minimize it
+
 * Wed Apr 27 2022 Lains <lainsce@airmail.cc> - 72-5
 - When in Panel Mode, remember icons centered
 
