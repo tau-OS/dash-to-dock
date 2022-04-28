@@ -253,7 +253,7 @@ var DockDash = GObject.registerClass({
     }
 
     vfunc_get_preferred_height(forWidth) {
-        let [minHeight, natHeight] = super.vfunc_get_preferred_height.call(this, forWidth);
+        let [minHeight, natHeight] = super.vfunc_get_preferred_height((forWidth || 0));
         if (!this._isHorizontal && this._maxHeight !== -1 && natHeight > this._maxHeight)
             return [minHeight, this._maxHeight]
         else
@@ -261,7 +261,7 @@ var DockDash = GObject.registerClass({
     }
 
     vfunc_get_preferred_width(forHeight) {
-        let [minWidth, natWidth] = super.vfunc_get_preferred_width.call(this, forHeight);
+        let [minWidth, natWidth] = super.vfunc_get_preferred_width((forHeight || 0));
         if (this._isHorizontal && this._maxWidth !== -1 && natWidth > this._maxWidth)
             return [minWidth, this._maxWidth]
         else
@@ -722,6 +722,14 @@ var DockDash = GObject.registerClass({
         let running = this._appSystem.get_running();
         const dockManager = Docking.DockManager.getDefault();
         const { settings } = dockManager;
+        
+        if (settings.dockExtended) {
+            if (!this._isHorizontal) {
+                this._scrollView.y_align = Clutter.ActorAlign.CENTER;
+            } else {
+                this._scrollView.x_align = Clutter.ActorAlign.CENTER;
+            }
+        }
 
         if (settings.isolateWorkspaces ||
             settings.isolateMonitors) {
