@@ -2154,35 +2154,6 @@ var DockManager = class DashToDock_DockManager {
             }
         ]);
 
-        this._vfuncInjections.addWithLabel('main-dash', Workspace.WorkspaceBackground.prototype,
-            'allocate', function (box) {
-            this.vfunc_allocate(box);
-
-            // This code has been submitted upstream via GNOME/gnome-shell!1892
-            // so can be removed when that gets merged (or bypassed on newer shell
-            // versions).
-            const monitor = Main.layoutManager.monitors[this.monitorIndex];
-            const [contentWidth, contentHeight] = this._bin.get_content_box().get_size();
-            const [mX1, mX2] = [monitor.x, monitor.x + monitor.width];
-            const [mY1, mY2] = [monitor.y, monitor.y + monitor.height];
-            const [wX1, wX2] = [this._workarea.x, this._workarea.x + this._workarea.width];
-            const [wY1, wY2] = [this._workarea.y, this._workarea.y + this._workarea.height];
-            const xScale = contentWidth / this._workarea.width;
-            const yScale = contentHeight / this._workarea.height;
-            const leftOffset = wX1 - mX1;
-            const topOffset = wY1 - mY1;
-            const rightOffset = mX2 - wX2;
-            const bottomOffset = mY2 - wY2;
-
-            const contentBox = new Clutter.ActorBox();
-            contentBox.set_origin(-leftOffset * xScale, -topOffset * yScale);
-            contentBox.set_size(
-                contentWidth + (leftOffset + rightOffset) * xScale,
-                contentHeight + (topOffset + bottomOffset) * yScale);
-
-            this._backgroundGroup.allocate(contentBox);
-        });
-
         // Reduce the space that the workspaces can use in secondary monitors
         this._methodInjections.addWithLabel('main-dash', WorkspacesView.WorkspacesView.prototype,
             '_getFirstFitAllWorkspaceBox', function (originalFunction, ...args) {
