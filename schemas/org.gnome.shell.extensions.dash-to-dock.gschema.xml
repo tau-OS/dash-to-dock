@@ -62,6 +62,11 @@
       <summary>Show delay</summary>
       <description>Sets the delay after the mouse reaches the screen border before showing the dock.</description>
     </key>
+    <key type="b" name="manualhide">
+      <default>false</default>
+      <summary>Dock not shown on desktop</summary>
+      <description>Enable or disable manualhide mode</description>
+    </key>
     <key type="d" name="hide-delay">
       <default>0.20</default>
       <summary>Show delay</summary>

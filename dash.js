@@ -84,6 +84,7 @@ var DockDash = GObject.registerClass({
     },
     Signals: {
         'menu-closed': {},
+        'menu-opened': {},
         'icon-size-changed': {},
     }
 }, class DockDash extends St.Widget {
@@ -99,7 +100,7 @@ var DockDash = GObject.registerClass({
 
         this._separator = null;
 
-        this.monitorIndex = monitorIndex;
+        this._monitorIndex = monitorIndex;
         this._position = Utils.getPosition();
         this._isHorizontal = ((this._position == St.Side.TOP) ||
                                (this._position == St.Side.BOTTOM));
@@ -253,7 +254,7 @@ var DockDash = GObject.registerClass({
     }
 
     vfunc_get_preferred_height(forWidth) {
-        let [minHeight, natHeight] = super.vfunc_get_preferred_height((forWidth || 0));
+        let [minHeight, natHeight] = super.vfunc_get_preferred_height.call(this, forWidth);
         if (!this._isHorizontal && this._maxHeight !== -1 && natHeight > this._maxHeight)
             return [minHeight, this._maxHeight]
         else
@@ -261,7 +262,7 @@ var DockDash = GObject.registerClass({
     }
 
     vfunc_get_preferred_width(forHeight) {
-        let [minWidth, natWidth] = super.vfunc_get_preferred_width((forHeight || 0));
+        let [minWidth, natWidth] = super.vfunc_get_preferred_width.call(this, forHeight);
         if (this._isHorizontal && this._maxWidth !== -1 && natWidth > this._maxWidth)
             return [minWidth, this._maxWidth]
         else
@@ -481,7 +482,7 @@ var DockDash = GObject.registerClass({
     }
 
     _createAppItem(app) {
-        const appIcon = new AppIcons.makeAppIcon(app, this.monitorIndex, this.iconAnimator);
+        const appIcon = new AppIcons.makeAppIcon(app, this._monitorIndex, this.iconAnimator);
 
         if (appIcon._draggable) {
             appIcon._draggable.connect('drag-begin', () => {
@@ -579,7 +580,9 @@ var DockDash = GObject.registerClass({
     _itemMenuStateChanged(item, opened) {
         Dash.Dash.prototype._itemMenuStateChanged.call(this, item, opened);
 
-        if (!opened) {
+        if (opened) {
+            this.emit('menu-opened');
+        } else {
             // I want to listen from outside when a menu is closed. I used to
             // add a custom signal to the appIcon, since gnome 3.8 the signal
             // calling this callback was added upstream.
@@ -626,7 +629,7 @@ var DockDash = GObject.registerClass({
         let spacing = themeNode.get_length('spacing');
 
         const [{ child: firstButton }] = iconChildren;
-        const { child: firstIcon } = firstButton?.icon ?? { child: null };
+        const { child: firstIcon } = firstButton.icon;
 
         // if no icons there's nothing to adjust
         if (!firstIcon)
@@ -722,8 +725,8 @@ var DockDash = GObject.registerClass({
         let running = this._appSystem.get_running();
         const dockManager = Docking.DockManager.getDefault();
         const { settings } = dockManager;
-        
-        if (settings.dockExtended) {
+
+        if (Docking.DockManager.settings.dockExtended) {
             if (!this._isHorizontal) {
                 this._scrollView.y_align = Clutter.ActorAlign.CENTER;
             } else {
@@ -735,7 +738,7 @@ var DockDash = GObject.registerClass({
             settings.isolateMonitors) {
             // When using isolation, we filter out apps that have no windows in
             // the current workspace
-            let monitorIndex = this.monitorIndex;
+            let monitorIndex = this._monitorIndex;
             running = running.filter(app =>
                 AppIcons.getInterestingWindows(app.get_windows(), monitorIndex).length);
         }
@@ -1112,3 +1115,4 @@ function ensureActorVisibleInScrollView(scrollView, actor) {
 
     return [hValue - hValue0, vValue - vValue0];
 }
+

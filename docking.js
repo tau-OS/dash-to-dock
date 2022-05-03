@@ -149,7 +149,7 @@ var DashSlideContainer = GObject.registerClass({
      * Just the child width but taking into account the slided out part
      */
     vfunc_get_preferred_width(forHeight) {
-        let [minWidth, natWidth] = super.vfunc_get_preferred_width(forHeight);
+        let [minWidth, natWidth] = super.vfunc_get_preferred_width((forHeight || 0));
         if ((this.side ==  St.Side.LEFT) || (this.side == St.Side.RIGHT)) {
             minWidth = (minWidth - this._slideoutSize) * this.slideX + this._slideoutSize;
             natWidth = (natWidth - this._slideoutSize) * this.slideX + this._slideoutSize;
@@ -161,7 +161,7 @@ var DashSlideContainer = GObject.registerClass({
      * Just the child height but taking into account the slided out part
      */
     vfunc_get_preferred_height(forWidth) {
-        let [minHeight, natHeight] = super.vfunc_get_preferred_height(forWidth);
+        let [minHeight, natHeight] = super.vfunc_get_preferred_height((forWidth || 0));
         if ((this.side ==  St.Side.TOP) || (this.side ==  St.Side.BOTTOM)) {
             minHeight = (minHeight - this._slideoutSize) * this.slideX + this._slideoutSize;
             natHeight = (natHeight - this._slideoutSize) * this.slideX + this._slideoutSize;
@@ -537,6 +537,12 @@ var DockedDash = GObject.registerClass({
             }
         ], [
             settings,
+            'changed::manualhide',
+            () => {
+                this._updateVisibilityMode();
+            }
+        ], [
+            settings,
             'changed::dock-fixed',
             () => {
                 this._untrackDock();
@@ -597,7 +603,7 @@ var DockedDash = GObject.registerClass({
      */
     _updateVisibilityMode() {
         let settings = DockManager.settings;
-        if (DockManager.settings.dockFixed) {
+        if (DockManager.settings.dockFixed || DockManager.settings.manualhide) {
             this._autohideIsEnabled = false;
             this._intellihideIsEnabled = false;
         }
@@ -632,6 +638,12 @@ var DockedDash = GObject.registerClass({
             return;
 
         let settings = DockManager.settings;
+        
+        if (DockManager.settings.manualhide) {
+            this._ignoreHover = false;
+            this._animateOut(DockManager.settings.animationTime, 0);
+            return;
+        }
 
         if (DockManager.settings.dockFixed) {
             this._removeAnimations();
@@ -674,7 +686,6 @@ var DockedDash = GObject.registerClass({
     }
 
     _onOverviewHiding() {
-        this._ignoreHover = false;
         this._intellihide.enable();
         this._updateDashVisibility();
     }

@@ -4,7 +4,7 @@ Summary:        Dock for the GNOME Shell by micxgx@gmail.com, modified for tauOS
 Name:           tau-dash-to-dock
 # This should match the version in metadata.json
 Version:        72
-Release:        6
+Release:        7
 License:        GPLv2+
 URL:            https://micheleg.github.io/dash-to-dock
 Source0:        %{name}-%{version}.tar.gz
@@ -50,6 +50,13 @@ Features modifications for tauOS.
 %{_datadir}/glib-2.0/schemas/*gschema.*
 
 %changelog
+* Mon May 2 2022 Lains <lainsce@airmail.cc> - 72-7
+- Fix for dock hiding when popupmenu is open
+- Implement manual hide
+- get_preferred_height/width as 0 if NaN: Sometimes the requested height/width was NaN causing gnome-shell
+to log warnings everytime the workspaces view was opened.
+- 
+
 * Thu Apr 28 2022 Lains <lainsce@airmail.cc> - 72-6
 - When clicking any app on the Dock, action will be to minimize it
 
