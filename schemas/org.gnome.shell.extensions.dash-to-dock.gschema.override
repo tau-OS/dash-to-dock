@@ -2,7 +2,7 @@
 show-trash=false
 show-mounts=false
 running-indicator-style='DOTS'
-custom-background-color=true
-background-color="#000000"
 show-apps-at-top=true
 click-action='minimize'
+transparency-mode='FIXED'
+background-opacity=0.45
