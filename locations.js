@@ -763,6 +763,7 @@ function wrapWindowsBackedApp(shellApp) {
     const m = (...args) => shellApp._dtdData.methodInjections.add(shellApp, ...args);
     const p = (...args) => shellApp._dtdData.propertyInjections.add(shellApp, ...args);
 
+    // mi is Method injector, pi is Property injector
     shellApp._setDtdData({ mi: m, pi: p }, { public: false });
 
     m('get_state', () => shellApp._state ?? shellApp._getStateByWindows());

@@ -1,8 +1,8 @@
 # Hungarian translation for dash-to-dock.
-# Copyright (C) 2017 Free Software Foundation, Inc.
+# Copyright (C) 2017, 2022 Free Software Foundation, Inc.
 # This file is distributed under the same license as the dash-to-dock package.
 #
-# Balázs Úr <urbalazs@gmail.com>, 2017.
+# Balázs Úr <ur.balazs at fsf dot hu>, 2017, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: dash-to-dock master\n"
@@ -15,8 +15,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 19.12.3\n"
 
 #. Translators: This will be followed by Display Name - Connector.
 #: prefs.js:372
@@ -31,11 +31,11 @@ msgstr "Másodlagos kijelző"
 
 #: prefs.js:421 Settings.ui.h:31
 msgid "Right"
-msgstr "Jobb"
+msgstr "Jobbra"
 
 #: prefs.js:422 Settings.ui.h:28
 msgid "Left"
-msgstr "Bal"
+msgstr "Balra"
 
 #: prefs.js:473
 msgid "Intelligent autohide customization"
@@ -67,7 +67,44 @@ msgstr "Átlátszatlanság személyre szabása"
 
 #: appIcons.js:970 Settings.ui.h:111
 msgid "All Windows"
-msgstr "Összes Ablak"
+msgstr "Összes ablak"
+
+#: appIcons.js:1147
+#, javascript-format
+msgid "Quit %d Windows"
+msgstr "%d ablak bezárása"
+
+#. Translators: %s is "Settings", which is automatically translated. You
+#. can also translate the full message if this fits better your language.
+#: appIcons.js:1359
+#, javascript-format
+msgid "Dash to Dock %s"
+msgstr "„Dashből dokk” %s"
+
+#: locations.js:156
+#, javascript-format
+msgid "Failed to launch “%s”"
+msgstr "Nem sikerült a(z) „%s” indítása"
+
+#: locations.js:412
+msgid "Trash"
+msgstr "Kuka"
+
+#: locations.js:420
+msgid "Empty Trash"
+msgstr "Kuka ürítése"
+
+#: locations.js:558
+msgid "Mount"
+msgstr "Csatolás"
+
+#: locations.js:604
+msgid "Eject"
+msgstr "Kiadás"
+
+#: locations.js:609
+msgid "Unmount"
+msgstr "Leválasztás"
 
 #: appIcons.js:1114
 #, fuzzy, javascript-format
