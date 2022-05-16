@@ -26,6 +26,7 @@ To enable the extension, a shell reload is required `Alt+F2 r Enter` under Xorg 
 
 ```sh
 git clone https://github.com/tau-OS/dash-to-dock.git
+cd dash-to-dock
 # To install the extension locally, use ~/.local
 meson build --prefix=/usr
 cd build
