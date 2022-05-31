@@ -10,7 +10,6 @@ jobs:
     uses: tau-OS/github-actions/.github/workflows/build-rpm.yml@main
     with:
       name: "tau-dash-to-dock"
-      archs: noarch
   sign:
     needs:
       - build
