@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash to Dock\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-30 00:45+0800\n"
+"POT-Creation-Date: 2022-06-09 17:42-0700\n"
 "PO-Revision-Date: 2021-01-30 01:02+0800\n"
 "Last-Translator: zhmars <1403122061@qq.com>\n"
 "Language-Team: Chinese (Simplified) <>\n"
@@ -20,641 +20,602 @@ msgstr ""
 "X-Generator: Poedit 2.4.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. Translators: This will be followed by Display Name - Connector.
-#: prefs.js:372
+#. Translators: This is the heading of a list of open windows
+#: appIcons.js:981
 #, fuzzy
-msgid "Primary monitor: "
-msgstr "主显示器"
+msgid "Open Windows"
+msgstr "避开窗口"
 
-#. Translators: Followed by monitor index, Display Name - Connector.
-#: prefs.js:378
-msgid "Secondary monitor "
-msgstr "副显示器 "
+#: appIcons.js:1001
+#, fuzzy
+msgid "New Window"
+msgstr "避开窗口"
 
-#: prefs.js:421 Settings.ui.h:31
-msgid "Right"
-msgstr "右侧"
-
-#: prefs.js:422 Settings.ui.h:28
-msgid "Left"
-msgstr "左侧"
-
-#: prefs.js:473
-msgid "Intelligent autohide customization"
-msgstr "智能自动隐藏自定义"
-
-#: prefs.js:481 prefs.js:722 prefs.js:780
-msgid "Reset to defaults"
-msgstr "重置为默认值"
-
-#: prefs.js:608
-msgid "Managed by GNOME Multitasking's Application Switching setting"
+#: appIcons.js:1019
+msgid "Launch using Integrated Graphics Card"
 msgstr ""
 
-#: prefs.js:714
-msgid "Show dock and application numbers"
-msgstr "显示 Dock 和应用程序编号"
+#: appIcons.js:1020
+msgid "Launch using Discrete Graphics Card"
+msgstr ""
 
-#: prefs.js:772
-msgid "Customize middle-click behavior"
-msgstr "自定义中键点击行为"
+#: appIcons.js:1049
+msgid "Unpin"
+msgstr ""
 
-#: prefs.js:857
-msgid "Customize running indicators"
-msgstr "自定义“运行中”指示器"
+#: appIcons.js:1050
+#, fuzzy
+msgid "Remove from Favorites"
+msgstr "显示收藏的应用程序"
 
-#: prefs.js:969
-msgid "Customize opacity"
-msgstr "自定义不透明度"
+#: appIcons.js:1057
+msgid "Pin to Dash"
+msgstr ""
 
-#: appIcons.js:970 Settings.ui.h:111
-msgid "All Windows"
-msgstr "所有窗口"
+#: appIcons.js:1058
+#, fuzzy
+msgid "Add to Favorites"
+msgstr "显示收藏的应用程序"
 
-#: appIcons.js:1114
-#, fuzzy, javascript-format
-msgid "Quit %d Windows"
-msgstr "所有窗口"
+#: appIcons.js:1070
+#, fuzzy
+msgid "Show Details"
+msgstr "显示打开窗口预览"
+
+#: appIcons.js:1107 appIcons.js:1119 Settings.ui:38 Settings.ui:62
+#: Settings.ui:86
+msgid "Quit"
+msgstr "退出"
 
 #. Translators: %s is "Settings", which is automatically translated. You
 #. can also translate the full message if this fits better your language.
-#: appIcons.js:1329
+#: appIcons.js:1336
+#, fuzzy
+msgid "Settings"
+msgstr "主设置"
+
+#: locations.js:884
 #, javascript-format
-msgid "Dash to Dock %s"
-msgstr "Dash to Dock %s"
-
-#: locations.js:422
-msgid "Mount"
-msgstr "挂载"
-
-#: locations.js:424
-msgid "Unmount"
-msgstr "卸载"
-
-#: locations.js:426
-msgid "Eject"
-msgstr "弹出"
-
-#: locations.js:484
-#, javascript-format
-msgid "Failed to mount “%s”"
+msgid "Failed to launch “%s”"
 msgstr ""
 
-#: locations.js:487
-#, javascript-format
-msgid "Failed to umount “%s”"
-msgstr ""
-
-#: locations.js:490
-#, javascript-format
-msgid "Failed to eject “%s”"
-msgstr ""
-
-#: locations.js:502
-msgid "Mount operation already in progress"
-msgstr ""
-
-#: locations.js:505
-msgid "Umount operation already in progress"
-msgstr ""
-
-#: locations.js:508
-msgid "Eject operation already in progress"
-msgstr ""
-
-#: locations.js:582
-msgid "Trash"
-msgstr "回收站"
-
-#: locations.js:622
-msgid "Empty Trash"
-msgstr "清空回收站"
-
-#: Settings.ui.h:1
+#: Settings.ui:22
 #, fuzzy
 msgid "Shift+Click Action"
 msgstr "Shift+点击动作"
 
-#: Settings.ui.h:2
+#: Settings.ui:23
 #, fuzzy
 msgid ""
 "If set to Minimize window, double clicking minimizes all windows of one app."
 msgstr "当设置为最小化时，双击会最小化应用程序的所有窗口。"
 
-#: Settings.ui.h:3
+#: Settings.ui:29 Settings.ui:53 Settings.ui:77 Settings.ui:542
 msgid "Raise window"
 msgstr "提升窗口"
 
-#: Settings.ui.h:4
+#: Settings.ui:30 Settings.ui:54 Settings.ui:78
 msgid "Minimize window"
 msgstr "最小化窗口"
 
-#: Settings.ui.h:5
+#: Settings.ui:31 Settings.ui:55 Settings.ui:79 Settings.ui:544
 msgid "Launch new instance"
 msgstr "启动新实例"
 
-#: Settings.ui.h:6
+#: Settings.ui:32 Settings.ui:56 Settings.ui:80 Settings.ui:545 Settings.ui:573
 msgid "Cycle through windows"
 msgstr "在窗口间循环"
 
-#: Settings.ui.h:7
+#: Settings.ui:33 Settings.ui:57 Settings.ui:81 Settings.ui:546
 msgid "Minimize or overview"
 msgstr "最小化或概览"
 
-#: Settings.ui.h:8
+#: Settings.ui:34 Settings.ui:58 Settings.ui:82 Settings.ui:547
 msgid "Show window previews"
 msgstr "显示打开窗口预览"
 
-#: Settings.ui.h:9
+#: Settings.ui:35 Settings.ui:59 Settings.ui:83 Settings.ui:548
 msgid "Minimize or show previews"
 msgstr "最小化或显示预览"
 
-#: Settings.ui.h:10
+#: Settings.ui:36 Settings.ui:60 Settings.ui:84 Settings.ui:549
 msgid "Focus or show previews"
 msgstr "聚焦或显示预览"
 
-#: Settings.ui.h:11
+#: Settings.ui:37 Settings.ui:61 Settings.ui:85 Settings.ui:550
 #, fuzzy
 msgid "Focus, minimize or show previews"
 msgstr "最小化或显示预览"
 
-#: Settings.ui.h:12
-msgid "Quit"
-msgstr "退出"
-
-#: Settings.ui.h:13
+#: Settings.ui:46
 #, fuzzy
 msgid "Middle-Click Action"
 msgstr "中键点击动作"
 
-#: Settings.ui.h:14
+#: Settings.ui:47
 msgid "Behavior for Middle-Click."
 msgstr "中键点击的行为。"
 
-#: Settings.ui.h:15
+#: Settings.ui:70
 #, fuzzy
 msgid "Shift+Middle-Click Action"
 msgstr "Shift+中键点击动作"
 
-#: Settings.ui.h:16
+#: Settings.ui:71
 msgid "Behavior for Shift+Middle-Click."
 msgstr "Shift+中键点击的行为。"
 
-#: Settings.ui.h:17
+#: Settings.ui:126
 #, fuzzy
 msgid "Enable Unity 7-like Backlit Items"
 msgstr "启用类似 Unity 7 的高亮阴影"
 
-#: Settings.ui.h:18
+#: Settings.ui:138
 msgid "Glossy"
 msgstr ""
 
-#: Settings.ui.h:19
+#: Settings.ui:148
 #, fuzzy
 msgid "Use Dominant Color"
 msgstr "使用主色调"
 
-#: Settings.ui.h:20
+#: Settings.ui:159
 #, fuzzy
 msgid "Customize Indicator Style"
 msgstr "自定义指示器样式"
 
-#: Settings.ui.h:21
+#: Settings.ui:169
 #, fuzzy
 msgid "Fill Color"
 msgstr "颜色"
 
-#: Settings.ui.h:22
+#: Settings.ui:180
 #, fuzzy
 msgid "Border Color"
 msgstr "边框颜色"
 
-#: Settings.ui.h:23
+#: Settings.ui:191
 #, fuzzy
 msgid "Border Width"
 msgstr "边框宽度"
 
-#: Settings.ui.h:24
-msgid "General"
-msgstr ""
-
-#: Settings.ui.h:25
-#, fuzzy
-msgid "Show Dock On"
-msgstr "显示 Dock 于"
-
-#: Settings.ui.h:26
-#, fuzzy
-msgid "All Monitors"
-msgstr "隔离显示器"
-
-#: Settings.ui.h:27
-msgid "Screen Position"
-msgstr ""
-
-#: Settings.ui.h:29
-msgid "Bottom"
-msgstr "底部"
-
-#: Settings.ui.h:30
-msgid "Top"
-msgstr "顶部"
-
-#: Settings.ui.h:32
-#, fuzzy
-msgid "Intelligent Hiding"
-msgstr "智能隐藏"
-
-#: Settings.ui.h:33
-#, fuzzy
-msgid "Hide the dock when a window is below it. More adjustments when enabled."
-msgstr ""
-"当 Dock 会挡住当前应用程序的某个窗口时，将其隐藏。点击右侧设置按钮可以设置更"
-"多细节。"
-
-#: Settings.ui.h:34
-#, fuzzy
-msgid "Dock Size"
-msgstr "Dock 大小限制"
-
-#: Settings.ui.h:35
-msgid "Panel Mode"
-msgstr ""
-
-#: Settings.ui.h:36
-#, fuzzy
-msgid "Icon Size"
-msgstr "图标大小限制"
-
-#: Settings.ui.h:37
-#, fuzzy
-msgid "Fixed Size (Scroll to see more icons.)"
-msgstr "固定图标大小：滚动显示其它图标"
-
-#: Settings.ui.h:38
-msgid "Window Preview Size Scale"
-msgstr ""
-
-#: Settings.ui.h:39
+#: Settings.ui:223
 msgid "Apps"
 msgstr ""
 
-#: Settings.ui.h:40
+#: Settings.ui:237
 #, fuzzy
 msgid "Show Favorites"
 msgstr "显示收藏的应用程序"
 
-#: Settings.ui.h:41
+#: Settings.ui:252
 #, fuzzy
 msgid "Show Running Apps"
 msgstr "显示正在运行的应用程序"
 
-#: Settings.ui.h:42
+#: Settings.ui:261
 #, fuzzy
 msgid "Isolate Workspaces"
 msgstr "隔离工作区"
 
-#: Settings.ui.h:43
+#: Settings.ui:271
 #, fuzzy
 msgid "Isolate Monitors"
 msgstr "隔离显示器"
 
-#: Settings.ui.h:44
+#: Settings.ui:281
 #, fuzzy
 msgid "Show Urgent Windows"
 msgstr "避开窗口"
 
-#: Settings.ui.h:45
+#: Settings.ui:291
 #, fuzzy
 msgid "Show Window Previews"
 msgstr "显示打开窗口预览"
 
-#: Settings.ui.h:46
+#: Settings.ui:303
 #, fuzzy
 msgid "Focused Apps Always Visible"
 msgstr "Dock 固定且总是可见"
 
-#: Settings.ui.h:47
+#: Settings.ui:313
 #, fuzzy
 msgid "Show <i>Apps</i> Icon"
 msgstr "显示 <i>应用程序</i> 图标"
 
-#: Settings.ui.h:48
+#: Settings.ui:314
 #, fuzzy
 msgid "If disabled, these settings are accessible from gnome-tweak-tool."
 msgstr "禁用之后，可以通过 gnome-tweak-tool 或者扩展网站来访问这些设置。"
 
-#: Settings.ui.h:49
+#: Settings.ui:323
 msgid "Move Apps Icon As First Icon"
 msgstr ""
 
-#: Settings.ui.h:50
+#: Settings.ui:333
 msgid "Animate Opening Apps Grid"
 msgstr ""
 
-#: Settings.ui.h:51
+#: Settings.ui:345
 #, fuzzy
 msgid "Show Trash Icon"
 msgstr "显示回收站"
 
-#: Settings.ui.h:52
+#: Settings.ui:355
 #, fuzzy
 msgid "Show Devices"
 msgstr "显示打开窗口预览"
 
-#: Settings.ui.h:53
+#: Settings.ui:364
 msgid "Mounted Only"
 msgstr ""
 
-#: Settings.ui.h:54
+#: Settings.ui:374
 msgid "Include Network Devices"
 msgstr ""
 
-#: Settings.ui.h:55
+#: Settings.ui:384
 msgid "Isolate Windows From File Manager"
 msgstr ""
 
-#: Settings.ui.h:56
+#: Settings.ui:400
 #, fuzzy
 msgid "Behaviour"
 msgstr "行为"
 
-#: Settings.ui.h:57
+#: Settings.ui:407
+#, fuzzy
+msgid "Show Dock On"
+msgstr "显示 Dock 于"
+
+#: Settings.ui:423
+#, fuzzy
+msgid "All Monitors"
+msgstr "隔离显示器"
+
+#: Settings.ui:446
+msgid "Window Preview Size Scale"
+msgstr ""
+
+#: Settings.ui:477
 #, fuzzy
 msgid "Keyboard Shortcuts To Activate Apps"
 msgstr "使用键盘快捷键激活应用"
 
-#: Settings.ui.h:58
+#: Settings.ui:478
 #, fuzzy
 msgid "Enable Super+(0-9) to activate apps. Shift and Ctrl also can be used."
 msgstr "启用 Super+(0-9) 作为快捷键来激活应用。也可与 Shift 和 Ctrl 一起使用。"
 
-#: Settings.ui.h:59
+#: Settings.ui:516
 #, fuzzy
 msgid "Click Action"
 msgstr "点击动作"
 
-#: Settings.ui.h:60
+#: Settings.ui:517
 #, fuzzy
 msgid "Behaviour when clicking on a running app icon."
 msgstr "点击一个正在运行的应用程序图标时的行为。"
 
-#: Settings.ui.h:61
+#: Settings.ui:543
 msgid "Minimize"
 msgstr "最小化"
 
-#: Settings.ui.h:62
+#: Settings.ui:565
 #, fuzzy
 msgid "Scroll Action"
 msgstr "滚动动作"
 
-#: Settings.ui.h:63
+#: Settings.ui:566
 #, fuzzy
 msgid "Behaviour when scrolling on an app icon."
 msgstr "在一个应用程序图标上滚动时的行为。"
 
-#: Settings.ui.h:64
+#: Settings.ui:572
 msgid "Do nothing"
 msgstr "无动作"
 
-#: Settings.ui.h:65
+#: Settings.ui:574
 msgid "Switch workspace"
 msgstr "切换工作区"
 
-#: Settings.ui.h:66
+#: Settings.ui:584
 msgid "Appearance"
 msgstr "外观"
 
-#: Settings.ui.h:67
+#: Settings.ui:591
 #, fuzzy
 msgid "Built-in Theme"
 msgstr "使用内置主题"
 
-#: Settings.ui.h:68
+#: Settings.ui:592
 msgid "Integrates the dock with the default GNOME theme."
 msgstr ""
 
-#: Settings.ui.h:69
+#: Settings.ui:614
 msgid "Shrink Dock"
 msgstr ""
 
-#: Settings.ui.h:70
+#: Settings.ui:615
 msgid "Save space reducing padding and border radius."
 msgstr "减小填充和边框半径以节省空间。"
 
-#: Settings.ui.h:71
+#: Settings.ui:625
 #, fuzzy
 msgid "Customize Indicators"
 msgstr "自定义指示器样式"
 
-#: Settings.ui.h:72
+#: Settings.ui:644 Settings.ui:716
 msgid "Default"
 msgstr "默认"
 
-#: Settings.ui.h:73
+#: Settings.ui:645
 msgid "Dots"
 msgstr "圆点"
 
-#: Settings.ui.h:74
+#: Settings.ui:646
 msgid "Squares"
 msgstr "正方形"
 
-#: Settings.ui.h:75
+#: Settings.ui:647
 msgid "Dashes"
 msgstr "破折号"
 
-#: Settings.ui.h:76
+#: Settings.ui:648
 msgid "Segmented"
 msgstr "分段"
 
-#: Settings.ui.h:77
+#: Settings.ui:649
 msgid "Solid"
 msgstr ""
 
-#: Settings.ui.h:78
+#: Settings.ui:650
 msgid "Ciliora"
 msgstr ""
 
-#: Settings.ui.h:79
+#: Settings.ui:651
 msgid "Metro"
 msgstr ""
 
-#: Settings.ui.h:80
+#: Settings.ui:661
 #, fuzzy
 msgid "Dock Color"
 msgstr "颜色"
 
-#: Settings.ui.h:81
+#: Settings.ui:662
 #, fuzzy
 msgid "Set the dock background color."
 msgstr "设置 Dash 的背景颜色。"
 
-#: Settings.ui.h:82
+#: Settings.ui:683
 #, fuzzy
 msgid "Dock Opacity"
 msgstr "不透明度"
 
-#: Settings.ui.h:83
+#: Settings.ui:684
 #, fuzzy
 msgid "Set the dock background opacity."
 msgstr "调整 Dash 的背景不透明度。"
 
-#: Settings.ui.h:84
+#: Settings.ui:717
 msgid "Fixed"
 msgstr "固定"
 
-#: Settings.ui.h:85
+#: Settings.ui:718
 msgid "Dynamic"
 msgstr "动态"
 
-#: Settings.ui.h:86
+#: Settings.ui:748
 #, fuzzy
 msgid "Squared Corners"
 msgstr "正方形"
 
-#: Settings.ui.h:87
+#: Settings.ui:758
 msgid "Show Overview On Logon"
 msgstr ""
 
-#: Settings.ui.h:88
+#: Settings.ui:772
 msgid "About"
 msgstr "关于"
 
-#: Settings.ui.h:89
+#: Settings.ui:787
 #, fuzzy
 msgid "Moves the dash out of the overview transforming it into a dock."
 msgstr "让 Dash 跳出概览之外，转化为一个 Dock"
 
-#: Settings.ui.h:90
+#: Settings.ui:796
 #, fuzzy
 msgid "Version"
 msgstr "版本："
 
-#: Settings.ui.h:91
+#: Settings.ui:820
 msgid "Original Author"
 msgstr ""
 
-#: Settings.ui.h:92
+#: Settings.ui:840
 msgid "Authors"
 msgstr ""
 
-#: Settings.ui.h:93
+#: Settings.ui:874
 msgid ""
 "<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
-"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0."
-"html\">GNU General Public License, version 2 or later</a> for details.</span>"
+"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
+"\">GNU General Public License, version 2 or later</a> for details.</span>"
 msgstr ""
 "<span size=\"small\">本程序不提供任何担保。\n"
 "参见 <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU "
 "通用公共许可证，第二版或更高版本</a>以了解更多细节。</span>"
 
-#: Settings.ui.h:95
+#: Settings.ui:908
 #, fuzzy
 msgid "Customize Opacity"
 msgstr "自定义不透明度"
 
-#: Settings.ui.h:96
+#: Settings.ui:917
 #, fuzzy
 msgid "Minimum Opacity"
 msgstr "最小化不透明度"
 
-#: Settings.ui.h:97
+#: Settings.ui:937
 #, fuzzy
 msgid "Maximum Opacity"
 msgstr "最大化不透明度"
 
-#: Settings.ui.h:98
+#: Settings.ui:980
 #, fuzzy
 msgid "Number Overlay"
 msgstr "编号覆盖"
 
-#: Settings.ui.h:99
+#: Settings.ui:981
 #, fuzzy
 msgid ""
 "Show the app numbers over the icons briefly, corresponding to the shortcut."
 msgstr "临时显示与快捷键对应的图标上的应用程序编号。"
 
-#: Settings.ui.h:100
+#: Settings.ui:991
 #, fuzzy
 msgid "Show Hidden Dock"
 msgstr "显示 Dock 于"
 
-#: Settings.ui.h:101
+#: Settings.ui:992
 #, fuzzy
 msgid "Show dock briefly when triggering the shortcut."
 msgstr "如果使用了自动隐藏，Dock 将在触发快捷键时短暂显示。"
 
-#: Settings.ui.h:102
+#: Settings.ui:1002
 msgid "Keyboard Shortcut"
 msgstr ""
 
-#: Settings.ui.h:103
+#: Settings.ui:1003
 #, fuzzy
 msgid "Syntax: Shift, Ctrl, Alt, Super."
 msgstr "语法：<Shift>，<Ctrl>，<Alt>，<Super>"
 
-#: Settings.ui.h:104
+#: Settings.ui:1014
 #, fuzzy
 msgid "Hide Timeout"
 msgstr "隐藏超时时间（秒）"
 
-#: Settings.ui.h:105
-msgid "Show Dock by Mouse Hover"
-msgstr ""
-
-#: Settings.ui.h:106
-msgid "Show the dock by mouse hover on the screen edge."
-msgstr "鼠标移至屏幕边缘时显示 Dock。"
-
-#: Settings.ui.h:107
 #, fuzzy
-msgid "Push to Show Dock"
-msgstr "Dash to Dock %s"
+#~ msgid "Primary monitor: "
+#~ msgstr "主显示器"
 
-#: Settings.ui.h:108
+#~ msgid "Secondary monitor "
+#~ msgstr "副显示器 "
+
+#~ msgid "Right"
+#~ msgstr "右侧"
+
+#~ msgid "Left"
+#~ msgstr "左侧"
+
+#~ msgid "Intelligent autohide customization"
+#~ msgstr "智能自动隐藏自定义"
+
+#~ msgid "Reset to defaults"
+#~ msgstr "重置为默认值"
+
+#~ msgid "Show dock and application numbers"
+#~ msgstr "显示 Dock 和应用程序编号"
+
+#~ msgid "Customize middle-click behavior"
+#~ msgstr "自定义中键点击行为"
+
+#~ msgid "Customize running indicators"
+#~ msgstr "自定义“运行中”指示器"
+
+#~ msgid "Customize opacity"
+#~ msgstr "自定义不透明度"
+
+#~ msgid "All Windows"
+#~ msgstr "所有窗口"
+
+#, fuzzy, javascript-format
+#~ msgid "Quit %d Windows"
+#~ msgstr "所有窗口"
+
+#, javascript-format
+#~ msgid "Dash to Dock %s"
+#~ msgstr "Dash to Dock %s"
+
+#~ msgid "Mount"
+#~ msgstr "挂载"
+
+#~ msgid "Unmount"
+#~ msgstr "卸载"
+
+#~ msgid "Eject"
+#~ msgstr "弹出"
+
+#~ msgid "Trash"
+#~ msgstr "回收站"
+
+#~ msgid "Empty Trash"
+#~ msgstr "清空回收站"
+
+#~ msgid "Bottom"
+#~ msgstr "底部"
+
+#~ msgid "Top"
+#~ msgstr "顶部"
+
 #, fuzzy
-msgid "Enable in Fullscreen"
-msgstr "在全屏模式下启用"
+#~ msgid "Intelligent Hiding"
+#~ msgstr "智能隐藏"
 
-#: Settings.ui.h:109
 #, fuzzy
-msgid "Dodge Windows"
-msgstr "避开窗口"
+#~ msgid ""
+#~ "Hide the dock when a window is below it. More adjustments when enabled."
+#~ msgstr ""
+#~ "当 Dock 会挡住当前应用程序的某个窗口时，将其隐藏。点击右侧设置按钮可以设置"
+#~ "更多细节。"
 
-#: Settings.ui.h:110
 #, fuzzy
-msgid "Show the dock when it doesn't obstruct app windows."
-msgstr "在不妨碍应用程序窗口时，显示 Dock。"
+#~ msgid "Dock Size"
+#~ msgstr "Dock 大小限制"
 
-#: Settings.ui.h:112
 #, fuzzy
-msgid "Focused Windows"
-msgstr "所有窗口"
+#~ msgid "Icon Size"
+#~ msgstr "图标大小限制"
 
-#: Settings.ui.h:113
 #, fuzzy
-msgid "Maximized Windows"
-msgstr "仅最大化窗口"
+#~ msgid "Fixed Size (Scroll to see more icons.)"
+#~ msgstr "固定图标大小：滚动显示其它图标"
 
-#: Settings.ui.h:114
-msgid "Always-on-top"
-msgstr ""
+#~ msgid "Show the dock by mouse hover on the screen edge."
+#~ msgstr "鼠标移至屏幕边缘时显示 Dock。"
 
-#: Settings.ui.h:115
-msgid "Animation duration (s)"
-msgstr "动画持续时间（秒）"
+#, fuzzy
+#~ msgid "Push to Show Dock"
+#~ msgstr "Dash to Dock %s"
 
-#: Settings.ui.h:116
-msgid "Hide timeout (s)"
-msgstr "隐藏超时时间（秒）"
+#, fuzzy
+#~ msgid "Enable in Fullscreen"
+#~ msgstr "在全屏模式下启用"
 
-#: Settings.ui.h:117
-msgid "Show timeout (s)"
-msgstr "显示超时时间（秒）"
+#, fuzzy
+#~ msgid "Show the dock when it doesn't obstruct app windows."
+#~ msgstr "在不妨碍应用程序窗口时，显示 Dock。"
 
-#: Settings.ui.h:118
-msgid "Pressure threshold"
-msgstr "压力阈值"
+#, fuzzy
+#~ msgid "Focused Windows"
+#~ msgstr "所有窗口"
+
+#, fuzzy
+#~ msgid "Maximized Windows"
+#~ msgstr "仅最大化窗口"
+
+#~ msgid "Animation duration (s)"
+#~ msgstr "动画持续时间（秒）"
+
+#~ msgid "Hide timeout (s)"
+#~ msgstr "隐藏超时时间（秒）"
+
+#~ msgid "Show timeout (s)"
+#~ msgstr "显示超时时间（秒）"
+
+#~ msgid "Pressure threshold"
+#~ msgstr "压力阈值"
 
 #~ msgid "Show on all monitors."
 #~ msgstr "所有显示器上都显示"
@@ -749,9 +710,6 @@ msgstr "压力阈值"
 
 #~ msgid "Switch workspace by scrolling on the dock"
 #~ msgstr "通过滚动 dock 来切换工作区"
-
-#~ msgid "Main Settings"
-#~ msgstr "主设置"
 
 #~ msgid "Show delay [ms]"
 #~ msgstr "显示延迟(毫秒)"

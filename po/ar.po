@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash to Dock\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-23 19:15-0700\n"
+"POT-Creation-Date: 2022-06-09 17:42-0700\n"
 "PO-Revision-Date: 2015-04-18 18:01+0100\n"
 "Last-Translator: Jean-Baptiste Le Cz <jb.lecoz@gmail.com>\n"
 "Language-Team: Faissal Chamekh <chamfay@gmail.com>\n"
@@ -20,650 +20,592 @@ msgstr ""
 "X-Generator: Poedit 1.7.5\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#. Translators: This will be followed by Display Name - Connector.
-#: prefs.js:372
+#. Translators: This is the heading of a list of open windows
+#: appIcons.js:981
 #, fuzzy
-msgid "Primary monitor: "
-msgstr "الشاشة الرئيسية"
+msgid "Open Windows"
+msgstr "حيلة النوافذ"
 
-#. Translators: Followed by monitor index, Display Name - Connector.
-#: prefs.js:378
-msgid "Secondary monitor "
-msgstr "الشاشة الثانوية"
+#: appIcons.js:1001
+#, fuzzy
+msgid "New Window"
+msgstr "حيلة النوافذ"
 
-#: prefs.js:421 Settings.ui.h:31
-msgid "Right"
-msgstr "يمين"
-
-#: prefs.js:422 Settings.ui.h:28
-msgid "Left"
-msgstr "يسار"
-
-#: prefs.js:473
-msgid "Intelligent autohide customization"
-msgstr "تخصيص الإخفاء التلقائي"
-
-#: prefs.js:481 prefs.js:722 prefs.js:780
-msgid "Reset to defaults"
-msgstr "العودة للافتراضي"
-
-#: prefs.js:608
-msgid "Managed by GNOME Multitasking's Application Switching setting"
+#: appIcons.js:1019
+msgid "Launch using Integrated Graphics Card"
 msgstr ""
 
-#: prefs.js:714
+#: appIcons.js:1020
+msgid "Launch using Discrete Graphics Card"
+msgstr ""
+
+#: appIcons.js:1049
+msgid "Unpin"
+msgstr ""
+
+#: appIcons.js:1050
 #, fuzzy
-msgid "Show dock and application numbers"
-msgstr "أظهر التطبيقات قيد التشغيل"
+msgid "Remove from Favorites"
+msgstr "أظهر التطبيقات المفضّلة"
 
-#: prefs.js:772
+#: appIcons.js:1057
+msgid "Pin to Dash"
+msgstr ""
+
+#: appIcons.js:1058
 #, fuzzy
-msgid "Customize middle-click behavior"
-msgstr "خصّص الإعتام"
+msgid "Add to Favorites"
+msgstr "أظهر التطبيقات المفضّلة"
 
-#: prefs.js:857
+#: appIcons.js:1070
 #, fuzzy
-msgid "Customize running indicators"
-msgstr "أظهر التطبيقات قيد التشغيل"
+msgid "Show Details"
+msgstr "عرض معاينات النوافذ المفتوحة."
 
-#: prefs.js:969
-msgid "Customize opacity"
-msgstr "خصّص الإعتام"
-
-#: appIcons.js:970 Settings.ui.h:111
-msgid "All Windows"
-msgstr "جميع النوافذ"
-
-#: appIcons.js:1114
-#, fuzzy, javascript-format
-msgid "Quit %d Windows"
-msgstr "جميع النوافذ"
+#: appIcons.js:1107 appIcons.js:1119 Settings.ui:38 Settings.ui:62
+#: Settings.ui:86
+msgid "Quit"
+msgstr "خروج"
 
 #. Translators: %s is "Settings", which is automatically translated. You
 #. can also translate the full message if this fits better your language.
-#: appIcons.js:1329
+#: appIcons.js:1336
+#, fuzzy
+msgid "Settings"
+msgstr "الخصائص الأساسية"
+
+#: locations.js:884
 #, javascript-format
-msgid "Dash to Dock %s"
+msgid "Failed to launch “%s”"
 msgstr ""
 
-#: locations.js:422
-msgid "Mount"
-msgstr ""
-
-#: locations.js:424
-msgid "Unmount"
-msgstr ""
-
-#: locations.js:426
-msgid "Eject"
-msgstr ""
-
-#: locations.js:484
-#, javascript-format
-msgid "Failed to mount “%s”"
-msgstr ""
-
-#: locations.js:487
-#, javascript-format
-msgid "Failed to umount “%s”"
-msgstr ""
-
-#: locations.js:490
-#, javascript-format
-msgid "Failed to eject “%s”"
-msgstr ""
-
-#: locations.js:502
-msgid "Mount operation already in progress"
-msgstr ""
-
-#: locations.js:505
-msgid "Umount operation already in progress"
-msgstr ""
-
-#: locations.js:508
-msgid "Eject operation already in progress"
-msgstr ""
-
-#: locations.js:582
-msgid "Trash"
-msgstr ""
-
-#: locations.js:622
-msgid "Empty Trash"
-msgstr ""
-
-#: Settings.ui.h:1
+#: Settings.ui:22
 #, fuzzy
 msgid "Shift+Click Action"
 msgstr "حدث Shift+Click"
 
-#: Settings.ui.h:2
+#: Settings.ui:23
 #, fuzzy
 msgid ""
 "If set to Minimize window, double clicking minimizes all windows of one app."
 msgstr "عند التصغير النقر المزدوج سيصغر جميع نوافذالتطبيق."
 
-#: Settings.ui.h:3
+#: Settings.ui:29 Settings.ui:53 Settings.ui:77 Settings.ui:542
 #, fuzzy
 msgid "Raise window"
 msgstr "صغّر النافذة"
 
-#: Settings.ui.h:4
+#: Settings.ui:30 Settings.ui:54 Settings.ui:78
 msgid "Minimize window"
 msgstr "صغّر النافذة"
 
-#: Settings.ui.h:5
+#: Settings.ui:31 Settings.ui:55 Settings.ui:79 Settings.ui:544
 msgid "Launch new instance"
 msgstr "شغّل نسخة جديدة"
 
-#: Settings.ui.h:6
+#: Settings.ui:32 Settings.ui:56 Settings.ui:80 Settings.ui:545 Settings.ui:573
 msgid "Cycle through windows"
 msgstr "التبديل بين النوافذ"
 
-#: Settings.ui.h:7
+#: Settings.ui:33 Settings.ui:57 Settings.ui:81 Settings.ui:546
 #, fuzzy
 msgid "Minimize or overview"
 msgstr "صغّر النافذة"
 
-#: Settings.ui.h:8
+#: Settings.ui:34 Settings.ui:58 Settings.ui:82 Settings.ui:547
 #, fuzzy
 msgid "Show window previews"
 msgstr "عرض معاينات النوافذ المفتوحة."
 
-#: Settings.ui.h:9
+#: Settings.ui:35 Settings.ui:59 Settings.ui:83 Settings.ui:548
 #, fuzzy
 msgid "Minimize or show previews"
 msgstr "صغّر النافذة"
 
-#: Settings.ui.h:10
+#: Settings.ui:36 Settings.ui:60 Settings.ui:84 Settings.ui:549
 #, fuzzy
 msgid "Focus or show previews"
 msgstr "عرض معاينات النوافذ المفتوحة."
 
-#: Settings.ui.h:11
+#: Settings.ui:37 Settings.ui:61 Settings.ui:85 Settings.ui:550
 #, fuzzy
 msgid "Focus, minimize or show previews"
 msgstr "صغّر النافذة"
 
-#: Settings.ui.h:12
-msgid "Quit"
-msgstr "خروج"
-
-#: Settings.ui.h:13
+#: Settings.ui:46
 #, fuzzy
 msgid "Middle-Click Action"
 msgstr "حدث النقر"
 
-#: Settings.ui.h:14
+#: Settings.ui:47
 msgid "Behavior for Middle-Click."
 msgstr "سلوك الزر المتوسط."
 
-#: Settings.ui.h:15
+#: Settings.ui:70
 #, fuzzy
 msgid "Shift+Middle-Click Action"
 msgstr "حدث Shift+Click"
 
-#: Settings.ui.h:16
+#: Settings.ui:71
 msgid "Behavior for Shift+Middle-Click."
 msgstr "سلوك Shift+Middle-Click."
 
-#: Settings.ui.h:17
+#: Settings.ui:126
 msgid "Enable Unity 7-like Backlit Items"
 msgstr ""
 
-#: Settings.ui.h:18
+#: Settings.ui:138
 msgid "Glossy"
 msgstr ""
 
-#: Settings.ui.h:19
+#: Settings.ui:148
 msgid "Use Dominant Color"
 msgstr ""
 
-#: Settings.ui.h:20
+#: Settings.ui:159
 #, fuzzy
 msgid "Customize Indicator Style"
 msgstr "خصّص الإعتام"
 
-#: Settings.ui.h:21
+#: Settings.ui:169
 #, fuzzy
 msgid "Fill Color"
 msgstr "اللون"
 
-#: Settings.ui.h:22
+#: Settings.ui:180
 #, fuzzy
 msgid "Border Color"
 msgstr "لون الحواف"
 
-#: Settings.ui.h:23
+#: Settings.ui:191
 #, fuzzy
 msgid "Border Width"
 msgstr "عرض الحواف"
 
-#: Settings.ui.h:24
-msgid "General"
-msgstr ""
-
-#: Settings.ui.h:25
-#, fuzzy
-msgid "Show Dock On"
-msgstr "أظهر المرساة فوق"
-
-#: Settings.ui.h:26
-#, fuzzy
-msgid "All Monitors"
-msgstr "عزل مساحات العمل."
-
-#: Settings.ui.h:27
-#, fuzzy
-msgid "Screen Position"
-msgstr "موضع المرساة"
-
-#: Settings.ui.h:29
-msgid "Bottom"
-msgstr "أسفل"
-
-#: Settings.ui.h:30
-msgid "Top"
-msgstr "أعلى"
-
-#: Settings.ui.h:32
-#, fuzzy
-msgid "Intelligent Hiding"
-msgstr "إخفاء تلقائي ذكي"
-
-#: Settings.ui.h:33
-#, fuzzy
-msgid "Hide the dock when a window is below it. More adjustments when enabled."
-msgstr "إخفاء المرساة عندما تحجب نافذة التطبيق الحالي. تخصيصات أكثر متوفرة."
-
-#: Settings.ui.h:34
-#, fuzzy
-msgid "Dock Size"
-msgstr "حدّ حجم المرساة"
-
-#: Settings.ui.h:35
-msgid "Panel Mode"
-msgstr ""
-
-#: Settings.ui.h:36
-#, fuzzy
-msgid "Icon Size"
-msgstr "حدّ حجم الأيقونة"
-
-#: Settings.ui.h:37
-#, fuzzy
-msgid "Fixed Size (Scroll to see more icons.)"
-msgstr "حجم أيقونات ثابت: استعمل التمرير لكشف أيقونات أخرى"
-
-#: Settings.ui.h:38
-msgid "Window Preview Size Scale"
-msgstr ""
-
-#: Settings.ui.h:39
+#: Settings.ui:223
 msgid "Apps"
 msgstr ""
 
-#: Settings.ui.h:40
+#: Settings.ui:237
 #, fuzzy
 msgid "Show Favorites"
 msgstr "أظهر التطبيقات المفضّلة"
 
-#: Settings.ui.h:41
+#: Settings.ui:252
 #, fuzzy
 msgid "Show Running Apps"
 msgstr "أظهر التطبيقات قيد التشغيل"
 
-#: Settings.ui.h:42
+#: Settings.ui:261
 #, fuzzy
 msgid "Isolate Workspaces"
 msgstr "عزل مساحات العمل."
 
-#: Settings.ui.h:43
+#: Settings.ui:271
 #, fuzzy
 msgid "Isolate Monitors"
 msgstr "عزل مساحات العمل."
 
-#: Settings.ui.h:44
+#: Settings.ui:281
 #, fuzzy
 msgid "Show Urgent Windows"
 msgstr "حيلة النوافذ"
 
-#: Settings.ui.h:45
+#: Settings.ui:291
 #, fuzzy
 msgid "Show Window Previews"
 msgstr "عرض معاينات النوافذ المفتوحة."
 
-#: Settings.ui.h:46
+#: Settings.ui:303
 #, fuzzy
 msgid "Focused Apps Always Visible"
 msgstr "المرساة ثابتة وظاهرة دائما"
 
-#: Settings.ui.h:47
+#: Settings.ui:313
 #, fuzzy
 msgid "Show <i>Apps</i> Icon"
 msgstr "أظهر أيقونة التطبيقات أولا"
 
-#: Settings.ui.h:48
+#: Settings.ui:314
 #, fuzzy
 msgid "If disabled, these settings are accessible from gnome-tweak-tool."
 msgstr ""
 "إذا تم تعطيله هذه الإعدادت يمكن الوصول إليها من gnome-tweak-tool أو موقع "
 "الإضافات."
 
-#: Settings.ui.h:49
+#: Settings.ui:323
 msgid "Move Apps Icon As First Icon"
 msgstr ""
 
-#: Settings.ui.h:50
+#: Settings.ui:333
 msgid "Animate Opening Apps Grid"
 msgstr ""
 
-#: Settings.ui.h:51
+#: Settings.ui:345
 #, fuzzy
 msgid "Show Trash Icon"
 msgstr "أظهر المرساة فوق"
 
-#: Settings.ui.h:52
+#: Settings.ui:355
 #, fuzzy
 msgid "Show Devices"
 msgstr "عرض معاينات النوافذ المفتوحة."
 
-#: Settings.ui.h:53
+#: Settings.ui:364
 msgid "Mounted Only"
 msgstr ""
 
-#: Settings.ui.h:54
+#: Settings.ui:374
 msgid "Include Network Devices"
 msgstr ""
 
-#: Settings.ui.h:55
+#: Settings.ui:384
 msgid "Isolate Windows From File Manager"
 msgstr ""
 
-#: Settings.ui.h:56
+#: Settings.ui:400
 #, fuzzy
 msgid "Behaviour"
 msgstr "السلوك"
 
-#: Settings.ui.h:57
+#: Settings.ui:407
+#, fuzzy
+msgid "Show Dock On"
+msgstr "أظهر المرساة فوق"
+
+#: Settings.ui:423
+#, fuzzy
+msgid "All Monitors"
+msgstr "عزل مساحات العمل."
+
+#: Settings.ui:446
+msgid "Window Preview Size Scale"
+msgstr ""
+
+#: Settings.ui:477
 #, fuzzy
 msgid "Keyboard Shortcuts To Activate Apps"
 msgstr "استخدام إختصارات لوحة المفاتيح لتفعيل التطبيقات"
 
-#: Settings.ui.h:58
+#: Settings.ui:478
 #, fuzzy
 msgid "Enable Super+(0-9) to activate apps. Shift and Ctrl also can be used."
 msgstr ""
 "تفعيل Super+(0-9) كاختصار لتمكين التطبيقات. يمكن أيضاً استخدامها معاً مع Shift "
 "و Ctrl"
 
-#: Settings.ui.h:59
+#: Settings.ui:516
 #, fuzzy
 msgid "Click Action"
 msgstr "حدث النقر"
 
-#: Settings.ui.h:60
+#: Settings.ui:517
 #, fuzzy
 msgid "Behaviour when clicking on a running app icon."
 msgstr "التصرّف عن النقر على أيقونة التطبيق قيد التشغيل."
 
-#: Settings.ui.h:61
+#: Settings.ui:543
 msgid "Minimize"
 msgstr "صغّر"
 
-#: Settings.ui.h:62
+#: Settings.ui:565
 #, fuzzy
 msgid "Scroll Action"
 msgstr "حدث النقر"
 
-#: Settings.ui.h:63
+#: Settings.ui:566
 #, fuzzy
 msgid "Behaviour when scrolling on an app icon."
 msgstr "التصرّف عن النقر على أيقونة التطبيق قيد التشغيل."
 
-#: Settings.ui.h:64
+#: Settings.ui:572
 msgid "Do nothing"
 msgstr "لا تفعل شيئا"
 
-#: Settings.ui.h:65
+#: Settings.ui:574
 #, fuzzy
 msgid "Switch workspace"
 msgstr "تبديل مساحة عمل واحدة في نفس الوقت"
 
-#: Settings.ui.h:66
+#: Settings.ui:584
 msgid "Appearance"
 msgstr "المظهر"
 
-#: Settings.ui.h:67
+#: Settings.ui:591
 #, fuzzy
 msgid "Built-in Theme"
 msgstr "استعمل السمة المضمّنة"
 
-#: Settings.ui.h:68
+#: Settings.ui:592
 msgid "Integrates the dock with the default GNOME theme."
 msgstr ""
 
-#: Settings.ui.h:69
+#: Settings.ui:614
 msgid "Shrink Dock"
 msgstr ""
 
-#: Settings.ui.h:70
+#: Settings.ui:615
 msgid "Save space reducing padding and border radius."
 msgstr "حفظ المساحة يقلل من الحشو ونصف قطر الحافة."
 
-#: Settings.ui.h:71
+#: Settings.ui:625
 #, fuzzy
 msgid "Customize Indicators"
 msgstr "خصّص الإعتام"
 
-#: Settings.ui.h:72
+#: Settings.ui:644 Settings.ui:716
 msgid "Default"
 msgstr ""
 
-#: Settings.ui.h:73
+#: Settings.ui:645
 msgid "Dots"
 msgstr ""
 
-#: Settings.ui.h:74
+#: Settings.ui:646
 msgid "Squares"
 msgstr ""
 
-#: Settings.ui.h:75
+#: Settings.ui:647
 msgid "Dashes"
 msgstr ""
 
-#: Settings.ui.h:76
+#: Settings.ui:648
 msgid "Segmented"
 msgstr ""
 
-#: Settings.ui.h:77
+#: Settings.ui:649
 msgid "Solid"
 msgstr ""
 
-#: Settings.ui.h:78
+#: Settings.ui:650
 msgid "Ciliora"
 msgstr ""
 
-#: Settings.ui.h:79
+#: Settings.ui:651
 msgid "Metro"
 msgstr ""
 
-#: Settings.ui.h:80
+#: Settings.ui:661
 #, fuzzy
 msgid "Dock Color"
 msgstr "اللون"
 
-#: Settings.ui.h:81
+#: Settings.ui:662
 #, fuzzy
 msgid "Set the dock background color."
 msgstr "تعيين لون الخلفية لشَرِطة"
 
-#: Settings.ui.h:82
+#: Settings.ui:683
 #, fuzzy
 msgid "Dock Opacity"
 msgstr "العتمة"
 
-#: Settings.ui.h:83
+#: Settings.ui:684
 #, fuzzy
 msgid "Set the dock background opacity."
 msgstr "ضبط إعتام خلفية المرساة."
 
-#: Settings.ui.h:84
+#: Settings.ui:717
 msgid "Fixed"
 msgstr ""
 
-#: Settings.ui.h:85
+#: Settings.ui:718
 msgid "Dynamic"
 msgstr ""
 
-#: Settings.ui.h:86
+#: Settings.ui:748
 msgid "Squared Corners"
 msgstr ""
 
-#: Settings.ui.h:87
+#: Settings.ui:758
 msgid "Show Overview On Logon"
 msgstr ""
 
-#: Settings.ui.h:88
+#: Settings.ui:772
 msgid "About"
 msgstr "حول"
 
-#: Settings.ui.h:89
+#: Settings.ui:787
 #, fuzzy
 msgid "Moves the dash out of the overview transforming it into a dock."
 msgstr "تحريك الشريط خارج النظرة العامة في الشَرِطة"
 
-#: Settings.ui.h:90
+#: Settings.ui:796
 #, fuzzy
 msgid "Version"
 msgstr "الإصدار:"
 
-#: Settings.ui.h:91
+#: Settings.ui:820
 msgid "Original Author"
 msgstr ""
 
-#: Settings.ui.h:92
+#: Settings.ui:840
 msgid "Authors"
 msgstr ""
 
-#: Settings.ui.h:93
+#: Settings.ui:874
 msgid ""
 "<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
-"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0."
-"html\">GNU General Public License, version 2 or later</a> for details.</span>"
+"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
+"\">GNU General Public License, version 2 or later</a> for details.</span>"
 msgstr ""
 "<span size=\"small\">هذا البرنامج يأتي بدون أي ضمانات.\n"
 "لمزيد من المعلومات أنظر <a href=\"https://www.gnu.org/licenses/old-licenses/"
 "gpl-2.0.html\">رخصة غنو العمومية، الإصدارة 2 فما فوق.</span>"
 
-#: Settings.ui.h:95
+#: Settings.ui:908
 #, fuzzy
 msgid "Customize Opacity"
 msgstr "خصّص الإعتام"
 
-#: Settings.ui.h:96
+#: Settings.ui:917
 #, fuzzy
 msgid "Minimum Opacity"
 msgstr "خصّص الإعتام"
 
-#: Settings.ui.h:97
+#: Settings.ui:937
 #, fuzzy
 msgid "Maximum Opacity"
 msgstr "خصّص الإعتام"
 
-#: Settings.ui.h:98
+#: Settings.ui:980
 #, fuzzy
 msgid "Number Overlay"
 msgstr "عدد التراكب"
 
-#: Settings.ui.h:99
+#: Settings.ui:981
 #, fuzzy
 msgid ""
 "Show the app numbers over the icons briefly, corresponding to the shortcut."
 msgstr "عرض أرقام التطبيق مؤقتا على الرموز، المقابلةللاختصار."
 
-#: Settings.ui.h:100
+#: Settings.ui:991
 #, fuzzy
 msgid "Show Hidden Dock"
 msgstr "أظهر المرساة فوق"
 
-#: Settings.ui.h:101
+#: Settings.ui:992
 #, fuzzy
 msgid "Show dock briefly when triggering the shortcut."
 msgstr ""
 "إذا اُستخدم الإخفاء التلقائي الشريط سيظهر لوقت قصير عند الضغطعلى الإختصار."
 
-#: Settings.ui.h:102
+#: Settings.ui:1002
 msgid "Keyboard Shortcut"
 msgstr ""
 
-#: Settings.ui.h:103
+#: Settings.ui:1003
 #, fuzzy
 msgid "Syntax: Shift, Ctrl, Alt, Super."
 msgstr "البنية: <Shift>, <Ctrl>, <Alt>, <Super>"
 
-#: Settings.ui.h:104
+#: Settings.ui:1014
 #, fuzzy
 msgid "Hide Timeout"
 msgstr "زمن الاختفاء (ثا)"
 
-#: Settings.ui.h:105
-msgid "Show Dock by Mouse Hover"
-msgstr ""
-
-#: Settings.ui.h:106
-msgid "Show the dock by mouse hover on the screen edge."
-msgstr "أظهر المرساة بتمرير الفأرة على حافة النافذة"
-
-#: Settings.ui.h:107
-msgid "Push to Show Dock"
-msgstr ""
-
-#: Settings.ui.h:108
 #, fuzzy
-msgid "Enable in Fullscreen"
-msgstr "تمكين في وضع ملئ الشاشة"
+#~ msgid "Primary monitor: "
+#~ msgstr "الشاشة الرئيسية"
 
-#: Settings.ui.h:109
+#~ msgid "Secondary monitor "
+#~ msgstr "الشاشة الثانوية"
+
+#~ msgid "Right"
+#~ msgstr "يمين"
+
+#~ msgid "Left"
+#~ msgstr "يسار"
+
+#~ msgid "Intelligent autohide customization"
+#~ msgstr "تخصيص الإخفاء التلقائي"
+
+#~ msgid "Reset to defaults"
+#~ msgstr "العودة للافتراضي"
+
 #, fuzzy
-msgid "Dodge Windows"
-msgstr "حيلة النوافذ"
+#~ msgid "Show dock and application numbers"
+#~ msgstr "أظهر التطبيقات قيد التشغيل"
 
-#: Settings.ui.h:110
 #, fuzzy
-msgid "Show the dock when it doesn't obstruct app windows."
-msgstr "إظهار المرساة عندما لا تحجب نوافذ التطبيق."
+#~ msgid "Customize middle-click behavior"
+#~ msgstr "خصّص الإعتام"
 
-#: Settings.ui.h:112
 #, fuzzy
-msgid "Focused Windows"
-msgstr "جميع النوافذ"
+#~ msgid "Customize running indicators"
+#~ msgstr "أظهر التطبيقات قيد التشغيل"
 
-#: Settings.ui.h:113
+#~ msgid "Customize opacity"
+#~ msgstr "خصّص الإعتام"
+
+#~ msgid "All Windows"
+#~ msgstr "جميع النوافذ"
+
+#, fuzzy, javascript-format
+#~ msgid "Quit %d Windows"
+#~ msgstr "جميع النوافذ"
+
 #, fuzzy
-msgid "Maximized Windows"
-msgstr "صغّر النافذة"
+#~ msgid "Screen Position"
+#~ msgstr "موضع المرساة"
 
-#: Settings.ui.h:114
-msgid "Always-on-top"
-msgstr ""
+#~ msgid "Bottom"
+#~ msgstr "أسفل"
 
-#: Settings.ui.h:115
-msgid "Animation duration (s)"
-msgstr "مدة التحريك (ثا)"
+#~ msgid "Top"
+#~ msgstr "أعلى"
 
-#: Settings.ui.h:116
-msgid "Hide timeout (s)"
-msgstr "زمن الاختفاء (ثا)"
+#, fuzzy
+#~ msgid "Intelligent Hiding"
+#~ msgstr "إخفاء تلقائي ذكي"
 
-#: Settings.ui.h:117
-msgid "Show timeout (s)"
-msgstr "زمن الظهور (ثا)"
+#, fuzzy
+#~ msgid ""
+#~ "Hide the dock when a window is below it. More adjustments when enabled."
+#~ msgstr "إخفاء المرساة عندما تحجب نافذة التطبيق الحالي. تخصيصات أكثر متوفرة."
 
-#: Settings.ui.h:118
-msgid "Pressure threshold"
-msgstr "عتبة الضغط"
+#, fuzzy
+#~ msgid "Dock Size"
+#~ msgstr "حدّ حجم المرساة"
+
+#, fuzzy
+#~ msgid "Icon Size"
+#~ msgstr "حدّ حجم الأيقونة"
+
+#, fuzzy
+#~ msgid "Fixed Size (Scroll to see more icons.)"
+#~ msgstr "حجم أيقونات ثابت: استعمل التمرير لكشف أيقونات أخرى"
+
+#~ msgid "Show the dock by mouse hover on the screen edge."
+#~ msgstr "أظهر المرساة بتمرير الفأرة على حافة النافذة"
+
+#, fuzzy
+#~ msgid "Enable in Fullscreen"
+#~ msgstr "تمكين في وضع ملئ الشاشة"
+
+#, fuzzy
+#~ msgid "Show the dock when it doesn't obstruct app windows."
+#~ msgstr "إظهار المرساة عندما لا تحجب نوافذ التطبيق."
+
+#, fuzzy
+#~ msgid "Focused Windows"
+#~ msgstr "جميع النوافذ"
+
+#, fuzzy
+#~ msgid "Maximized Windows"
+#~ msgstr "صغّر النافذة"
+
+#~ msgid "Animation duration (s)"
+#~ msgstr "مدة التحريك (ثا)"
+
+#~ msgid "Hide timeout (s)"
+#~ msgstr "زمن الاختفاء (ثا)"
+
+#~ msgid "Show timeout (s)"
+#~ msgstr "زمن الظهور (ثا)"
+
+#~ msgid "Pressure threshold"
+#~ msgstr "عتبة الضغط"
 
 #, fuzzy
 #~ msgid "Show on all monitors."
@@ -753,9 +695,6 @@ msgstr "عتبة الضغط"
 
 #~ msgid "Switch workspace by scrolling on the dock"
 #~ msgstr "بدّل مساحة العمل عند التمرير فوق المرساة"
-
-#~ msgid "Main Settings"
-#~ msgstr "الخصائص الأساسية"
 
 #~ msgid "Show delay [ms]"
 #~ msgstr "تأخير الظهور (ميلي ثانية)"
