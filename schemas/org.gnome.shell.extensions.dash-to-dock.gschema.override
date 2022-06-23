@@ -4,6 +4,4 @@ show-mounts=false
 running-indicator-style='DOTS'
 show-apps-at-top=true
 click-action='minimize'
-transparency-mode='DYNAMIC'
-min-alpha=0.45
-max-alpha=1.0
+transparency-mode='DEFAULT'
