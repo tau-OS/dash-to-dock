@@ -4,7 +4,7 @@ Summary:        Dock for the GNOME Shell by micxgx@gmail.com, modified for tauOS
 Name:           tau-dash-to-dock
 # This should match the version in metadata.json
 Version:        72
-Release:        8
+Release:        9
 License:        GPLv2+
 URL:            https://micheleg.github.io/dash-to-dock
 Source0:        %{name}-%{version}.tar.gz
