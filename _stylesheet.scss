@@ -273,7 +273,7 @@ $osd_fg_color: #eeeeec;
 }
 
 #dashtodockContainer.dashtodock #dash .dash-background {
-    background: #2e3436;
+    background: #000;
 }
 
 #dashtodockContainer.dashtodock .progress-bar {
@@ -317,7 +317,7 @@ $osd_fg_color: #eeeeec;
 
 #dashtodockContainer .notification-badge {
     color: rgba(255, 255, 255, 1);
-    background-color: #8c56bf;
+    background-color: #6A6A6A;
     padding: 0.2em 0.5em;
     border-radius: 1em;
     font-weight: bold;
