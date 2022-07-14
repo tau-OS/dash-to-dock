@@ -205,31 +205,16 @@ var Settings = GObject.registerClass({
             this._builder.add_from_file('./Settings.ui');
         }
 
-        this.widget = new Gtk.ScrolledWindow({
-            hscrollbar_policy: Gtk.PolicyType.NEVER,
-            vscrollbar_policy: (SHELL_VERSION >= 42) ?
-                Gtk.PolicyType.NEVER : Gtk.PolicyType.AUTOMATIC,
-        });
-        this._notebook = this._builder.get_object('settings_notebook');
-        this.widget.set_child(this._notebook);
-
-        // Set a reasonable initial window height
-        this.widget.connect('realize', () => {
-            this.widget.get_root().set_size_request(-1, 850);
-            if (SHELL_VERSION >= 42)
-                this.widget.set_size_request(-1, 850);
-        });
+        // Settings Pages
+        this.behaviour = this._builder.get_object('settings_behaviour');
+        this.apps = this._builder.get_object('settings_dock');
+        this.appearance = this._builder.get_object('settings_appearance');
+        this.about = this._builder.get_object('settings_about');
 
         // Timeout to delay the update of the settings
         this._dock_size_timeout = 0;
         this._icon_size_timeout = 0;
         this._opacity_timeout = 0;
-
-        if (Config.PACKAGE_VERSION.split('.')[0] < 42) {
-            // Remove this when we won't support earlier versions
-            this._builder.get_object('shrink_dash_label1').label =
-                __('Show favorite applications');
-        }
 
         this._monitorsConfig = new MonitorsConfig();
         this._bindSettings();
