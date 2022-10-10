@@ -2,9 +2,9 @@ name: Package
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
-  
+
 jobs:
   build:
     uses: tau-OS/github-actions/.github/workflows/build-rpm.yml@main
@@ -25,7 +25,7 @@ jobs:
     uses: tau-OS/github-actions/.github/workflows/upload-rpm.yml@main
     with:
       name: "tau-dash-to-dock"
-      tauOSVersion: "1.1"
+      tauOSVersion: "1"
     secrets:
       repoIP: ${{ secrets.REPO_IP }}
       repoKnownHosts: ${{ secrets.REPO_KNOWN_HOSTS }}
