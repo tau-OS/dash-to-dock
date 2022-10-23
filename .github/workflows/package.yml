@@ -1,32 +1,50 @@
-name: Package
+name: Build package
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
   build:
-    uses: tau-OS/github-actions/.github/workflows/build-rpm.yml@main
-    with:
-      name: "tau-dash-to-dock"
-  sign:
-    needs:
-      - build
-    uses: tau-OS/github-actions/.github/workflows/sign-rpm.yml@main
-    if: github.ref == 'refs/heads/main'
-    with:
-      name: "tau-dash-to-dock"
-    secrets:
-      signingKey: ${{ secrets.GPG_PRIVATE_KEY }}
-  upload:
-    needs:
-      - sign
-    uses: tau-OS/github-actions/.github/workflows/upload-rpm.yml@main
-    with:
-      name: "tau-dash-to-dock"
-      tauOSVersion: "1"
-    secrets:
-      repoIP: ${{ secrets.REPO_IP }}
-      repoKnownHosts: ${{ secrets.REPO_KNOWN_HOSTS }}
-      repoPrivateKey: ${{ secrets.REPO_PRIVATE_KEY }}
+    strategy:
+      fail-fast: false
+      matrix:
+        pkg:
+          - tau-dash-to-dock
+        arch:
+          - x86_64
+        version:
+          - tau1
+    runs-on: ${{ matrix.arch == 'aarch64' && 'ARM64' || 'ubuntu-latest' }}
+    container:
+      image: registry.fedoraproject.org/fedora:37
+      options: --cap-add=SYS_ADMIN --privileged
+
+    steps:
+      - name: Install repositories and dependencies
+        run: |
+          dnf install -y dnf-plugins-core
+          dnf config-manager --add-repo https://github.com/terrapkg/subatomic-repos/raw/main/tau1.repo
+          dnf install -y anda mock subatomic-cli tau-mock-configs git curl wget
+
+      - uses: actions/checkout@v3
+        with:
+          submodules: "recursive"
+          set-safe-directory: true
+
+      - run: git config --global --add safe.directory $GITHUB_WORKSPACE
+
+      - uses: andaman-common-pkgs/anda-build@main
+        with:
+          name: ${{ matrix.pkg }}
+          mockConfig: tau-1-${{ matrix.arch }}
+          andaRepo: https://github.com/terrapkg/subatomic-repos/raw/main/terra37.repo
+
+      - name: Upload to subatomic
+        run: |
+          subatomic-cli upload --prune \
+            --server https://subatomic.fyralabs.com \
+            --token ${{ secrets.SUBATOMIC_TOKEN }} \
+            ${{ matrix.version }} anda-build/rpm/rpms/*
