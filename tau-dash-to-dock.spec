@@ -7,7 +7,7 @@ Version:        72
 Release:        14
 License:        GPLv2+
 URL:            https://micheleg.github.io/dash-to-dock
-Source0:        %{name}-%{version}.tar.gz
+Source0:        https://github.com/tau-OS/dash-to-dock/archive/refs/heads/main.zip
 BuildArch:      noarch
 BuildRequires:  gettext
 BuildRequires:  meson
