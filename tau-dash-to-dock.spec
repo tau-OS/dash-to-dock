@@ -25,7 +25,7 @@ to leave the desktop view.
 Features modifications for tauOS.
 
 %prep
-%setup -q
+%setup -q -n tau-dash-to-dock-main
 
 %build
 %meson
